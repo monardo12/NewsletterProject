@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HTML:HTML xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HTML="HTML" xsi:schemaLocation="HTML ../metamodel/HtmlSimple.ecore">
+  <htmlElements xsi:type="HTML:TABLE" border="0" width="600" cellspacing="0" cellpadding="0" align="center" bgcolor="">
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD">
+        <elements xsi:type="HTML:A" ref="http://apps.co">
+          <elements xsi:type="HTML:IMG" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/header02_1.png" width="100%" height="90" border="0"/>
+        </elements>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR" bgcolor="#D5D4D4">
+      <elements xsi:type="HTML:TD" align="right">
+        <elements xsi:type="HTML:TABLE" width="100" cellpadding="5">
+          <elements xsi:type="HTML:TR">
+            <elements xsi:type="HTML:TD" align="right">
+              <elements xsi:type="HTML:P">
+                <elements xsi:type="HTML:FONT" color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2" value="SEMANA 15 - 20 DE FEBRERO 2016"/>
+              </elements>
+            </elements>
+          </elements>
+        </elements>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD">
+        <elements xsi:type="HTML:A" ref="https://apps.co/comunicaciones/articulos/elementos-legales-para-el-emprendimiento-digital-2/?mkt_hm=4&amp;amp;utm_source=email_marketing&amp;amp;utm_admin=65089&amp;amp;utm_medium=email&amp;amp;utm_campaign=Elementos_">
+          <elements xsi:type="HTML:IMG" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB02_2.png" width="100%" height="358" border="0"/>
+        </elements>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD">
+        <elements xsi:type="HTML:IMG" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB03.png" width="100%" height="62" border="0"/>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD">
+        <elements xsi:type="HTML:TABLE" width="100%" cellpadding="10" bgcolor="#464749">
+          <elements xsi:type="HTML:TR">
+            <elements xsi:type="HTML:TD">
+              <elements xsi:type="HTML:HR" color="#8E8E8E"/>
+            </elements>
+          </elements>
+        </elements>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD">
+        <elements xsi:type="HTML:TABLE" width="100%" cellspacing="" cellpadding="15" bgcolor="#464749">
+          <elements xsi:type="HTML:TR">
+            <elements xsi:type="HTML:TD" align="center" height="">
+              <elements xsi:type="HTML:P">
+                <elements xsi:type="HTML:B">
+                  <elements xsi:type="HTML:FONT" color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="" value="ELEMENTOS LEGALES PARA EL EMPRENDIENTO DIGITAL"/>
+                </elements>
+              </elements>
+              <elements xsi:type="HTML:P">
+                <elements xsi:type="HTML:FONT" color="#FFFFFF" face="Arial, Helvetica, sans-serif" value="Aspectos jurídicos que, como mínimo, todo emprendedor debe conocer."/>
+              </elements>
+            </elements>
+          </elements>
+        </elements>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD">
+        <elements xsi:type="HTML:TABLE" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#464749">
+          <elements xsi:type="HTML:TR">
+            <elements xsi:type="HTML:TD" colspan="" valign="center" align="center" width="50%">
+              <elements xsi:type="HTML:IMG" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febrero05_1.png" width="225" height="224" border="0"/>
+            </elements>
+            <elements xsi:type="HTML:TD" rowspan="" valign="center" align="left" width="50%">
+              <elements xsi:type="HTML:A" ref="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/">
+                <elements xsi:type="HTML:B">
+                  <elements xsi:type="HTML:FONT" face="'Trebuchet MS', Arial, Helvetica, sans-serif" size="3" value="PRESENCIAL"/>
+                </elements>
+                <styles value="#DE8616"/>
+                <styles key="color" value="#FFFFFF"/>
+                <styles key="display" value="inline-block"/>
+                <styles key="line-height" value="40px"/>
+                <styles key="text-align" value="center"/>
+                <styles key="text-decoration" value="none"/>
+                <styles key="width" value="140px"/>
+              </elements>
+              <elements xsi:type="HTML:P">
+                <elements xsi:type="HTML:I">
+                  <elements xsi:type="HTML:FONT" color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2" value="25 de Febrero 2016 - 2:00 pm"/>
+                </elements>
+              </elements>
+              <elements xsi:type="HTML:A" ref="https://plus.google.com/events/c541njr83ht26v8ic03tslq4c3c">
+                <elements xsi:type="HTML:B">
+                  <elements xsi:type="HTML:FONT" color="" face="'Trebuchet MS', Arial, Helvetica, sans-serif" size="3" value="VIRTUAL"/>
+                </elements>
+                <styles value="#DE8616"/>
+                <styles key="color" value="#FFFFFF"/>
+                <styles key="display" value="inline-block"/>
+                <styles key="line-height" value="40px"/>
+                <styles key="text-align" value="center"/>
+                <styles key="text-decoration" value="none"/>
+                <styles key="width" value="140px"/>
+              </elements>
+              <elements xsi:type="HTML:P">
+                <elements xsi:type="HTML:I">
+                  <elements xsi:type="HTML:FONT" color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2" value="3 de Marzo 2016 - 2:00 pm."/>
+                </elements>
+              </elements>
+            </elements>
+          </elements>
+        </elements>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD">
+        <elements xsi:type="HTML:A" ref="https://apps.co/comunicaciones/articulos/certificate-internacionalmente-como-profesional-ti/">
+          <elements xsi:type="HTML:IMG" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febrero14.png" width="100%" height="168" border="0"/>
+        </elements>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD" bgcolor="#CCCCCC" height="18"/>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD">
+        <elements xsi:type="HTML:TABLE" border="0" width="100%" cellspacing="0" cellpadding="20" bgcolor="#E5E5E5">
+          <elements xsi:type="HTML:TR">
+            <elements xsi:type="HTML:TD" valign="top" align="center" width="50%">
+              <elements xsi:type="HTML:A" ref="https://apps.co/comunicaciones/articulos/en-el-2016-habra-1600-millones-de-cosas-conectadas/">
+                <elements xsi:type="HTML:IMG" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB20.png" width="100%" height="133" border="0"/>
+              </elements>
+              <elements xsi:type="HTML:P">
+                <elements xsi:type="HTML:FONT" face="Arial, Helvetica, sans-serif" size="2" value="En el 2016 habrá 1600 millones de cosas conectadas"/>
+              </elements>
+            </elements>
+            <elements xsi:type="HTML:TD" valign="top" align="center" width="50%" height="">
+              <elements xsi:type="HTML:A" ref="https://apps.co/comunicaciones/articulos/tendencias-claves-para-un-ano-cargado-de-tecnologi/">
+                <elements xsi:type="HTML:IMG" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB17.png" width="100%" height="133" border="0"/>
+              </elements>
+              <elements xsi:type="HTML:P">
+                <elements xsi:type="HTML:FONT" face="Arial, Helvetica, sans-serif" size="2" value="Tendencias clave para una año cargado de tecnología"/>
+              </elements>
+            </elements>
+          </elements>
+        </elements>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD">
+        <elements xsi:type="HTML:TABLE" width="100%" cellpadding="8" bgcolor="#FFFFFF">
+          <elements xsi:type="HTML:TR">
+            <elements xsi:type="HTML:TD">
+              <elements xsi:type="HTML:HR" color="#DDDDDD"/>
+            </elements>
+          </elements>
+        </elements>
+      </elements>
+    </elements>
+    <elements xsi:type="HTML:TR">
+      <elements xsi:type="HTML:TD" width="" bgcolor="#FFFFFF" height="">
+        <elements xsi:type="HTML:IMG" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/Capturadepantalla20151106alas2.38.43p.m..png" width="100%" height="114" border="0"/>
+      </elements>
+    </elements>
+  </htmlElements>
+</HTML:HTML>
