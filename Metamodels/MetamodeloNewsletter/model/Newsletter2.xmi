@@ -8,34 +8,29 @@
     </rows>
     <rows>
       <cells>
-        <elements xsi:type="metamodeloNewsletter:Image" link="http://apps.co"/>
+        <elements xsi:type="metamodeloNewsletter:Image" link="http://apps.co" src=""/>
+      </cells>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Button">
+          <text fontWeight="bold"/>
+        </elements>
       </cells>
     </rows>
     <rows>
       <cells>
         <elements xsi:type="metamodeloNewsletter:Text"/>
       </cells>
-    </rows>
-    <rows>
       <cells>
         <elements xsi:type="metamodeloNewsletter:Text"/>
       </cells>
       <cells>
-        <elements xsi:type="metamodeloNewsletter:Button">
-          <text content="BOTON 1"/>
-        </elements>
-      </cells>
-      <cells>
-        <elements xsi:type="metamodeloNewsletter:Button">
-          <text content="BOTON 2" fontWeight="bold"/>
-        </elements>
+        <elements xsi:type="metamodeloNewsletter:Text"/>
       </cells>
     </rows>
     <rows>
       <cells>
         <elements xsi:type="metamodeloNewsletter:Divider"/>
       </cells>
-      <cells/>
     </rows>
   </table>
 </metamodeloNewsletter:Newsletter>

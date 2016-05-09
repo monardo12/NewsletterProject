@@ -8,15 +8,14 @@
     </elements>
     <elements xsi:type="HTML:TR">
       <elements xsi:type="HTML:TD">
-        <elements xsi:type="HTML:A" ref="http://apps.co">
-          <elements xsi:type="HTML:IMG"/>
-        </elements>
-      </elements>
-    </elements>
-    <elements xsi:type="HTML:TR">
-      <elements xsi:type="HTML:TD">
-        <elements xsi:type="HTML:P">
-          <elements xsi:type="HTML:FONT"/>
+        <elements xsi:type="HTML:TABLE">
+          <elements xsi:type="HTML:TR">
+            <elements xsi:type="HTML:TD">
+              <elements xsi:type="HTML:A" ref="http://apps.co">
+                <elements xsi:type="HTML:IMG"/>
+              </elements>
+            </elements>
+          </elements>
         </elements>
       </elements>
     </elements>
@@ -30,15 +29,13 @@
               </elements>
             </elements>
             <elements xsi:type="HTML:TD">
-              <elements xsi:type="HTML:A">
+              <elements xsi:type="HTML:P">
                 <elements xsi:type="HTML:FONT"/>
               </elements>
             </elements>
             <elements xsi:type="HTML:TD">
-              <elements xsi:type="HTML:A">
-                <elements xsi:type="HTML:B">
-                  <elements xsi:type="HTML:FONT"/>
-                </elements>
+              <elements xsi:type="HTML:P">
+                <elements xsi:type="HTML:FONT"/>
               </elements>
             </elements>
           </elements>
@@ -50,15 +47,8 @@
         <elements xsi:type="HTML:TABLE">
           <elements xsi:type="HTML:TR">
             <elements xsi:type="HTML:TD">
-              <elements xsi:type="HTML:TABLE">
-                <elements xsi:type="HTML:TR">
-                  <elements xsi:type="HTML:TD">
-                    <elements xsi:type="HTML:HR"/>
-                  </elements>
-                </elements>
-              </elements>
+              <elements xsi:type="HTML:HR"/>
             </elements>
-            <elements xsi:type="HTML:TD"/>
           </elements>
         </elements>
       </elements>

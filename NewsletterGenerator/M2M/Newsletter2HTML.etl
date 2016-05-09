@@ -1,0 +1,115 @@
+rule Newsletter2HTML
+	transform
+		s:newsletter!Newsletter
+	to
+		t:html!HTML{
+			if(s.table <> null){
+				var table = s.table.equivalent();
+				t.htmlElements.add(table);
+			}
+		}
+
+@lazy
+rule Table2TABLE
+	transform
+		s:newsletter!Table
+	to
+		t:html!TABLE{
+			for(row in s.rows){
+				t.addElement(row.equivalent());
+			}
+		}
+
+@lazy
+rule Row2TR
+	transform
+		s:newsletter!Row
+	to
+		t:html!TR{
+			if(s.cells.size() > 1){
+				var newTR = new html!TR;
+				for(cell in s.cells){
+					newTR.addElement(cell.equivalent());
+				}
+				var newTABLE = new html!TABLE;
+				newTABLE.addElement(newTR);
+				var newTD = new html!TD;
+				newTD.addElement(newTABLE);
+				t.addElement(newTD);
+			} else {
+				t.addElement(s.cells.get(0).equivalent());			
+			}
+		}
+
+@lazy		
+rule Cell2TD
+	transform
+		s:newsletter!Cell
+	to
+		t:html!TD{
+			for(element in s.elements){
+				var htmlElement : html!HTMLElement;
+				if(element.isTypeOf(newsletter!Text)){
+					htmlElement = element.getHtmlText();
+				} else if(element.isTypeOf(newsletter!Button)){
+					htmlElement = element.getHtmlButton();
+				} else if(element.isTypeOf(newsletter!Image)){
+					htmlElement = element.getHtmlImage();
+				} else if(element.isTypeOf(newsletter!Video)){
+				
+				} else if(element.isTypeOf(newsletter!Divider)){
+					htmlElement = element.getHtmlDivider();
+				} 
+				t.addElement(htmlElement);
+			}
+		}
+		
+operation newsletter!Text getHtmlText() : html!HTMLElement{
+	var p = new html!P;
+	var font = new html!FONT;
+	//FALTA TENER EN CUENTA ETIQUETAS A, B, I, U, STRIKE
+	p.addElement(font);
+	return p;
+}
+
+operation newsletter!Button getHtmlButton() : html!HTMLElement{
+	var a = new html!A;
+	var font = new html!FONT;
+	
+	if(self.text.fontWeight == newsletter!FontWeight#bold){
+		var b = new html!B;
+		b.addElement(font);
+		a.addElement(b);
+	} else {
+		a.addElement(font);
+	}
+	
+	return a;
+}
+
+operation newsletter!Image getHtmlImage() : html!HTMLElement{
+	var img = new html!IMG;
+	if(self.link <> null){
+		var a = new html!A;
+		a.ref = self.link;
+		a.addElement(img);
+		return a;
+	}
+	return img;
+}
+
+operation newsletter!Divider getHtmlDivider() : html!HTMLElement{
+	var table = new html!TABLE;
+	var tr = new html!TR;
+	var td = new html!TD;
+	var hr = new html!HR;
+	
+	td.addElement(hr);
+	tr.addElement(td);
+	table.addElement(tr);
+	return table;
+}
+
+operation html!HTMLElement addElement(element : html!HTMLElement){
+	self.elements.add(element);
+}
