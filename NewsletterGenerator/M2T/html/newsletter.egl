@@ -1,0 +1,173 @@
+[%
+var table = html!TABLE.all.at(0);
+%]
+[%=table.printTag()%]
+[%
+
+//Styles Template
+@template
+operation html!HTMLElement printStyles(){
+	if(self.styles.notEmpty()){
+		out.print("style=\"");
+		for(style in self.styles){
+			out.print(style.key.literal + ":" + style.value + ";");
+		}
+		out.print("\"");
+	}
+}
+
+//Inner tags Template
+@template
+operation html!HTMLElement printInnerTags(){
+	for(content in self.eContents()){
+		if(not content.isTypeOf(html!Style)){
+%]
+[%=content.printTag()%]
+[%
+		}
+	}
+}
+//TABLE Template
+@template
+operation html!TABLE printTag() { 
+%]
+<table width="[%=self.width%]" align="[%=self.align%]">
+	[%=self.printInnerTags()%]
+</table>
+[%
+}
+
+//TR Template
+@template
+operation html!TR printTag() { 
+%]
+<tr>
+	[%=self.printInnerTags()%]
+</tr>
+[%
+}
+
+//TD Template
+@template
+operation html!TD printTag() { 
+%]
+<td>
+	[%=self.printInnerTags()%]
+</td>
+[%
+}
+
+//DIV Template
+@template
+operation html!DIV printTag() { 
+%]
+<div>
+	[%=self.printInnerTags()%]
+</div>
+[%
+}
+
+//SPAN Template
+@template
+operation html!SPAN printTag() { 
+%]
+<span>
+	[%=self.printInnerTags()%]
+</span>
+[%
+}
+
+//P Template
+@template
+operation html!P printTag() { 
+%]
+<p>
+	[%=self.printInnerTags()%]
+</p>
+[%
+}
+
+//A Template
+@template
+operation html!A printTag() { 
+%]
+<a href="[%=self.ref%]" [%=self.printStyles()%]>
+	[%=self.printInnerTags()%]
+</a>
+[%
+}
+
+//FONT Template
+@template
+operation html!FONT printTag() { 
+%]
+<font color="[%=self.color%]" face="[%=self.face%]" size="[%=self.size%]">
+	[%=self.value%]
+</font>
+[%
+}
+
+//B Template
+@template
+operation html!B printTag() { 
+%]
+<b>
+	[%=self.printInnerTags()%]
+</b>
+[%
+}
+
+//U Template
+@template
+operation html!U printTag() { 
+%]
+<u>
+	[%=self.printInnerTags()%]
+</u>
+[%
+}
+
+//I Template
+@template
+operation html!I printTag() { 
+%]
+<i>
+	[%=self.printInnerTags()%]
+</i>
+[%
+}
+
+//STRIKE Template
+@template
+operation html!STRIKE printTag() { 
+%]
+<strike>
+	[%=self.printInnerTags()%]
+</strike>
+[%
+}
+
+//IMG Template
+@template
+operation html!IMG printTag() { 
+%]
+<img src="[%=self.src%]">
+[%
+}
+
+//BR Template
+@template
+operation html!BR printTag() { 
+%]
+<br>
+[%
+}
+
+//HR Template
+@template
+operation html!HR printTag() { 
+%]
+<hr>
+[%
+}
+%]

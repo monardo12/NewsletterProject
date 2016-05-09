@@ -1,113 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metamodeloNewsletter:Newsletter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metamodeloNewsletter="http://www.example.org/metamodeloNewsletter" xsi:schemaLocation="http://www.example.org/metamodeloNewsletter ../metamodel/metamodeloNewsletter.ecore">
-  <table width="600">
-    <rows height="90">
-      <cells width="100%">
-        <elements xsi:type="metamodeloNewsletter:Image" ref="http://apps.co" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/header02_1.png"/>
+<metamodeloNewsletter:Newsletter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metamodeloNewsletter="http://www.example.org/metamodeloNewsletter" xsi:schemaLocation="http://www.example.org/metamodeloNewsletter enums">
+  <table>
+    <rows>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Image"/>
       </cells>
     </rows>
     <rows>
-      <cells width="100%">
-        <elements xsi:type="metamodeloNewsletter:Text" ref="" content="SEMANA 15 - 20 DE FEBRERO 2016" fontFamily="Arial, Helvetica, sans-serif" fontSize="2" fontColor="#FFFFFF"/>
-        <styles Key="align" Value="right"/>
-      </cells>
-      <styles Value="#D5D4D4"/>
-    </rows>
-    <rows height="358">
-      <cells width="100%">
-        <elements xsi:type="metamodeloNewsletter:Image" ref="https://apps.co/comunicaciones/articulos/elementos-legales-para-el-emprendimiento-digital-2/?mkt_hm=4&amp;amp;utm_source=email_marketing&amp;amp;utm_admin=65089&amp;amp;utm_medium=email&amp;amp;utm_campaign=Elementos_" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB02_2.png"/>
-      </cells>
-    </rows>
-    <rows height="62">
-      <cells width="100%">
-        <elements xsi:type="metamodeloNewsletter:Image" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB03.png"/>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Image" link="http://apps.co"/>
       </cells>
     </rows>
     <rows>
-      <cells width="100%">
-        <elements xsi:type="metamodeloNewsletter:Divider">
-          <styles Key="color" Value="#8E8E8E"/>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Text"/>
+      </cells>
+    </rows>
+    <rows>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Text"/>
+      </cells>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Button">
+          <text content="BOTON 1"/>
         </elements>
       </cells>
-      <styles Value="#464749"/>
-    </rows>
-    <rows>
       <cells>
-        <table>
-          <rows>
-            <cells width="100%">
-              <elements xsi:type="metamodeloNewsletter:Text" content="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL" fontFamily="Arial, Helvetica, sans-serif" fontColor="#FFFFFF"/>
-              <elements xsi:type="metamodeloNewsletter:Text" content="Aspectos jurídicos que, como mínimo, todo emprendedor debe conocer." fontFamily="Arial, Helvetica, sans-serif" fontColor="#FFFFFF"/>
-            </cells>
-          </rows>
-          <styles Value="#464749"/>
-        </table>
-      </cells>
-    </rows>
-    <rows>
-      <cells>
-        <table>
-          <rows height="224">
-            <cells width="50%">
-              <elements xsi:type="metamodeloNewsletter:Image" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febrero05_1.png"/>
-              <styles Key="align" Value="center"/>
-            </cells>
-            <cells width="50%">
-              <elements xsi:type="metamodeloNewsletter:Button" ref="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/">
-                <text content="PRESENCIAL" fontFamily="'Trebuchet MS', Arial, Helvetica, sans-serif" fontSize="3" fontColor="#FFFFFF"/>
-              </elements>
-              <elements xsi:type="metamodeloNewsletter:Text" fontFamily="Arial, Helvetica, sans-serif" fontSize="2" fontColor="#FFFFFF"/>
-              <elements xsi:type="metamodeloNewsletter:Button" ref="https://plus.google.com/events/c541njr83ht26v8ic03tslq4c3c">
-                <text content="VIRTUAL" fontFamily="'Trebuchet MS', Arial, Helvetica, sans-serif" fontSize="3" fontColor=""/>
-              </elements>
-              <elements xsi:type="metamodeloNewsletter:Text" fontFamily="Arial, Helvetica, sans-serif" fontSize="2" fontColor="#FFFFFF"/>
-              <styles Key="align" Value="left"/>
-            </cells>
-          </rows>
-        </table>
-      </cells>
-    </rows>
-    <rows height="168">
-      <cells width="100%">
-        <elements xsi:type="metamodeloNewsletter:Image" ref="https://apps.co/comunicaciones/articulos/certificate-internacionalmente-como-profesional-ti" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febrero14.png"/>
-      </cells>
-    </rows>
-    <rows height="18">
-      <cells width="">
-        <styles Value="#CCCCCC"/>
-      </cells>
-    </rows>
-    <rows>
-      <cells>
-        <table width="100%">
-          <rows height="133">
-            <cells width="50%">
-              <elements xsi:type="metamodeloNewsletter:Image" ref="https://apps.co/comunicaciones/articulos/en-el-2016-habra-1600-millones-de-cosas-conectadas/" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB20.png"/>
-              <elements xsi:type="metamodeloNewsletter:Text" content="En el 2016 habrá 1600 millones de cosas conectadas" fontFamily="Arial, Helvetica, sans-serif" fontSize="2"/>
-              <styles Key="align" Value="center"/>
-            </cells>
-            <cells width="50%">
-              <elements xsi:type="metamodeloNewsletter:Image" ref="https://apps.co/comunicaciones/articulos/tendencias-claves-para-un-ano-cargado-de-tecnologi/" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB17.png"/>
-              <elements xsi:type="metamodeloNewsletter:Text" content="Tendencias claves para un año cargado de tecnología" fontFamily="Arial, Helvetica, sans-serif" fontSize="2"/>
-              <styles Key="align" Value="center"/>
-            </cells>
-          </rows>
-          <styles Value="#E5E5E5"/>
-        </table>
-      </cells>
-    </rows>
-    <rows>
-      <cells>
-        <elements xsi:type="metamodeloNewsletter:Divider">
-          <styles Value="#FFFFFF"/>
-          <styles Key="color" Value="#DDDDD"/>
+        <elements xsi:type="metamodeloNewsletter:Button">
+          <text content="BOTON 2" fontWeight="bold"/>
         </elements>
       </cells>
     </rows>
-    <rows height="114">
-      <cells width="100%">
-        <elements xsi:type="metamodeloNewsletter:Image" ref="" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/Capturadepantalla20151106alas2.38.43p.m..png"/>
+    <rows>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Divider"/>
       </cells>
+      <cells/>
     </rows>
   </table>
 </metamodeloNewsletter:Newsletter>

@@ -1,0 +1,4 @@
+[%
+	var entityTemplate:Template:= TemplateFactory.load('newsletter.egl');
+	entityTemplate.generate('../../generated/newsletter.html');
+%]
