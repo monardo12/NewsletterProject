@@ -137,13 +137,13 @@ operation html!I printTag() {
 [%
 }
 
-//STRIKE Template
+//S Template
 @template
-operation html!STRIKE printTag() { 
+operation html!S printTag() { 
 %]
-<strike>
+<s>
 	[%=self.printInnerTags()%]
-</strike>
+</s>
 [%
 }
 
