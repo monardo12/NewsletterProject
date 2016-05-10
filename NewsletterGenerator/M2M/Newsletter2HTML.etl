@@ -56,7 +56,7 @@ rule Cell2TD
 				} else if(element.isTypeOf(newsletter!Image)){
 					htmlElement = element.getHtmlImage();
 				} else if(element.isTypeOf(newsletter!Video)){
-				
+					htmlElement = element.getHtmlVideo();
 				} else if(element.isTypeOf(newsletter!Divider)){
 					htmlElement = element.getHtmlDivider();
 				} 
@@ -66,36 +66,83 @@ rule Cell2TD
 		
 operation newsletter!Text getHtmlText() : html!HTMLElement{
 	var p = new html!P;
+	
+	//Add A element if applies
+	if(self.link <> null){
+		var a = new html!A;
+		a.ref = self.link;
+		
+		//TODO Revisar método addStyle
+		var style = new html!Style;
+		style.key = html!StyleKey#textDecoration;
+		style.value = "none";
+		a.styles.add(style);
+		//a.addStyle(html!StyleKey#textDecoration, "none");
+		p.addElementRecursively(a);
+	}
+	
+	//Add B element if applies
+	if(self.fontWeight == newsletter!FontWeight#bold){
+		var b = new html!B;
+		p.addElementRecursively(b);
+	}
+	
+	//Add I element if applies
+	if(self.italic){
+		var i = new html!I;
+		p.addElementRecursively(i);
+	}
+	
+	//Add U element if applies
+	if(self.underline){
+		var u = new html!U;
+		p.addElementRecursively(u);
+	}
+	
+	//Add S element if applies
+	if(self.strikethrough){
+		var s = new html!S;
+		p.addElementRecursively(s);
+	}
+	
 	var font = new html!FONT;
-	//FALTA TENER EN CUENTA ETIQUETAS A, B, I, U, STRIKE
-	p.addElement(font);
+	p.addElementRecursively(font);
 	return p;
 }
 
 operation newsletter!Button getHtmlButton() : html!HTMLElement{
-	var a = new html!A;
-	var font = new html!FONT;
-	
-	if(self.text.fontWeight == newsletter!FontWeight#bold){
-		var b = new html!B;
-		b.addElement(font);
-		a.addElement(b);
+	var p = self.text.getHtmlText();
+	if(p.elements.get(0).isTypeOf(html!A)){
+		//Botón con link
 	} else {
-		a.addElement(font);
+		//Botón sin link
 	}
 	
-	return a;
+	return p;
 }
 
 operation newsletter!Image getHtmlImage() : html!HTMLElement{
+	var p = new html!P;
 	var img = new html!IMG;
 	if(self.link <> null){
 		var a = new html!A;
 		a.ref = self.link;
-		a.addElement(img);
-		return a;
+		p.addElementRecursively(a);
 	}
-	return img;
+	p.addElementRecursively(img);
+	return p;
+}
+
+operation newsletter!Video getHtmlVideo() : html!HTMLElement{
+	var preview = self.preview.getHtmlImage();
+	var title = self.title.getHtmlText();
+	var button = self.button.getHtmlButton();
+	
+	var div = new html!DIV;
+	div.addElement(preview);
+	div.addElement(title);
+	div.addElement(button);
+	return div;
 }
 
 operation newsletter!Divider getHtmlDivider() : html!HTMLElement{
@@ -112,4 +159,19 @@ operation newsletter!Divider getHtmlDivider() : html!HTMLElement{
 
 operation html!HTMLElement addElement(element : html!HTMLElement){
 	self.elements.add(element);
+}
+
+operation html!HTMLElement addElementRecursively(element : html!HTMLElement){
+	if(self.elements.isEmpty()){
+		self.addElement(element);
+	} else {
+		self.elements.get(0).addElementRecursively(element);
+	}
+}
+
+operation html!HTMLElement addStyle(key : html!StyleKey, value : String){
+	var style = new html!Style;
+	style.key = key;
+	style.value = value;
+	self.styles.add(style);
 }

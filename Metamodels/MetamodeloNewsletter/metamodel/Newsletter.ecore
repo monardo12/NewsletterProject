@@ -9,7 +9,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rows" lowerBound="1" upperBound="-1"
         eType="#//Row" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="#//enums/Color"
         defaultValueLiteral="none"/>
   </eClassifiers>
@@ -52,7 +52,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="strikethrough" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//Text" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="text" lowerBound="1" eType="#//Text"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//enums/Color"
         defaultValueLiteral="none"/>
   </eClassifiers>
@@ -62,10 +63,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Video" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="preview" lowerBound="1"
         eType="#//Image" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="title" eType="#//Text"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="title" lowerBound="1" eType="#//Text"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="description" eType="#//Text"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="button" lowerBound="1"
+        eType="#//Button" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Divider" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//enums/Color"
