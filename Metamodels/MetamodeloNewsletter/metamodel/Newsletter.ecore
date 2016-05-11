@@ -18,7 +18,7 @@
         eType="#//Cell" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="#//enums/Color"
-        defaultValueLiteral="none"/>
+        defaultValueLiteral="white"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cell">
     <eStructuralFeatures xsi:type="ecore:EReference" name="table" eType="#//Table"
@@ -27,13 +27,13 @@
         eType="#//Element" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="#//enums/Color"
-        defaultValueLiteral="none"/>
+        defaultValueLiteral="white"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="verticalAlignment" eType="#//enums/VerticalAlign"
         defaultValueLiteral="top"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="#//enums/Align"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" eType="#//enums/Align"
         defaultValueLiteral="left"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -44,18 +44,19 @@
         defaultValueLiteral="Arial"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fontSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fontColor" eType="#//enums/Color"
-        defaultValueLiteral="none"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fontWeight" eType="#//enums/FontWeight"
+        defaultValueLiteral="black"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="normal"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="italic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="underline" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="strikethrough" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textAlign" eType="#//enums/Align"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="text" lowerBound="1" eType="#//Text"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//enums/Color"
-        defaultValueLiteral="none"/>
+        defaultValueLiteral="black"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="src" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -70,11 +71,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Divider" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//enums/Color"
-        defaultValueLiteral="none"/>
+        defaultValueLiteral="black"/>
   </eClassifiers>
   <eSubpackages name="enums" nsURI="enums" nsPrefix="enums">
     <eClassifiers xsi:type="ecore:EEnum" name="Color">
-      <eLiterals name="none"/>
       <eLiterals name="aqua" literal="Aqua"/>
       <eLiterals name="black" literal="Black"/>
       <eLiterals name="blue" literal="Blue"/>
@@ -102,10 +102,6 @@
       <eLiterals name="top" literal="top"/>
       <eLiterals name="middle" literal="middle"/>
       <eLiterals name="bottom" literal="bottom"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="FontWeight">
-      <eLiterals name="normal" literal="normal"/>
-      <eLiterals name="bold" literal="bold"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="FontFamily">
       <eLiterals name="arial" literal="Arial"/>

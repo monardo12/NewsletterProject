@@ -31,7 +31,7 @@ operation html!HTMLElement printInnerTags(){
 @template
 operation html!TABLE printTag() { 
 %]
-<table width="[%=self.width%]" align="[%=self.align%]">
+<table width="[%=self.width%]" align="[%=self.align%]" cellpadding="[%=self.cellpadding%]" cellspacing="[%=self.cellspacing%]">
 	[%=self.printInnerTags()%]
 </table>
 [%
@@ -41,7 +41,7 @@ operation html!TABLE printTag() {
 @template
 operation html!TR printTag() { 
 %]
-<tr>
+<tr height="[%=self.height%]" bgcolor="[%=self.bgcolor%]">
 	[%=self.printInnerTags()%]
 </tr>
 [%
@@ -51,7 +51,7 @@ operation html!TR printTag() {
 @template
 operation html!TD printTag() { 
 %]
-<td>
+<td width="[%=self.width%]" bgcolor="[%=self.bgcolor%]">
 	[%=self.printInnerTags()%]
 </td>
 [%
@@ -81,7 +81,7 @@ operation html!SPAN printTag() {
 @template
 operation html!P printTag() { 
 %]
-<p>
+<p [%=self.printStyles()%]>
 	[%=self.printInnerTags()%]
 </p>
 [%
@@ -151,7 +151,7 @@ operation html!S printTag() {
 @template
 operation html!IMG printTag() { 
 %]
-<img src="[%=self.src%]">
+<img src="[%=self.src%]" height="[%=self.height%]" width="[%=self.width%]" border="[%=self.border%]">
 [%
 }
 

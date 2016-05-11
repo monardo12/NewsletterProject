@@ -33,6 +33,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" ordered="false"
         unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bgcolor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TD" eSuperTypes="#//HTMLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="colspan" ordered="false"
@@ -48,9 +49,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bgcolor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DIV" eSuperTypes="#//HTMLElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DIV" eSuperTypes="#//HTMLElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SPAN" eSuperTypes="#//HTMLElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="P" eSuperTypes="#//HTMLElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="P" eSuperTypes="#//HTMLElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="A" eSuperTypes="#//HTMLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ref" ordered="false" unique="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
