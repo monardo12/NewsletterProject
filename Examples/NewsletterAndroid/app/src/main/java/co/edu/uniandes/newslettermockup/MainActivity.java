@@ -7,13 +7,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import java.util.HashMap;
-import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
-
+    /**
+     * HashMap que almacena las acciones de la aplicacion.
+     * Una accion es un redireccion a un link que puede tener cualquier contenido web.
+     * Cada registro del hashmap lo compone un id de vista que lo lanza(key), y el link para ejecutar la accion(value).
+     */
     private HashMap <Integer, String> actionLinksViews;
 
     @Override
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     @Override
     public void onClick(View v) {
 
-        Log.i("onClick", "Click en vista" + v.getId());
+        Log.i("onClick", "Click en vista= " + v.getId());
 
         //El id de cada vista nos dice cual es su link almacenado en el HashMap de actions
         String link = actionLinksViews.get(v.getId());
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private static final String HTTP = "http://";
 
     /**
-     * Open a broser choser giving a url (with or without http:// prefix)
+     * Open a browser chooser giving a url (with or without http:// prefix)
      * @param url
      */
     public void openBrowser(String url) {
