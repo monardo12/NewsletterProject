@@ -3,40 +3,40 @@
   <table width="600">
     <rows height="90">
       <cells width="600">
-        <elements xsi:type="metamodeloNewsletter:Image" link="http://apps.co" width="600" height="90" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/header02_1.png"/>
+        <elements xsi:type="metamodeloNewsletter:Image" link="http://apps.co" height="90" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/header02_1.png"/>
       </cells>
     </rows>
     <rows height="30" backgroundColor="gray">
       <cells width="600" backgroundColor="silver">
-        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="SEMANA 15 - 20 DE FEBRERO 2016" fontSize="2" fontColor="white" bold="false" textAlign="right"/>
+        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="SEMANA 15 - 20 DE FEBRERO 2016   " fontSize="2" fontColor="white" bold="false" textAlign="right"/>
       </cells>
     </rows>
     <rows height="358">
       <cells width="600">
-        <elements xsi:type="metamodeloNewsletter:Image" link="https://apps.co/comunicaciones/articulos/elementos-legales-para-el-emprendimiento-digital-2/?mkt_hm=4&amp;amp;utm_source=email_marketing&amp;amp;utm_admin=65089&amp;amp;utm_medium=email&amp;amp;utm_campaign=Elementos_" align="center" width="600" height="358" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB02_2.png"/>
+        <elements xsi:type="metamodeloNewsletter:Image" link="https://apps.co/comunicaciones/articulos/elementos-legales-para-el-emprendimiento-digital-2/?mkt_hm=4&amp;amp;utm_source=email_marketing&amp;amp;utm_admin=65089&amp;amp;utm_medium=email&amp;amp;utm_campaign=Elementos_" align="center" height="358" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB02_2.png"/>
       </cells>
     </rows>
     <rows height="62">
       <cells width="600">
-        <elements xsi:type="metamodeloNewsletter:Image" width="600" height="62" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB03.png"/>
+        <elements xsi:type="metamodeloNewsletter:Image" height="62" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB03.png"/>
       </cells>
     </rows>
     <rows height="30">
-      <cells width="600" backgroundColor="black">
-        <elements xsi:type="metamodeloNewsletter:Divider" width="600" height="30" color="gray"/>
+      <cells width="600" backgroundColor="gray">
+        <elements xsi:type="metamodeloNewsletter:Divider" width="600" height="30"/>
       </cells>
     </rows>
     <rows>
-      <cells width="600">
-        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL" fontSize="2" bold="true" textAlign="center"/>
-        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="Aspectos jurídicos que, como mínimo, todo emprendedor debe conocer." fontSize="2" bold="false" textAlign="center"/>
+      <cells width="600" backgroundColor="gray">
+        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL" fontSize="3" fontColor="white" bold="true" textAlign="center"/>
+        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="Aspectos jurídicos que, como mínimo, todo emprendedor debe conocer." fontSize="3" fontColor="white" bold="false" textAlign="center"/>
       </cells>
     </rows>
     <rows>
-      <cells width="300" backgroundColor="black" verticalAlignment="middle">
+      <cells width="300" backgroundColor="gray" verticalAlignment="middle">
         <elements xsi:type="metamodeloNewsletter:Image" link="" align="center" width="225" height="224" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febrero05_1.png"/>
       </cells>
-      <cells width="300" backgroundColor="black">
+      <cells width="300" backgroundColor="gray">
         <elements xsi:type="metamodeloNewsletter:Button" link="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/" width="140" height="40" color="orange">
           <text link="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/" content="PRESENCIAL" fontFamily="Trebuchet MS" fontSize="3" fontColor="white" bold="true"/>
         </elements>
@@ -49,23 +49,23 @@
     </rows>
     <rows height="168">
       <cells width="600">
-        <elements xsi:type="metamodeloNewsletter:Image" link="https://apps.co/comunicaciones/articulos/certificate-internacionalmente-como-profesional-ti" width="600" height="168" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febrero14.png"/>
+        <elements xsi:type="metamodeloNewsletter:Image" link="https://apps.co/comunicaciones/articulos/certificate-internacionalmente-como-profesional-ti" height="168" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febrero14.png"/>
       </cells>
     </rows>
-    <rows height="18" backgroundColor="silver"/>
+    <rows height="18" backgroundColor="gray"/>
     <rows>
-      <cells backgroundColor="black">
+      <cells width="300" backgroundColor="silver">
         <elements xsi:type="metamodeloNewsletter:Video">
-          <preview link="https://apps.co/comunicaciones/articulos/en-el-2016-habra-1600-millones-de-cosas-conectadas/" width="300" height="113" src="https://s3.amazonaws.com/newsletter-imagenes/2016/04/appsco/disenoboletin19febrerob20.png"/>
+          <preview link="https://apps.co/comunicaciones/articulos/en-el-2016-habra-1600-millones-de-cosas-conectadas/" height="133" src="https://s3.amazonaws.com/newsletter-imagenes/2016/04/appsco/disenoboletin19febrerob20.png"/>
           <title link="" align="center" content="En el 2016 habrá 1600 millones de cosas conectadas" fontSize="2" fontColor="white" bold="false" textAlign="center"/>
           <button link="https://apps.co/comunicaciones/articulos/en-el-2016-habra-1600-millones-de-cosas-conectadas/" align="center" width="140" height="40" color="orange">
             <text link="https://apps.co/comunicaciones/articulos/en-el-2016-habra-1600-millones-de-cosas-conectadas/" align="center" content="VER VIDEO" fontFamily="Trebuchet MS" fontSize="3" fontColor="white" bold="true" textAlign="center"/>
           </button>
         </elements>
       </cells>
-      <cells backgroundColor="black">
+      <cells width="300" backgroundColor="silver">
         <elements xsi:type="metamodeloNewsletter:Video">
-          <preview link="https://apps.co/comunicaciones/articulos/tendencias-claves-para-un-ano-cargado-de-tecnologi/" width="300" height="113" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB17.png"/>
+          <preview link="https://apps.co/comunicaciones/articulos/tendencias-claves-para-un-ano-cargado-de-tecnologi/" height="133" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/disenoboletin19febreroB17.png"/>
           <title align="center" content="Tendencias claves para un año cargado de tecnología" fontSize="2" fontColor="white" bold="false" textAlign="center"/>
           <button link="https://apps.co/comunicaciones/articulos/tendencias-claves-para-un-ano-cargado-de-tecnologi/" align="center" width="140" height="40" color="orange">
             <text link="https://apps.co/comunicaciones/articulos/tendencias-claves-para-un-ano-cargado-de-tecnologi/" align="center" content="VER VIDEO" fontFamily="Trebuchet MS" fontSize="3" fontColor="white" bold="true" textAlign="center"/>
@@ -75,12 +75,12 @@
     </rows>
     <rows height="30">
       <cells>
-        <elements xsi:type="metamodeloNewsletter:Divider" color="gray"/>
+        <elements xsi:type="metamodeloNewsletter:Divider" color="silver"/>
       </cells>
     </rows>
     <rows height="114">
       <cells width="600">
-        <elements xsi:type="metamodeloNewsletter:Image" width="600" height="114" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/Capturadepantalla20151106alas2.38.43p.m..png"/>
+        <elements xsi:type="metamodeloNewsletter:Image" height="114" src="http://x65089.track.list-manage7.net/web_public_shared/image/65089/Capturadepantalla20151106alas2.38.43p.m..png"/>
       </cells>
     </rows>
   </table>
