@@ -39,15 +39,13 @@ rule Row2TR
 				t.bgcolor = s.backgroundColor.literal;
 			}
 			if(s.cells.size() > 1){
-				var newTR = new html!TR;
+				var tr = new html!TR;
 				for(cell in s.cells){
-					newTR.addElement(cell.equivalent());
+					tr.addElement(cell.equivalent());
 				}
-				var newTABLE = new html!TABLE;
-				newTABLE.addElement(newTR);
-				var newTD = new html!TD;
-				newTD.addElement(newTABLE);
-				t.addElement(newTD);
+				t.addElementRecursively(new html!TD);
+				t.addElementRecursively(new html!TABLE);
+				t.addElementRecursively(tr);
 			} else if(s.cells.size() == 1){
 				t.addElement(s.cells.get(0).equivalent());			
 			}
@@ -83,8 +81,12 @@ rule Cell2TD
 operation newsletter!Text getHtmlTextElement() : html!HTMLElement{
 	var p = new html!P;
 	p.align = self.align.literal;
-	p.addStyle(html!StyleKey#lineHeight, self.height.toString() + "px");
-	p.addStyle(html!StyleKey#width, self.width.toString() + "px");
+	if(self.height > 0){
+		p.addStyle(html!StyleKey#lineHeight, self.height.toString() + "px");
+	}
+	if(self.width > 0){
+		p.addStyle(html!StyleKey#width, self.width.toString() + "px");
+	}
 	
 	//Add A element if applies
 	if(self.link <> null){
