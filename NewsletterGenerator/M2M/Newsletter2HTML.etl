@@ -215,6 +215,7 @@ operation newsletter!Video getHtmlVideoElement() : html!HTMLElement{
 operation newsletter!Divider getHtmlDividerElement() : html!HTMLElement{
 	var table = new html!TABLE;
 	table.cellpadding = "10";
+	table.cellspacing = "0";
 	table.width = "100%";
 	
 	var hr = new html!HR;
