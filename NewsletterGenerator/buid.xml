@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project default="build">
+	<!-- Models -->
+	<property name="newsletter.model.location" location="../Metamodels/MetamodeloNewsletter/model/Newsletter.xmi" />
+	<property name="html.model.location" location="${basedir}/models/HTML.xmi" />
+
+	<!-- Metamodels -->
+	<property name="newsletter.metamodel.location" location="../Metamodels/MetamodeloNewsletter/metamodel/Newsletter.ecore" />
+	<property name="newsletter.metamodel.uri" value="http://www.example.org/metamodeloNewsletter" />
+	<property name="html.metamodel.location" location="../Metamodels/MetamodeloHTML/metamodel/HTML.ecore" />
+	<property name="html.metamodel.uri" value="HTML" />
+	
+	
+	<target name="build">
+		<echo>Borrando el contenido de la carpeta generated</echo>
+		<delete dir="${generated.location}" failonerror="true" />
+		<antcall target="m2m" />
+	</target>
+	
+	<!-- M2M -->
+	<target name="m2m">
+		<echo>Realizar transformación ETL</echo>
+		<epsilon.emf.register file="${newsletter.metamodel.location}" />
+		<epsilon.emf.register file="${html.metamodel.location}" />
+		<epsilon.emf.loadModel name="html" modelfile="${html.model.location}" metamodeluri="${html.metamodel.uri}" read="false" store="true" />
+		<epsilon.emf.loadModel name="newsletter" modelfile="${newsletter.model.location}" metamodeluri="${newsletter.metamodel.uri}" read="true" store="false" />
+		<epsilon.etl src="${basedir}/M2M/Newsletter2HTML.etl">
+			<model ref="newsletter" />
+			<model ref="html" />
+		</epsilon.etl>
+		<antcall target="m2t" />
+	</target>
+	
+	<!-- M2T -->
+	<target name="m2t">
+		<echo>Corriendo Template EGL</echo>
+		<epsilon.emf.register file="${html.metamodel.location}" />
+		<epsilon.emf.loadModel name="html" modelfile="${html.model.location}" metamodeluri="${html.metamodel.uri}" read="true" store="true" />
+		<epsilon.egl src="${basedir}/M2T/html/generateHTML.egl">
+			<model ref="html" />
+		</epsilon.egl>
+	</target>
+</project>

@@ -99,5 +99,6 @@
     <eLiterals name="textAlign" literal="text-align"/>
     <eLiterals name="textDecoration" literal="text-decoration"/>
     <eLiterals name="width"/>
+    <eLiterals name="padding" literal="padding"/>
   </eClassifiers>
 </ecore:EPackage>

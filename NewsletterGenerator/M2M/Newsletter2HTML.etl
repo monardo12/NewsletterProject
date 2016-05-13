@@ -15,7 +15,9 @@ rule Table2TABLE
 		s:newsletter!Table
 	to
 		t:html!TABLE{
-			t.width = s.width.toString();
+			if(s.width <> null and s.width > 0){
+				t.width = s.width.asString();
+			}
 			if(s.backgroundColor <> null){
 				t.bgcolor = s.backgroundColor.literal;
 			}
@@ -34,22 +36,27 @@ rule Row2TR
 		s:newsletter!Row
 	to
 		t:html!TR{
-			t.height = s.height.asString();
+			if(s.height <> null and s.height > 0){
+				t.height = s.height.asString();
+			}
 			if(s.backgroundColor <> null){
 				t.bgcolor = s.backgroundColor.literal;
 			}
 			if(s.cells.size() > 1){
-				var newTR = new html!TR;
+				var tr = new html!TR;
 				for(cell in s.cells){
-					newTR.addElement(cell.equivalent());
+					tr.addElement(cell.equivalent());
 				}
-				var newTABLE = new html!TABLE;
-				newTABLE.addElement(newTR);
-				var newTD = new html!TD;
-				newTD.addElement(newTABLE);
-				t.addElement(newTD);
+				t.addElementRecursively(new html!TD);
+				var table = new html!TABLE;
+				table.cellspacing = "0";
+				table.cellpadding = "0";
+				t.addElementRecursively(table);
+				t.addElementRecursively(tr);
 			} else if(s.cells.size() == 1){
 				t.addElement(s.cells.get(0).equivalent());			
+			} else if(s.cells.isEmpty()){
+				t.addElement(new html!TD);
 			}
 		}
 
@@ -59,7 +66,9 @@ rule Cell2TD
 		s:newsletter!Cell
 	to
 		t:html!TD{
-			t.width = s.width.asString();
+			if(s.width <> null and s.width > 0){
+				t.width = s.width.asString();
+			}
 			if(s.backgroundColor <> null){
 				t.bgcolor = s.backgroundColor.literal;
 			}
@@ -83,8 +92,15 @@ rule Cell2TD
 operation newsletter!Text getHtmlTextElement() : html!HTMLElement{
 	var p = new html!P;
 	p.align = self.align.literal;
-	p.addStyle(html!StyleKey#lineHeight, self.height.toString() + "px");
-	p.addStyle(html!StyleKey#width, self.width.toString() + "px");
+	if(self.height <> null and self.height > 0){
+		p.addStyle(html!StyleKey#lineHeight, self.height.toString() + "px");
+	}
+	if(self.height <> null and self.width > 0){
+		p.addStyle(html!StyleKey#width, self.width.toString() + "px");
+	}
+	if(self.textAlign <> null){
+		p.addStyle(html!StyleKey#textAlign, self.textAlign.literal);
+	}
 	
 	//Add A element if applies
 	if(self.link <> null){
@@ -119,6 +135,7 @@ operation newsletter!Text getHtmlTextElement() : html!HTMLElement{
 	font.face = self.fontFamily.literal;
 	font.size = self.fontSize;
 	font.color = self.fontColor.literal;
+	font.addStyle(html!StyleKey#padding, "5px");
 	p.addElementRecursively(font);
 	return p;
 }
@@ -156,10 +173,22 @@ operation newsletter!Image getHtmlImageElement() : html!HTMLElement{
 	p.align = self.align.literal;
 	var img = new html!IMG;
 	img.src = self.src;
-	img.width = self.width.toString();
-	img.height = self.height.toString();
-	img.border = "0";
 	
+	//Set image width
+	if(self.width <> null and self.width > 0){
+		img.width = self.width.toString();
+	} else {
+		img.width = "100%";
+	}
+	
+	//Set image height
+	if(self.height <> null and self.height > 0){
+		img.height = self.height.toString();
+	} else {
+		img.height = "100%";
+	}
+	
+	img.border = "0";
 	if(self.link <> null){
 		var a = new html!A;
 		a.ref = self.link;
@@ -179,12 +208,14 @@ operation newsletter!Video getHtmlVideoElement() : html!HTMLElement{
 	div.addElement(preview);
 	div.addElement(title);
 	div.addElement(button);
+	div.addStyle(html!StyleKey#padding, "20px");
 	return div;
 }
 
 operation newsletter!Divider getHtmlDividerElement() : html!HTMLElement{
 	var table = new html!TABLE;
 	table.cellpadding = "10";
+	table.cellspacing = "0";
 	table.width = "100%";
 	
 	var hr = new html!HR;

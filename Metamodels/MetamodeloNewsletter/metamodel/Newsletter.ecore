@@ -16,7 +16,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Row">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cells" lowerBound="1" upperBound="-1"
         eType="#//Cell" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="#//enums/Color"
         defaultValueLiteral="white"/>
   </eClassifiers>
@@ -25,7 +25,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//Element" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="#//enums/Color"
         defaultValueLiteral="white"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="verticalAlignment" eType="#//enums/VerticalAlign"
@@ -75,23 +75,23 @@
   </eClassifiers>
   <eSubpackages name="enums" nsURI="enums" nsPrefix="enums">
     <eClassifiers xsi:type="ecore:EEnum" name="Color">
-      <eLiterals name="aqua" literal="Aqua"/>
-      <eLiterals name="black" literal="Black"/>
-      <eLiterals name="blue" literal="Blue"/>
-      <eLiterals name="fuchsia" literal="Fuchsia"/>
-      <eLiterals name="gray" literal="Gray"/>
-      <eLiterals name="green" literal="Green"/>
-      <eLiterals name="lime" literal="Lime"/>
-      <eLiterals name="maroon" literal="Maroon"/>
-      <eLiterals name="navy" literal="Navy"/>
-      <eLiterals name="olive" literal="Olive"/>
-      <eLiterals name="orange" literal="Orange"/>
-      <eLiterals name="purple" literal="Purple"/>
-      <eLiterals name="red" literal="Red"/>
-      <eLiterals name="silver" literal="Silver"/>
-      <eLiterals name="teal" literal="Teal"/>
-      <eLiterals name="white" literal="White"/>
-      <eLiterals name="yellow" literal="Yellow"/>
+      <eLiterals name="aqua" literal="aqua"/>
+      <eLiterals name="black" literal="black"/>
+      <eLiterals name="blue" literal="blue"/>
+      <eLiterals name="fuchsia" literal="fuchsia"/>
+      <eLiterals name="gray" literal="gray"/>
+      <eLiterals name="green" literal="green"/>
+      <eLiterals name="lime" literal="lime"/>
+      <eLiterals name="maroon" literal="maroon"/>
+      <eLiterals name="navy" literal="navy"/>
+      <eLiterals name="olive" literal="olive"/>
+      <eLiterals name="orange" literal="orange"/>
+      <eLiterals name="purple" literal="purple"/>
+      <eLiterals name="red" literal="red"/>
+      <eLiterals name="silver" literal="silver"/>
+      <eLiterals name="teal" literal="teal"/>
+      <eLiterals name="white" literal="white"/>
+      <eLiterals name="yellow" literal="yellow"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="Align">
       <eLiterals name="left" literal="left"/>
