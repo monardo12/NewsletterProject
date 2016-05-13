@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<android:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="android" xmlns:view="view" xsi:schemaLocation="android view">
+<android:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="android" xmlns:view="view" xsi:schemaLocation="android view" name="NewsletterAndroid" identifier="">
   <mainActivity name="MainActivity" title="NewsLetterMockup">
     <layout>
       <content xsi:type="view:RelativeLayout">

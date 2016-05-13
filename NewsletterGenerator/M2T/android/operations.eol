@@ -1,0 +1,54 @@
+/**--------------------------------------------------------------**/
+//Definicion de operaciones reutilizables entre egls
+/**--------------------------------------------------------------**/
+
+//--------------------------------------------------------------
+//Operaciones sobre directorios
+//--------------------------------------------------------------
+operation dirGenerado(): String{  
+   return "../../generated/";
+}
+
+operation dirStaticFiles():String{
+ return "../../staticFiles/";
+}
+
+operation getAppName():String{
+ 	var app : android!Application:= android!Application.all.at(0);
+ 	return app.name;
+}
+
+operation dirProyecto(): String{  
+   return dirGenerado() + getAppName() +"/";
+}
+
+operation dirAppFolder(): String{  
+   return dirProyecto() + "app/";
+}
+
+operation dirSourceFolder(): String {
+	return dirAppFolder()+"src/";
+}
+
+operation dirPackageMainJava(packageName: String): String {
+	return dirSourceFolder()+ "main/java/co/edu/uniandes/newslettermockup/";
+}
+
+operation dirPackageResources(packageName: String): String {
+	return dirSourceFolder()+ "main/res";
+}
+
+operation dirPackageAndroidTest(packageName: String): String {
+	return dirSourceFolder()+ "androidTest/java/co/edu/uniandes/newslettermockup/";
+}
+
+operation dirPackageTest(packageName: String): String {
+	return dirSourceFolder()+ "test/java/co/edu/uniandes/newslettermockup/";
+}
+operation dirPackage(packageName: String): String {
+	return dirSourceFolder()+ packageName;
+}
+
+operation dirPackage(packageName: String): String {
+	return dirSource()+ packageName + "/";
+}
