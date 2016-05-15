@@ -1,54 +1,60 @@
 <?xml version="1.0" encoding="ASCII"?>
-<android:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="android" xmlns:view="view" xsi:schemaLocation="android view" name="NewsletterAndroid" identifier="">
+<android:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="android" xmlns:view="view" xsi:schemaLocation="android view" name="NewsletterAndroid" identifier="co.edu.uniandes.newslettermockup">
   <mainActivity name="MainActivity" title="NewsLetterMockup">
-    <layout>
+    <layout name="activity_main">
       <content xsi:type="view:RelativeLayout">
         <views xsi:type="view:ScrollView">
           <views xsi:type="view:GridLayout">
             <views xsi:type="view:LinearLayout" layout_height="wrap_content">
-              <views xsi:type="view:ImageView" id="@+id/imageView_header02_1" label="" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/header02_1"/>
+              <views xsi:type="view:ImageView" id="imageView_header02_1" label="" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/header02_1"/>
             </views>
             <views xsi:type="view:LinearLayout" layout_height="wrap_content" layout_row="1" background="#E5E5E5">
-              <views xsi:type="view:TextView" id="@+id/textView1" text="SEMANA 15 - 20 DE FEBRERO 2016" textColor="#ffffff" layout_width="wrap_content" layout_height="wrap_content" layout_gravity="right"/>
+              <views xsi:type="view:TextView" id="textView1" text="SEMANA 15 - 20 DE FEBRERO 2016" textColor="#ffffff" layout_width="wrap_content" layout_height="wrap_content" layout_gravity="right"/>
             </views>
             <views xsi:type="view:LinearLayout" layout_height="wrap_content" layout_row="2">
-              <views xsi:type="view:ImageView" id="@+id/imageView_disenoboletin19febrerob02_2" layout_height="wrap_content" src="@drawable/disenoboletin19febrerob02_2"/>
+              <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrerob02_2" layout_height="wrap_content" src="@drawable/disenoboletin19febrerob02_2"/>
             </views>
             <views xsi:type="view:LinearLayout" layout_height="wrap_content" layout_row="3">
-              <views xsi:type="view:ImageView" id="@+id/imageView_disenoboletin19febrerob03" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/disenoboletin19febrerob03"/>
+              <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrerob03" label="" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/disenoboletin19febrerob03"/>
             </views>
             <views xsi:type="view:LinearLayout" layout_height="wrap_content" layout_row="4" background="#464749">
-              <views xsi:type="view:TextView" id="@+id/textView2" text="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL " textColor="#ffffff" textAppearance="?android:attr/textAppearanceSmall" label="" layout_width="wrap_content" layout_height="wrap_content"/>
-              <views xsi:type="view:TextView" id="@+id/textView3" text="Aspectos jur&#xed;dicos que, como m&#xed;nimo, todo emprendedor debe conocer." textColor="#ffffff" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content"/>
+              <views xsi:type="view:TextView" id="textView2" text="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL " textColor="#ffffff" textAppearance="?android:attr/textAppearanceSmall" label="" layout_width="wrap_content" layout_height="wrap_content"/>
+              <views xsi:type="view:TextView" id="textView3" text="Aspectos jur&#xed;dicos que, como m&#xed;nimo, todo emprendedor debe conocer." textColor="#ffffff" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content"/>
             </views>
             <views xsi:type="view:GridLayout" layout_height="wrap_content" layout_row="5" background="#464749" rowCount="1" columnCount="2">
-              <views xsi:type="view:ImageView" id="@+id/imageView_disenoboletin19febrero05_1" textAlignment="" layout_width="wrap_content" layout_height="wrap_content" paddingLeft="" src="@drawable/disenoboletin19febrero05_1"/>
+              <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrero05_1" textAlignment="" layout_width="wrap_content" layout_height="wrap_content" paddingLeft="" src="@drawable/disenoboletin19febrero05_1"/>
               <views xsi:type="view:LinearLayout" layout_height="wrap_content" layout_column="1">
-                <views xsi:type="view:Button" id="@+id/button" text="Presencial" layout_width="wrap_content" layout_height="wrap_content" background="#DE8616"/>
-                <views xsi:type="view:TextView" id="@+id/textView8" text="25 de Febrero 2016 - 2:00 pm" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content" background="#ffffff"/>
-                <views xsi:type="view:Button" id="@+id/button3" layout_width="wrap_content" layout_height="wrap_content" background="#DE8616"/>
-                <views xsi:type="view:TextView" id="@+id/textView4" text="3 de Marzo 2016 - 2:00 pm" textColor="#ffffff" textAlignment="" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content"/>
+                <views xsi:type="view:Button" id="button_presencial" text="Presencial" layout_width="wrap_content" layout_height="wrap_content" background="#DE8616"/>
+                <views xsi:type="view:TextView" id="textView8" text="25 de Febrero 2016 - 2:00 pm" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content" background="#ffffff"/>
+                <views xsi:type="view:Button" id="button_virtual" layout_width="wrap_content" layout_height="wrap_content" background="#DE8616"/>
+                <views xsi:type="view:TextView" id="textView4" text="3 de Marzo 2016 - 2:00 pm" textColor="#ffffff" textAlignment="" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content"/>
               </views>
             </views>
             <views xsi:type="view:LinearLayout" id="" layout_height="wrap_content" layout_row="6" background="#464749">
-              <views xsi:type="view:ImageView" id="@+id/imageView_disenoboletin19febrero14" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/disenoboletin19febrero14"/>
+              <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrero14" layout_width="wrap_content" layout_height="wrap_content" background="" src="@drawable/disenoboletin19febrero14"/>
             </views>
             <views xsi:type="view:GridLayout" layout_height="wrap_content" layout_row="7" background="#E5E5E5" rowCount="1" columnCount="2">
-              <views xsi:type="view:LinearLayout" layout_width="0dp" layout_height="wrap_content" layout_weight="0.5" layout_gravity="">
-                <views xsi:type="view:ImageView" id="@+id/imageView_disenoboletin19febrerob20" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/disenoboletin19febrerob20"/>
-                <views xsi:type="view:TextView" id="@+id/textView6" text="En el 2016 habr&#xe1; 1600 millones de cosas conectadas " textAlignment="center" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content" background=""/>
+              <views xsi:type="view:LinearLayout" id="layout_video1" layout_width="0dp" layout_height="wrap_content" layout_weight="0.5" layout_gravity="">
+                <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrerob20" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/disenoboletin19febrerob20"/>
+                <views xsi:type="view:TextView" id="textView6" text="En el 2016 habr&#xe1; 1600 millones de cosas conectadas " textAlignment="center" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content" background=""/>
               </views>
-              <views xsi:type="view:LinearLayout" layout_width="0dp" layout_height="wrap_content" layout_weight="0.5" layout_column="1">
-                <views xsi:type="view:ImageView" id="@+id/imageView_disenoboletin19febrerob17" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/disenoboletin19febrerob17"/>
-                <views xsi:type="view:TextView" id="@+id/textView7" text="Tendencias claves para un a&#xf1;o cargado de tecnolog&#xed;a" textAlignment="center" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content"/>
+              <views xsi:type="view:LinearLayout" id="layout_video2" layout_width="0dp" layout_height="wrap_content" layout_weight="0.5" layout_column="1">
+                <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrerob17" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/disenoboletin19febrerob17"/>
+                <views xsi:type="view:TextView" id="textView7" text="Tendencias claves para un a&#xf1;o cargado de tecnolog&#xed;a" textAlignment="center" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content"/>
               </views>
             </views>
             <views xsi:type="view:LinearLayout" layout_height="wrap_content" layout_row="8">
-              <views xsi:type="view:ImageView" id="@+id/imageView_disenoboletin19febreropartners" text="" layout_height="wrap_content" src="@drawable/disenoboletin19febreropartners"/>
+              <views xsi:type="view:ImageView" id="imageView_disenoboletin19febreropartners" text="" layout_height="wrap_content" src="@drawable/disenoboletin19febreropartners"/>
             </views>
           </views>
         </views>
       </content>
     </layout>
+    <actions actionLink="https://apps.co/comunicaciones/articulos/elementos-legales-para-el-emprendimiento-digital-2/?mkt_hm=4&amp;utm_source=email_marketing&amp;utm_admin=65089&amp;utm_medium=email&amp;utm_campaign=Elementos" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.2/@views.0"/>
+    <actions actionLink="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.5/@views.1/@views.0"/>
+    <actions actionLink="https://plus.google.com/events/c541njr83ht26v8ic03tslq4c3c" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.5/@views.1/@views.2"/>
+    <actions actionLink="https://apps.co/comunicaciones/articulos/certificate-internacionalmente-como-profesional-ti/" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.6/@views.0"/>
+    <actions actionLink="https://www.youtube.com/watch?v=p542clXAwRw" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.7/@views.0"/>
+    <actions actionLink="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.7/@views.1"/>
   </mainActivity>
 </android:Application>

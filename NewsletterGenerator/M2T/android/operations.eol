@@ -30,25 +30,39 @@ operation dirSourceFolder(): String {
 	return dirAppFolder()+"src/";
 }
 
-operation dirPackageMainJava(packageName: String): String {
+operation dirPackageMainJava(): String {
 	return dirSourceFolder()+ "main/java/co/edu/uniandes/newslettermockup/";
 }
 
-operation dirPackageResources(packageName: String): String {
+operation dirPackageResources(): String {
 	return dirSourceFolder()+ "main/res";
 }
 
-operation dirPackageAndroidTest(packageName: String): String {
+operation dirPackageLayouts(): String {
+	return dirSourceFolder()+ "main/res/layout/";
+}
+
+operation dirPackageManifest(): String {
+	return dirSourceFolder()+ "main/";
+}
+
+operation dirPackageAndroidTest(): String {
 	return dirSourceFolder()+ "androidTest/java/co/edu/uniandes/newslettermockup/";
 }
 
-operation dirPackageTest(packageName: String): String {
+operation dirPackageTest(): String {
 	return dirSourceFolder()+ "test/java/co/edu/uniandes/newslettermockup/";
 }
 operation dirPackage(packageName: String): String {
 	return dirSourceFolder()+ packageName;
 }
 
-operation dirPackage(packageName: String): String {
-	return dirSource()+ packageName + "/";
+//--------------------------------------------------------------
+// Operaciones comunes para los egls 
+//--------------------------------------------------------------
+
+operation Application getPackageName(): String{
+	return self.identifier;
 }
+
+

@@ -28,6 +28,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Layout">
       <eStructuralFeatures xsi:type="ecore:EReference" name="content" lowerBound="1"
           eType="#//layout/view/ViewGroup" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eSubpackages name="view" nsURI="view" nsPrefix="view">
       <eClassifiers xsi:type="ecore:EClass" name="View" abstract="true">
