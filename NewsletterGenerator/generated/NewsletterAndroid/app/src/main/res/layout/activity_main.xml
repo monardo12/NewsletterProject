@@ -12,12 +12,12 @@
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:columnCount="1"
@@ -110,67 +110,81 @@
                     android:textColor="#ffffff" />
             </LinearLayout>
 
-
-            <GridLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_row="5"
-                android:background="#464749"
-                android:columnCount="2"
-                android:rowCount="1">
+                android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imageView_disenoboletin19febrero05_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_column="0"
-                    android:layout_row="0"
-                    android:src="@drawable/disenoboletin19febrero05_1" />
-
-                <LinearLayout
+                <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_column="1"
-                    android:layout_row="0"
-                    android:orientation="vertical">
+                    android:background="#464749"
+                    android:columnCount="2"
+                    android:rowCount="1">
 
-                    <Button
-                        android:id="@+id/button_presencial"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="0.4"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/selector_on_click_view_orange"
-                        android:clickable="true"
-                        android:onClick="onClick"
-                        android:text="Presencial" />
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="wrap_content"
+                        <ImageView
+                            android:id="@+id/imageView_disenoboletin19febrero05_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/disenoboletin19febrero05_1" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="0.6"
                         android:layout_height="wrap_content"
-                        android:text="25 de Febrero 2016 - 2:00 pm"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="#ffffff" />
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_virtual"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColorHint="#DE8616"
-                        android:background="@drawable/selector_on_click_view_orange"
-                        android:onClick="onClick"
-                        android:text="Virtual" />
+                        <Button
+                            android:id="@+id/button_presencial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_on_click_view_orange"
+                            android:clickable="true"
+                            android:onClick="onClick"
+                            android:text="Presencial" />
 
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3 de Marzo 2016 - 2:00 pm"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="#ffffff" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25 de Febrero 2016 - 2:00 pm"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#ffffff" />
 
-            </GridLayout>
+                        <Button
+                            android:id="@+id/button_virtual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="#DE8616"
+                            android:background="@drawable/selector_on_click_view_orange"
+                            android:onClick="onClick"
+                            android:text="Virtual" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 de Marzo 2016 - 2:00 pm"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+
+                </GridLayout>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -188,70 +202,75 @@
                     android:src="@drawable/disenoboletin19febrero14" />
             </LinearLayout>
 
-            <GridLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_row="7"
-                android:background="#E5E5E5"
-                android:columnCount="2"
-                android:rowCount="1">
+                android:orientation="vertical">
 
 
-                <LinearLayout
-                    android:id="@+id/layout_video1"
-                    android:layout_width="0dp"
+                <GridLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_column="0"
-                    android:layout_columnWeight="0.5"
-                    android:layout_row="0"
-                    android:onClick="onClick"
-                    android:background="@drawable/selector_on_click_video"
-                    android:clickable="true"
-                    android:orientation="vertical">
+                    android:background="#E5E5E5"
+                    android:columnCount="2"
+                    android:rowCount="1">
 
-                    <ImageView
-                        android:id="@+id/imageView_disenoboletin19febrerob20"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/layout_video1"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="0.5"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/disenoboletin19febrerob20" />
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        android:onClick="onClick"
+                        android:background="@drawable/selector_on_click_video_orange"
+                        android:clickable="true"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
+                        <ImageView
+                            android:id="@+id/imageView_disenoboletin19febrerob20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/disenoboletin19febrerob20" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="En el 2016 habrá 1600 millones de cosas conectadas "
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_video2"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="0.5"
                         android:layout_height="wrap_content"
-                        android:text="En el 2016 habrá 1600 millones de cosas conectadas "
-                        android:textAlignment="center"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
-                </LinearLayout>
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        android:onClick="onClick"
+                        android:background="@drawable/selector_on_click_video_orange"
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/layout_video2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_column="1"
-                    android:layout_columnWeight="0.5"
-                    android:layout_row="0"
-                    android:onClick="onClick"
-                    android:background="@drawable/selector_on_click_video"
-                    android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/imageView_disenoboletin19febrerob17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/disenoboletin19febrerob17" />
 
-                    <ImageView
-                        android:id="@+id/imageView_disenoboletin19febrerob17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/disenoboletin19febrerob17" />
-
-                    <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tendencias claves para un año cargado de tecnología"
-                        android:textAlignment="center"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
-                </LinearLayout>
-            </GridLayout>
-
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tendencias claves para un año cargado de tecnología"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </LinearLayout>
+                </GridLayout>
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

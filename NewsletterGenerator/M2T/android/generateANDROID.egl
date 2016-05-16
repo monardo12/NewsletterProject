@@ -1,5 +1,7 @@
 [%	
 import "./operations.eol";
+import "./stylesGenerator.egl";
+
 var app : android!Application= android!Application.all.at(0);
 out.println("Application" + app);
 %]
@@ -13,7 +15,7 @@ out.println("INICIO generador Android2Text--------------------------------------
 //Elementos principales para dividir el trabajo en templates
 var mainActivity : android!Activity = app.mainActivity;
 var layout : android!Layout  = mainActivity.layout;
-
+generateCustomViewSelectors();
 
 //Formateadores para imprimir el codigo de forma organizada en el archivo destino.
 //Formateador JAVA

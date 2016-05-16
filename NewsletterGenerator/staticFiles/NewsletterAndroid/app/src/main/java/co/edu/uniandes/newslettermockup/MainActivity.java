@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_main);
         actionLinksViews = new HashMap<Integer, String>();
 
         //Por cada vista con link se crea un registro en un hashmap de actions

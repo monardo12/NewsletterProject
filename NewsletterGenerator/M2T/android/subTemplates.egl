@@ -108,6 +108,7 @@ operation View printViewProperties()
 	self.printText();
 	self.printTextColor();
 	self.printTextAlignment();
+	self.printTextStyle();
 	self.printTextAppearance();
 	self.printLayoutWith();
 	self.printLayoutHeight();
@@ -151,8 +152,9 @@ operation View printText(){
 
 @Template
 operation View printTextColor(){
-	if(self.textColor.isDefined()){
-	%]android:textColor="[%=self.textColor%]"
+
+	if(self.textColor.isDefined() and getColorByKey(self.textColor)<>'NONE'){
+	%]android:textColor="[%=getColorByKey(self.textColor)%]"
 	[%
 	}
 }
@@ -161,6 +163,14 @@ operation View printTextColor(){
 operation View printTextAlignment(){
 	if(self.textAlignment.isDefined()){
 	%]android:textAlignment="[%=self.textAlignment%]"
+	[%
+	}
+}
+
+@Template
+operation View printTextStyle(){
+	if(self.textStyle.isDefined()){
+	%]android:textStyle="[%=self.textStyle%]"
 	[%
 	}
 }
@@ -234,8 +244,8 @@ var container = self.eContainer();
 
 @Template
 operation View printBackground(){
-	if(self.background.isDefined()){
-	%]android:background="[%=self.background%]"
+	if(self.background.isDefined() and getColorByKey(self.background)<>'NONE'){
+	%]android:background="[%=self.getBackgroundByKey((self.background))%]"
 	[%
 	}
 }

@@ -42,6 +42,11 @@ operation dirPackageLayouts(): String {
 	return dirSourceFolder()+ "main/res/layout/";
 }
 
+operation dirPackageDrawables(): String {
+	return dirSourceFolder()+ "main/res/drawable/";
+}
+
+
 operation dirPackageManifest(): String {
 	return dirSourceFolder()+ "main/";
 }
@@ -79,5 +84,120 @@ operation ViewGroup isGridLayout(): Boolean {
 }
 operation ViewGroup isLinearLayout(): Boolean {
     return self.isTypeOf(LinearLayout);
+}
+
+// -------------------------------
+// Operations about colors
+// -------------------------------
+
+/**
+* Dark colors for create gradients and custom styles
+*/
+operation mapDarkColors(): Map{
+
+	var mapDarkColors : Map = 
+	Map{
+	'aqua'='#009688',
+	'black'='#000000',
+	'blue'='#0099cc',
+	'fuchsia'='#A80F43',
+	'gray'='#363739',
+	'green'='#669900',
+	'lime'='#00FF00',
+	'maroon'='#D30101',
+	'navy'='#000080',
+	'olive'='#808000',
+	'orange'='#bb6008',
+	'purple'='#7D2AA6',
+	'red'='#cc0000',
+	'silver'='#726D6D',
+	'teal'='#008080',
+	'white'='#DAD2D2',
+	'yellow'='#FFCC00'
+	};
+	return mapDarkColors;
+}
+
+/**
+* Light and default value for colors
+*/
+operation mapLightColors(): Map{
+
+	var mapLightColors : Map = 
+	Map{
+	'aqua'='#00FFFF',
+	'black'='#000000',
+	'blue'='#33b5e5',
+	'fuchsia'='#FF4081',
+	'gray'='#464749',
+	'green'='#99cc00',
+	'lime'='#A2F5A2',
+	'maroon'='#800000',
+	'navy'='#4747AA',
+	'olive'='#E8E838',
+	'orange'='#f3ae1b',
+	'purple'='#aa66cc',
+	'red'='#CB4848',
+	'silver'='#C0C0C0',
+	'teal'='#008080',
+	'white'='#FFFFFF',
+	'yellow'='#FFFF00'
+	};
+	
+	return mapLightColors;
+}
+
+operation getColorsKeys(): Set{
+
+	var keysColors:Set = mapLightColors().keySet();
+	return keysColors;
+}
+
+operation getColorByKey(keyColor: String ): String{
+	
+	if (getColorsKeys().includes(keyColor))
+	{
+		return mapLightColors().get(keyColor);
+	}
+	else 
+	{
+		return 'NONE';
+	}
+}
+
+operation getColorDarkByKey(keyColor: String ): String{
+	
+	if (getColorsKeys().includes(keyColor))
+	{
+		return mapDarkColors().get(keyColor);
+	}
+	else 
+	{
+		return 'NONE';
+	}
+}
+
+operation View getBackgroundByKey(keyColor): String{
+	
+	var app : android!Application:= android!Application.all.at(0);
+	var mainActivity : android!Activity = app.mainActivity;
+	
+	// Valida si el background es un selector
+	if (mainActivity.actions->collect(a | a.view).includes(self))
+	{
+		if (self.isTypeOf(Button))
+		{
+			return '@drawable/selector_on_click_view_'+keyColor;
+		}
+		if (self.isTypeOf(LinearLayout)) 
+		{
+			return '@drawable/selector_on_click_video_'+keyColor;
+		}
+		return getColorByKey(keyColor);
+	}
+	else
+	{
+		return getColorByKey(keyColor);
+	}
 }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/relativeLayout_root"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:paddingBottom="@dimen/activity_vertical_margin"
@@ -9,12 +10,14 @@ android:paddingRight="@dimen/activity_horizontal_margin"
 android:paddingTop="@dimen/activity_vertical_margin"
 tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 	<ScrollView
+	android:id="@+id/scrollView_root"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent"
+	android:layout_height="wrap_content"
 	>
 		<GridLayout
+		android:id="@+id/gridLayout_root"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
+		android:layout_height="wrap_content"
 		android:rowCount="9"
 		android:columnCount="1"
 		>
@@ -39,13 +42,13 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 			android:layout_height="wrap_content"
 			android:layout_row="1"
 			android:layout_column="0"
-			android:background="#E5E5E5"
+			android:background="#C0C0C0"
 			android:orientation="vertical"
 			>
 				<TextView
 				android:id="@+id/textView1"
 				android:text="SEMANA 15 - 20 DE FEBRERO 2016"
-				android:textColor="#ffffff"
+				android:textColor="#FFFFFF"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_gravity="right"
@@ -96,7 +99,8 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 				<TextView
 				android:id="@+id/textView2"
 				android:text="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL "
-				android:textColor="#ffffff"
+				android:textColor="#FFFFFF"
+				android:textStyle="bold"
 				android:textAppearance="?android:attr/textAppearanceSmall"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -105,7 +109,7 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 				<TextView
 				android:id="@+id/textView3"
 				android:text="Aspectos jurídicos que, como mínimo, todo emprendedor debe conocer."
-				android:textColor="#ffffff"
+				android:textColor="#FFFFFF"
 				android:textAppearance="?android:attr/textAppearanceSmall"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -113,77 +117,86 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 				</TextView>
 				
 			</LinearLayout>
-			<GridLayout
+			<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_row="5"
 			android:layout_column="0"
 			android:background="#464749"
-			android:rowCount="1"
-			android:columnCount="2"
+			android:orientation="vertical"
 			>
-				<LinearLayout
-				android:layout_width="0dp"
+				<GridLayout
+				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_row="0"
-				android:layout_column="0"
-				android:orientation="vertical"
-				android:layout_columnWeight="0.4"
+				android:background="#464749"
+				android:rowCount="1"
+				android:columnCount="2"
 				>
-					<ImageView
-					android:id="@+id/imageView_disenoboletin19febrero05_1"
-					android:layout_width="wrap_content"
+					<LinearLayout
+					android:layout_width="0dp"
 					android:layout_height="wrap_content"
-					android:src="@drawable/disenoboletin19febrero05_1"
+					android:layout_row="0"
+					android:layout_column="0"
+					android:orientation="vertical"
+					android:layout_columnWeight="0.4"
 					>
-					</ImageView>
+						<ImageView
+						android:id="@+id/imageView_disenoboletin19febrero05_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@drawable/disenoboletin19febrero05_1"
+						>
+						</ImageView>
+						
+					</LinearLayout>
+					<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_row="0"
+					android:layout_column="1"
+					android:orientation="vertical"
+					android:layout_columnWeight="0.6"
+					>
+						<Button
+						android:id="@+id/button_presencial"
+						android:text="Presencial"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:background="@drawable/selector_on_click_view_orange"
+						>
+						</Button>
+						<TextView
+						android:id="@+id/textView8"
+						android:text="25 de Febrero 2016 - 2:00 pm"
+						android:textColor="#FFFFFF"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						>
+						</TextView>
+						<Button
+						android:id="@+id/button_virtual"
+						android:text="Virtual"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:background="@drawable/selector_on_click_view_orange"
+						>
+						</Button>
+						<TextView
+						android:id="@+id/textView4"
+						android:text="3 de Marzo 2016 - 2:00 pm"
+						android:textColor="#FFFFFF"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						>
+						</TextView>
+						
+					</LinearLayout>
 					
-				</LinearLayout>
-				<LinearLayout
-				android:layout_width="0dp"
-				android:layout_height="wrap_content"
-				android:layout_row="0"
-				android:layout_column="1"
-				android:orientation="vertical"
-				android:layout_columnWeight="0.6"
-				>
-					<Button
-					android:id="@+id/button_presencial"
-					android:text="Presencial"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="#DE8616"
-					>
-					</Button>
-					<TextView
-					android:id="@+id/textView8"
-					android:text="25 de Febrero 2016 - 2:00 pm"
-					android:textAppearance="?android:attr/textAppearanceSmall"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="#ffffff"
-					>
-					</TextView>
-					<Button
-					android:id="@+id/button_virtual"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="#DE8616"
-					>
-					</Button>
-					<TextView
-					android:id="@+id/textView4"
-					android:text="3 de Marzo 2016 - 2:00 pm"
-					android:textColor="#ffffff"
-					android:textAppearance="?android:attr/textAppearanceSmall"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					>
-					</TextView>
-					
-				</LinearLayout>
+				</GridLayout>
 				
-			</GridLayout>
+			</LinearLayout>
 			<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -201,71 +214,82 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 				</ImageView>
 				
 			</LinearLayout>
-			<GridLayout
+			<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_row="7"
 			android:layout_column="0"
-			android:background="#E5E5E5"
-			android:rowCount="1"
-			android:columnCount="2"
+			android:orientation="vertical"
 			>
-				<LinearLayout
-				android:id="@+id/layout_video1"
-				android:layout_width="0dp"
+				<GridLayout
+				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_row="0"
-				android:layout_column="0"
-				android:orientation="vertical"
-				android:layout_columnWeight="0.5"
+				android:background="#C0C0C0"
+				android:rowCount="1"
+				android:columnCount="2"
 				>
-					<ImageView
-					android:id="@+id/imageView_disenoboletin19febrerob20"
-					android:layout_width="wrap_content"
+					<LinearLayout
+					android:id="@+id/layout_video1"
+					android:layout_width="0dp"
 					android:layout_height="wrap_content"
-					android:src="@drawable/disenoboletin19febrerob20"
+					android:layout_row="0"
+					android:layout_column="0"
+					android:background="@drawable/selector_on_click_video_orange"
+					android:orientation="vertical"
+					android:layout_columnWeight="0.5"
 					>
-					</ImageView>
-					<TextView
-					android:id="@+id/textView6"
-					android:text="En el 2016 habrá 1600 millones de cosas conectadas "
-					android:textAlignment="center"
-					android:textAppearance="?android:attr/textAppearanceSmall"
-					android:layout_width="wrap_content"
+						<ImageView
+						android:id="@+id/imageView_disenoboletin19febrerob20"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@drawable/disenoboletin19febrerob20"
+						>
+						</ImageView>
+						<TextView
+						android:id="@+id/textView6"
+						android:text="En el 2016 habrá 1600 millones de cosas conectadas "
+						android:textColor="#FFFFFF"
+						android:textAlignment="center"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						>
+						</TextView>
+						
+					</LinearLayout>
+					<LinearLayout
+					android:id="@+id/layout_video2"
+					android:layout_width="0dp"
 					android:layout_height="wrap_content"
+					android:layout_row="0"
+					android:layout_column="1"
+					android:background="@drawable/selector_on_click_video_orange"
+					android:orientation="vertical"
+					android:layout_columnWeight="0.5"
 					>
-					</TextView>
+						<ImageView
+						android:id="@+id/imageView_disenoboletin19febrerob17"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@drawable/disenoboletin19febrerob17"
+						>
+						</ImageView>
+						<TextView
+						android:id="@+id/textView7"
+						android:text="Tendencias claves para un año cargado de tecnología"
+						android:textColor="#FFFFFF"
+						android:textAlignment="center"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						>
+						</TextView>
+						
+					</LinearLayout>
 					
-				</LinearLayout>
-				<LinearLayout
-				android:id="@+id/layout_video2"
-				android:layout_width="0dp"
-				android:layout_height="wrap_content"
-				android:layout_row="0"
-				android:layout_column="1"
-				android:orientation="vertical"
-				android:layout_columnWeight="0.5"
-				>
-					<ImageView
-					android:id="@+id/imageView_disenoboletin19febrerob17"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:src="@drawable/disenoboletin19febrerob17"
-					>
-					</ImageView>
-					<TextView
-					android:id="@+id/textView7"
-					android:text="Tendencias claves para un año cargado de tecnología"
-					android:textAlignment="center"
-					android:textAppearance="?android:attr/textAppearanceSmall"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					>
-					</TextView>
-					
-				</LinearLayout>
+				</GridLayout>
 				
-			</GridLayout>
+			</LinearLayout>
 			<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"

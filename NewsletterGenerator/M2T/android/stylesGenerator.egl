@@ -1,0 +1,33 @@
+[%
+import "./operations.eol";
+operation generateCustomViewSelectors()
+{
+	//Formateador XML
+	var fxml = new Native("org.eclipse.epsilon.egl.formatter.language.XmlFormatter");
+	
+	// Complex Styles templates
+	var buttonTemplate : Template;
+	var videoTemplate : Template;
+	
+	var keys:Set = getColorsKeys();
+	//keys.println();
+	
+	for (k in keys) {
+		
+		var darkColor:String = mapDarkColors().get(k);
+		var lightColor:String = mapLightColors().get(k);
+	
+		buttonTemplate = TemplateFactory.load("generateButtonStyle.egl");
+		buttonTemplate.setFormatter(fxml);
+		buttonTemplate.populate("darkColor", darkColor);
+		buttonTemplate.populate("lightColor", lightColor);
+		buttonTemplate.generate(dirPackageDrawables() + "selector_on_click_view_" + k.toLowerCase() + ".xml");
+	
+		videoTemplate = TemplateFactory.load("generateVideoStyle.egl");
+		videoTemplate.setFormatter(fxml);
+		videoTemplate.populate("darkColor", darkColor);
+		videoTemplate.populate("lightColor", lightColor);
+		videoTemplate.generate(dirPackageDrawables() + "selector_on_click_video_" + k.toLowerCase() + ".xml");
+	}
+}
+%]
