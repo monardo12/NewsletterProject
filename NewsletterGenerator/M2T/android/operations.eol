@@ -65,4 +65,19 @@ operation Application getPackageName(): String{
 	return self.identifier;
 }
 
+operation getPackageName():String{
+ 	var app : android!Application:= android!Application.all.at(0);
+ 	return app.identifier;
+}
+
+operation View isViewGroup(): Boolean {
+    return self.isKindOf(ViewGroup);
+}
+
+operation ViewGroup isGridLayout(): Boolean {
+    return self.isTypeOf(GridLayout);
+}
+operation ViewGroup isLinearLayout(): Boolean {
+    return self.isTypeOf(LinearLayout);
+}
 

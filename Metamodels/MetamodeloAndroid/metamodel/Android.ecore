@@ -46,9 +46,10 @@
             defaultValueLiteral="match_parent"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_gravity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_row" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_column" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_row" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+            defaultValueLiteral="0"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_column" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+            defaultValueLiteral="0"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="paddingBottom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="paddingLeft" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -67,11 +68,15 @@
       <eClassifiers xsi:type="ecore:EClass" name="LinearLayout" eSuperTypes="#//layout/view/ViewGroup">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="orientation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
             defaultValueLiteral="vertical"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_columnWeight"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="RelativeLayout" eSuperTypes="#//layout/view/ViewGroup"/>
       <eClassifiers xsi:type="ecore:EClass" name="GridLayout" eSuperTypes="#//layout/view/ViewGroup">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+            defaultValueLiteral="1"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+            defaultValueLiteral="1"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_aligntParentTop"
             eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_centerHorizontal"
