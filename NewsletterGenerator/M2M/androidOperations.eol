@@ -1,0 +1,66 @@
+
+/**
+* Generates a valid id for a GridLayout
+*/
+operation android!GridLayout nextId(): String{
+	var key = 'lastId_GridLayout';
+	contIds.put(key, contIds.get(key) + 1);
+	return  'gridLayout_'+contIds.get(key);
+}
+
+/**
+* Generates a valid id for a LinearLayout
+*/
+operation android!LinearLayout nextId(): String{
+	var key = 'lastId_LinearLayout';
+	contIds.put(key, contIds.get(key) + 1);
+	return  'linearLayout_'+contIds.get(key);
+}
+
+/**
+* Generates a valid id for a ImageView
+*/
+operation android!ImageView nextId(): String{
+	var key = 'lastId_ImageView';
+	contIds.put(key, contIds.get(key) + 1);
+	return  'imageView_'+contIds.get(key);
+}
+
+/**
+* Generates a valid id for a Button
+*/
+operation android!Button nextId(): String{
+	var key = 'lastId_Button';
+	contIds.put(key, contIds.get(key) + 1);
+	return  'button_'+contIds.get(key);
+}
+
+/**
+* Generates a valid id for a TextView
+*/
+operation android!TextView nextId(): String{
+	var key = 'lastId_TextView';
+	contIds.put(key, contIds.get(key) + 1);
+	return  'textView_'+contIds.get(key);
+}
+
+operation newsletter!Cell toGravity(vAlign):String{
+	
+	if (vAlign==newsletter!VerticalAlign#middle)
+	{
+		return "center_vertical";
+	}
+	if (vAlign==newsletter!VerticalAlign#bottom)
+	{
+		return "bottom";
+	}
+	if (vAlign==newsletter!VerticalAlign#top)
+	{
+		return "top";
+	}
+}
+
+operation newsletter!Table getSumCells():Real{
+	return 100.0D;
+}
+

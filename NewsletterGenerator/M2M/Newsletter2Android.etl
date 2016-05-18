@@ -1,0 +1,171 @@
+import "androidOperations.eol";
+pre {
+	"Start ETL Newsletter2Android".println();
+	
+	// This map will save a number with the last
+	// id count by each clickable element
+	var contIds:Map = Map{
+	'lastId_ImageView'=0,
+	'lastId_TextView'=0,
+	'lastId_Button'=0,
+	'lastId_LinearLayout'=0,
+	'lastId_GridLayout'=0
+	};
+	
+}
+
+/**
+* This is the primary rule.
+*/
+rule Newsletter2Android
+	transform 
+		s:newsletter!Newsletter
+	to 
+		t:android!Application{
+		t.name = "NewsletterAndroid";
+		t.identifier = "co.edu.uniandes.newslettermockup";			
+		t.mainActivity = s.equivalent('Newsletter2Activity');
+		}
+@lazy
+rule Newsletter2Activity
+	transform 
+		s:newsletter!Newsletter
+	to 
+		t:android!Activity{
+		t.name = "MainActivity";
+		t.title = "NewsLetterMockup";
+		if(s.table <> null){
+				t.layout = s.equivalent('Newsletter2Layout');
+				//t.actions = 
+			}
+		}
+@lazy
+rule Newsletter2Layout
+	transform 
+		s:newsletter!Newsletter
+	to 
+		t:android!Layout{
+		t.name = "activity_main";
+		t.content = s.table.equivalent('RootTable2RelativeScrollableGridLayout');
+		}
+
+@lazy
+rule RootTable2RelativeScrollableGridLayout
+	transform 
+		s:newsletter!Table
+	to 
+		t:android!RelativeLayout{
+		t.id = "relativeLayout_root";
+		t.layout_width = "match_parent";
+		t.layout_height = "match_parent";
+		t.paddingBottom = "@dimen/activity_vertical_margin";
+		t.paddingLeft = "@dimen/activity_horizontal_margin";
+		t.paddingRight = "@dimen/activity_horizontal_margin";
+		t.paddingTop = "@dimen/activity_vertical_margin";
+		
+		var scrollView:android!ScrollView = new android!ScrollView;
+		scrollView.id = "scrollView_root";
+		scrollView.layout_width = "match_parent";
+		scrollView.layout_height = "wrap_content";
+		
+		var rootGridLayout:android!GridLayout = s.equivalent('Table2GridLayout');
+		rootGridLayout.layout_aligntParentTop = true;
+		rootGridLayout.layout_centerHorizontal =true;
+		
+		scrollView.views.add (rootGridLayout); 		
+		
+		t.views.add(scrollView);
+				
+		}
+@lazy
+rule  Table2GridLayout
+	transform 
+		s:newsletter!Table
+	to 
+		t:android!GridLayout{
+		t.id = t.nextId();
+		t.layout_width = "match_parent";
+		t.layout_height = "wrap_content";
+		
+		if(s.backgroundColor <> null){
+				t.backgroud = s.backgroundColor.literal;
+			}
+			
+		var widthSumCells = s.getSumCells();
+		var rowCount = 1;
+		var maxColumnCount =1;
+		
+		for(row in s.rows){
+			rowCount = loopCount;
+			
+			if(row.cells.size()==1)
+			{
+				//LinearLayout
+				for(cell in row.cells){	
+					var ll:android!LinearLayout = cell.equivalent();
+					ll.layout_columnWeight = 1.0d;
+					ll.layout_column = 0;
+					ll.layout_row = rowCount-1;
+					t.views.add(ll);
+				}
+			}
+			else
+			{
+				//GridLayout (con linear por celda)
+				//columnas = cantidad celdas...
+				if (row.cells.size()>maxColumnCount)
+				{
+					maxColumnCount = row.cells.size();
+				}
+				
+			}
+			
+						
+			}
+		t.rowCount = rowCount;
+		t.columnCount = maxColumnCount;
+		}
+@lazy 
+rule Cell2LinearLayout
+	transform 
+		s:newsletter!Cell
+	to 
+		t:android!LinearLayout{
+		t.id= t.nextId();
+		t.layout_width = "match_parent";
+		t.layout_height = "wrap_content";
+		t.orientation = "vertical";
+		
+		if(s.backgroundColor <> null){
+				t.background = s.backgroundColor.literal;
+			}
+			
+		t.gravity = s.toGravity( s.verticalAlignment);
+		
+		if(s.table.isDefined()){
+				t.views.add (s.table.equivalent('Table2GridLayout'));
+		}
+		
+		//t.views = s.elements.equivalent();
+		//Text to textview, button to button, 
+		//image to imageview y video to linear especial,
+		// divider to linear especial
+		}
+		
+		 	
+
+post {
+	"Finish ETL Newsletter2Android".println();
+	// Print the results 
+	("Application: " + android!Application.all().size()).println(); 
+	("Activity: " + android!Activity.all().size()).println(); 
+	("View: " + android!View.all().size()).println(); 
+	("	ViewGroup: " + android!ViewGroup.all().size()).println();
+	("		RelativeLayout: " + android!RelativeLayout.all().size()).println();
+	("		ScrollView: " + android!ScrollView.all().size()).println();
+	("		GridLayout: " + android!GridLayout.all().size()).println();
+	("		LinearLayout: " + android!LinearLayout.all().size()).println();
+	("	ImageView: " + android!ImageView.all().size()).println();
+	("	Button: " + android!Button.all().size()).println();
+	("	TextView: " + android!TextView.all().size()).println();
+}	

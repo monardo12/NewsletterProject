@@ -69,6 +69,7 @@
             defaultValueLiteral="vertical"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_columnWeight"
             eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="gravity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="RelativeLayout" eSuperTypes="#//layout/view/ViewGroup"/>
       <eClassifiers xsi:type="ecore:EClass" name="GridLayout" eSuperTypes="#//layout/view/ViewGroup">

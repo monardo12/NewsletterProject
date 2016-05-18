@@ -106,9 +106,10 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 				android:layout_height="wrap_content"
 				>
 				</TextView>
+
 				<TextView
 				android:id="@+id/textView3"
-				android:text="Aspectos jurídicos que, como mínimo, todo emprendedor debe conocer."
+				android:text="Aspectos jurï¿½dicos que, como mï¿½nimo, todo emprendedor debe conocer."
 				android:textColor="#FFFFFF"
 				android:textAppearance="?android:attr/textAppearanceSmall"
 				android:layout_width="wrap_content"
@@ -247,7 +248,7 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 						</ImageView>
 						<TextView
 						android:id="@+id/textView6"
-						android:text="En el 2016 habrá 1600 millones de cosas conectadas "
+						android:text="En el 2016 habrï¿½ 1600 millones de cosas conectadas "
 						android:textColor="#FFFFFF"
 						android:textAlignment="center"
 						android:textAppearance="?android:attr/textAppearanceSmall"
@@ -276,7 +277,7 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 						</ImageView>
 						<TextView
 						android:id="@+id/textView7"
-						android:text="Tendencias claves para un año cargado de tecnología"
+						android:text="Tendencias claves para un aï¿½o cargado de tecnologï¿½a"
 						android:textColor="#FFFFFF"
 						android:textAlignment="center"
 						android:textAppearance="?android:attr/textAppearanceSmall"
