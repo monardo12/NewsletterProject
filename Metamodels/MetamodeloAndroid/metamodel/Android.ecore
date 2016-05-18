@@ -37,7 +37,7 @@
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="textColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="textAlignment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="textAppearance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="textSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
             defaultValueLiteral="match_parent"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

@@ -59,8 +59,54 @@ operation newsletter!Cell toGravity(vAlign):String{
 		return "top";
 	}
 }
+/**
+* Get Styles from newsletter!Text that applies
+* in a android!TextView
+*/
+operation newsletter!Text extractTextStyles():String{
 
-operation newsletter!Table getSumCells():Real{
-	return 100.0D;
+	var styles = "";
+		if (self.bold)
+		{
+			styles = "bold";
+		}
+		if (self.italic)
+		{
+			styles = "italic";
+		}
+		if (self.bold and self.italic)
+		{
+			styles = "bold | italic";
+		}
+	return styles;
 }
+
+operation newsletter!Row getSumCells():Real{
+	return 1.0d;
+}
+
+/**
+* Returns the image name normalized for android 
+* Given the newsletter!Image that contains the src
+* The normalization removes special characters and accentuations.
+*/
+operation newsletter!Image extractImageNameNormalized(target:android!ImageView):String{
+	
+	var urlImagen: new Native("java.lang.String") = self.src;
+	var lastSlash = urlImagen.lastIndexOf('/');
+	//lastSlash.println();
+	var lastDot = urlImagen.lastIndexOf('.');
+	//lastDot.println();
+	var nombre = urlImagen.substring(lastSlash+1, lastDot);
+	//Normaliza el nombre de la imgen, en android solo puede ser en minusculas 
+	//y sin caracteres especiales.
+	nombre = nombre.replaceAll("[-+.^:,]","");
+	nombre = nombre.toLowerCase();
+	nombre = nombre.replaceAll("[αινσϊ]","");
+	
+	("Imagen " + target.id + " = "+nombre).println();
+	
+	return nombre.asString();
+}
+
 

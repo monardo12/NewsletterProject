@@ -51,7 +51,7 @@ tLayout.setFormatter(fxml);
 tLayout.populate("ma", mainActivity);
 tLayout.populate("layout", layout);
 tLayout.populate("app", app);
-tLayout.generate(dirPackageLayouts() + layout.name + "-temp.xml");
+tLayout.generate(dirPackageLayouts() + layout.name + "_temp.xml");
 
 //Template Generador de Manifest
 

@@ -16,8 +16,12 @@ pre {
 
 /**
 * This is the primary rule.
+* This rule is the starting point of the transformation, this map Newsletter
+* to Application. 
+* - It will launch the definition of the 'mainActivity' relation 
+* throught the equivalent function 
 */
-rule Newsletter2Android
+rule Newsletter2Application
 	transform 
 		s:newsletter!Newsletter
 	to 
@@ -26,6 +30,15 @@ rule Newsletter2Android
 		t.identifier = "co.edu.uniandes.newslettermockup";			
 		t.mainActivity = s.equivalent('Newsletter2Activity');
 		}
+		
+/**
+* This rule executes the transformation for the map Newsletter
+* to Activity. 
+* - It will launch the definition of the 'layout' relation 
+* throught the equivalent function 
+* - It will launch the definition of the 'actions' relation 
+* throught the equivalent function 
+*/
 @lazy
 rule Newsletter2Activity
 	transform 
@@ -39,6 +52,12 @@ rule Newsletter2Activity
 				//t.actions = 
 			}
 		}
+/**
+* This rule executes the transformation for the map Newsletter
+* to Layout. 
+* - It will launch the definition of the 'content' relation 
+* throught the equivalent function.
+*/
 @lazy
 rule Newsletter2Layout
 	transform 
@@ -49,13 +68,19 @@ rule Newsletter2Layout
 		t.content = s.table.equivalent('RootTable2RelativeScrollableGridLayout');
 		}
 
+/**
+* This rule executes the transformation for the map Table
+* to RelativeScrollableGridLayout. 
+* - It will launch the definition of the 'views' relation 
+* throught the equivalent function.
+*/
 @lazy
 rule RootTable2RelativeScrollableGridLayout
 	transform 
 		s:newsletter!Table
 	to 
 		t:android!RelativeLayout{
-		t.id = "relativeLayout_root";
+		t.id = "root_relativeLayout";
 		t.layout_width = "match_parent";
 		t.layout_height = "match_parent";
 		t.paddingBottom = "@dimen/activity_vertical_margin";
@@ -64,11 +89,12 @@ rule RootTable2RelativeScrollableGridLayout
 		t.paddingTop = "@dimen/activity_vertical_margin";
 		
 		var scrollView:android!ScrollView = new android!ScrollView;
-		scrollView.id = "scrollView_root";
+		scrollView.id = "root_scrollView";
 		scrollView.layout_width = "match_parent";
 		scrollView.layout_height = "wrap_content";
 		
 		var rootGridLayout:android!GridLayout = s.equivalent('Table2GridLayout');
+		rootGridLayout.id = "root_"+rootGridLayout.id;
 		rootGridLayout.layout_aligntParentTop = true;
 		rootGridLayout.layout_centerHorizontal =true;
 		
@@ -77,13 +103,19 @@ rule RootTable2RelativeScrollableGridLayout
 		t.views.add(scrollView);
 				
 		}
+/**
+* This rule executes the transformation for the map Table
+* to GridLayout. 
+* - It will launch the definition of the 'views' relation 
+* throught the equivalent function.
+*/
 @lazy
 rule  Table2GridLayout
 	transform 
 		s:newsletter!Table
 	to 
 		t:android!GridLayout{
-		t.id = t.nextId();
+		t.id = "table_"+t.nextId();
 		t.layout_width = "match_parent";
 		t.layout_height = "wrap_content";
 		
@@ -91,16 +123,15 @@ rule  Table2GridLayout
 				t.backgroud = s.backgroundColor.literal;
 			}
 			
-		var widthSumCells = s.getSumCells();
 		var rowCount = 1;
-		var maxColumnCount =1;
+		var columnCount =1;
 		
 		for(row in s.rows){
 			rowCount = loopCount;
 			
 			if(row.cells.size()==1)
 			{
-				//LinearLayout
+				//LinearLayout Row (only one cell)
 				for(cell in row.cells){	
 					var ll:android!LinearLayout = cell.equivalent();
 					ll.layout_columnWeight = 1.0d;
@@ -111,27 +142,47 @@ rule  Table2GridLayout
 			}
 			else
 			{
-				//GridLayout (con linear por celda)
-				//columnas = cantidad celdas...
-				if (row.cells.size()>maxColumnCount)
-				{
-					maxColumnCount = row.cells.size();
-				}
+				//GridLayout Row (2 or mor cells, with LinearLayout by Cell)
+				var gridCell = new android!GridLayout;
+				gridCell.id = "cell_"+ gridCell.nextId();
+				gridCell.columnCount = row.cells.size();
+				gridCell.rowCount = 1;
 				
+				for(cell in row.cells){	
+					var ll:android!LinearLayout = cell.equivalent();
+					
+					ll.layout_columnWeight = (cell.width/row.getSumCells());
+					ll.layout_width="0dp";
+					ll.layout_height="wrap_content";
+					ll.layout_column = loopCount-1;
+					ll.layout_row = 0;
+					
+					gridCell.layout_column = 0;
+					gridCell.layout_row = rowCount-1;
+					gridCell.views.add(ll);
+					
+					t.views.add(gridCell);
+				}
 			}
 			
 						
 			}
 		t.rowCount = rowCount;
-		t.columnCount = maxColumnCount;
+		t.columnCount = columnCount;
 		}
+/**
+* This rule executes the transformation for the map Cell
+* to LinearLayout. 
+* - It will launch the definition of the 'views' relation 
+* throught the equivalent function.
+*/
 @lazy 
 rule Cell2LinearLayout
 	transform 
 		s:newsletter!Cell
 	to 
 		t:android!LinearLayout{
-		t.id= t.nextId();
+		t.id= "cell_"+t.nextId();
 		t.layout_width = "match_parent";
 		t.layout_height = "wrap_content";
 		t.orientation = "vertical";
@@ -145,13 +196,129 @@ rule Cell2LinearLayout
 		if(s.table.isDefined()){
 				t.views.add (s.table.equivalent('Table2GridLayout'));
 		}
+		t.views = s.elements.equivalent();
+		//Posible rules called in above equivalen() operation:
+		//Text to Textview, Button to Button, 
+		//Image to Imageview, Video to special LinearLayoutVideo,
+		//and Divider to special LinearLayoutDivider,
+		}
+
+/**
+* This rule executes the transformation for the map Text
+* to TextView.  It will not launch more definitions.
+*/
+@lazy 
+rule Text2TextView
+	transform 
+		s:newsletter!Text
+	to
+		t:android!TextView{
+		t.id= t.nextId();
 		
-		//t.views = s.elements.equivalent();
-		//Text to textview, button to button, 
-		//image to imageview y video to linear especial,
-		// divider to linear especial
+		t.layout_width = "wrap_content";
+		t.layout_height = "wrap_content";
+		
+		t.text = s.content;
+		t.textColor = s.fontColor.literal;
+		t.textAlignment = "center";
+		t.layout_gravity= s.textAlign.literal;
+		t.textAppearance = "?android:attr/textAppearanceSmall";
+		t.textSize = (10+(s.fontSize.asInteger())).asString()+"dp";
+		t.textStyle = s.extractTextStyles();
+		
+		}
+/**
+* This rule executes the transformation for the map Text
+* to TextView.  It will not launch more definitions.
+*/
+@lazy 
+rule Button2Button
+	transform 
+		s:newsletter!Button
+	to
+		t:android!Button{
+		t.id= t.nextId();
+		
+		t.layout_width = "wrap_content";
+		t.layout_height = "wrap_content";
+		t.background = s.color.literal;
+		
+		//Atributos tomados del Text del Button
+		var text:newsletter!Text = s.text;
+		t.text = text.content;
+		t.textColor = text.fontColor.literal;
+		t.textAlignment = "center";
+		t.layout_gravity= text.textAlign.literal;
+		t.textSize = (10+(text.fontSize.asInteger())).asString()+"dp";
+		t.textStyle = text.extractTextStyles();
+		
+		
+		}
+@lazy 
+rule Image2ImageView
+	transform 
+		s:newsletter!Image
+	to
+		t:android!ImageView{
+		t.id= t.nextId();
+		
+		t.layout_width = "wrap_content";
+		t.layout_height = "wrap_content";
+		
+		t.src = s.extractImageNameNormalized(t);
+		
+		}
+@lazy 
+rule Video2LinearLayoutVideo
+	transform 
+		s:newsletter!Video
+	to
+		t:android!LinearLayout{
+		t.id= "video_"+t.nextId();
+		
+		t.layout_width = "wrap_content";
+		t.layout_height = "wrap_content";
+		
+		var preview:android!ImageView = s.preview.equivalent();
+		var title:android!TextView = s.title.equivalent();
+		
+		t.views.add(preview);
+		t.views.add(title);
+		
+		}
+@lazy 
+rule Divider2LinearLayoutDivider
+	transform 
+		s:newsletter!Divider
+	to
+		t:android!LinearLayout{
+		t.id= "divider_"+t.nextId();
+		t.orientation="vertical";
+		t.gravity="center";
+		
+		t.layout_width="match_parent";
+		if (t.layout_height.isDefined() > 2 )
+		{
+			t.layout_height= s.height.asString() + "dp";
+		}
+		else
+		{
+			t.layout_height= "2dp";
 		}
 		
+		t.paddingLeft="10dp";
+		t.paddingRight="10dp";
+		
+		var separator:android!LinearLayout = new android!LinearLayout;
+		separator.id= "separator_"+separator.nextId();
+		separator.orientation="horizontal";
+		separator.background=s.color.literal;
+		separator.layout_width="match_parent";
+		separator.layout_height="2dp";
+		
+		t.views.add(separator);
+		
+		}			
 		 	
 
 post {
@@ -165,7 +332,10 @@ post {
 	("		ScrollView: " + android!ScrollView.all().size()).println();
 	("		GridLayout: " + android!GridLayout.all().size()).println();
 	("		LinearLayout: " + android!LinearLayout.all().size()).println();
-	("	ImageView: " + android!ImageView.all().size()).println();
+	("			VideoLinearLayout: " + android!LinearLayout.all()->select( e | e.id.startsWith("video_")).size()).println();
+	("			DividerLinearLayout: " + android!LinearLayout.all()->select( e | e.id.startsWith("divider_")).size()).println();
 	("	Button: " + android!Button.all().size()).println();
 	("	TextView: " + android!TextView.all().size()).println();
+	("	ImageView: " + android!ImageView.all().size()).println();
+	
 }	

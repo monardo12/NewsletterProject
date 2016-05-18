@@ -2,11 +2,11 @@
 <android:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="android" xmlns:view="view" xsi:schemaLocation="android view" name="NewsletterAndroid" identifier="co.edu.uniandes.newslettermockup">
   <mainActivity name="MainActivity" title="NewsLetterMockup">
     <layout name="activity_main">
-      <content xsi:type="view:RelativeLayout" id="relativeLayout_root" textAlignment="" label="" background="" paddingBottom="@dimen/activity_vertical_margin" paddingLeft="@dimen/activity_horizontal_margin" paddingRight="@dimen/activity_horizontal_margin" paddingTop="@dimen/activity_vertical_margin">
+      <content xsi:type="view:RelativeLayout" id="relativeLayout_root" textAlignment=""  background="" paddingBottom="@dimen/activity_vertical_margin" paddingLeft="@dimen/activity_horizontal_margin" paddingRight="@dimen/activity_horizontal_margin" paddingTop="@dimen/activity_vertical_margin">
         <views xsi:type="view:ScrollView" id="scrollView_root" layout_height="wrap_content">
           <views xsi:type="view:GridLayout" id="gridLayout_root" text="" layout_height="wrap_content" rowCount="9" layout_aligntParentTop="true" layout_centerHorizontal="true">
             <views xsi:type="view:LinearLayout" id="" layout_height="wrap_content">
-              <views xsi:type="view:ImageView" id="imageView_header02_1" label="" layout_width="wrap_content" layout_height="wrap_content" src="header02_1"/>
+              <views xsi:type="view:ImageView" id="imageView_header02_1"  layout_width="wrap_content" layout_height="wrap_content" src="header02_1"/>
             </views>
             <views xsi:type="view:LinearLayout" id="" layout_height="wrap_content" layout_row="1" background="silver">
               <views xsi:type="view:TextView" id="textView1" text="SEMANA 15 - 20 DE FEBRERO 2016" textColor="white" layout_width="wrap_content" layout_height="wrap_content" layout_gravity="right"/>
@@ -15,16 +15,16 @@
               <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrerob02_2" layout_height="wrap_content" src="disenoboletin19febrerob02_2"/>
             </views>
             <views xsi:type="view:LinearLayout" layout_height="wrap_content" layout_row="3">
-              <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrerob03" label="" layout_width="wrap_content" layout_height="wrap_content" src="disenoboletin19febrerob03"/>
+              <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrerob03"  layout_width="wrap_content" layout_height="wrap_content" src="disenoboletin19febrerob03"/>
             </views>
             <views xsi:type="view:LinearLayout" layout_height="wrap_content" layout_row="4" background="gray">
-              <views xsi:type="view:TextView" id="textView2" text="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL " textColor="white" textAppearance="?android:attr/textAppearanceSmall" label="" layout_width="wrap_content" layout_height="wrap_content" background="" textStyle="bold"/>
+              <views xsi:type="view:TextView" id="textView2" text="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL " textColor="white" textAppearance="?android:attr/textAppearanceSmall"  layout_width="wrap_content" layout_height="wrap_content" background="" textStyle="bold"/>
               <views xsi:type="view:TextView" id="textView3" text="Aspectos jur&#xed;dicos que, como m&#xed;nimo, todo emprendedor debe conocer." textColor="white" textAppearance="?android:attr/textAppearanceSmall" layout_width="wrap_content" layout_height="wrap_content"/>
             </views>
             <views xsi:type="view:LinearLayout" layout_height="wrap_content" layout_row="5" background="gray">
               <views xsi:type="view:GridLayout" layout_height="wrap_content" background="gray" columnCount="2">
                 <views xsi:type="view:LinearLayout" layout_width="0dp" layout_height="wrap_content" layout_columnWeight="0.4">
-                  <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrero05_1" textAlignment="" label="" layout_width="wrap_content" layout_height="wrap_content" paddingLeft="" src="disenoboletin19febrero05_1"/>
+                  <views xsi:type="view:ImageView" id="imageView_disenoboletin19febrero05_1" textAlignment=""  layout_width="wrap_content" layout_height="wrap_content" paddingLeft="" src="disenoboletin19febrero05_1"/>
                 </views>
                 <views xsi:type="view:LinearLayout" layout_width="0dp" layout_height="wrap_content" layout_column="1" layout_columnWeight="0.6">
                   <views xsi:type="view:Button" id="button_presencial" text="Presencial" layout_width="wrap_content" layout_height="wrap_content" background="orange"/>
