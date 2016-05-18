@@ -76,8 +76,6 @@ public class EnumsFactoryImpl extends EFactoryImpl implements EnumsFactory {
 				return createAlignFromString(eDataType, initialValue);
 			case EnumsPackage.VERTICAL_ALIGN:
 				return createVerticalAlignFromString(eDataType, initialValue);
-			case EnumsPackage.FONT_WEIGHT:
-				return createFontWeightFromString(eDataType, initialValue);
 			case EnumsPackage.FONT_FAMILY:
 				return createFontFamilyFromString(eDataType, initialValue);
 			default:
@@ -99,8 +97,6 @@ public class EnumsFactoryImpl extends EFactoryImpl implements EnumsFactory {
 				return convertAlignToString(eDataType, instanceValue);
 			case EnumsPackage.VERTICAL_ALIGN:
 				return convertVerticalAlignToString(eDataType, instanceValue);
-			case EnumsPackage.FONT_WEIGHT:
-				return convertFontWeightToString(eDataType, instanceValue);
 			case EnumsPackage.FONT_FAMILY:
 				return convertFontFamilyToString(eDataType, instanceValue);
 			default:
@@ -165,26 +161,6 @@ public class EnumsFactoryImpl extends EFactoryImpl implements EnumsFactory {
 	 * @generated
 	 */
 	public String convertVerticalAlignToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FontWeight createFontWeightFromString(EDataType eDataType, String initialValue) {
-		FontWeight result = FontWeight.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertFontWeightToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -2,6 +2,7 @@
  */
 package metamodeloNewsletter.impl;
 
+import metamodeloNewsletter.Button;
 import metamodeloNewsletter.Image;
 import metamodeloNewsletter.MetamodeloNewsletterPackage;
 import metamodeloNewsletter.Text;
@@ -25,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link metamodeloNewsletter.impl.VideoImpl#getPreview <em>Preview</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.VideoImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link metamodeloNewsletter.impl.VideoImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link metamodeloNewsletter.impl.VideoImpl#getButton <em>Button</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,14 +53,14 @@ public class VideoImpl extends ElementImpl implements Video {
 	protected Text title;
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The cached value of the '{@link #getButton() <em>Button</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDescription()
+	 * @see #getButton()
 	 * @generated
 	 * @ordered
 	 */
-	protected Text description;
+	protected Button button;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,8 +172,8 @@ public class VideoImpl extends ElementImpl implements Video {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Text getDescription() {
-		return description;
+	public Button getButton() {
+		return button;
 	}
 
 	/**
@@ -180,11 +181,11 @@ public class VideoImpl extends ElementImpl implements Video {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(Text newDescription, NotificationChain msgs) {
-		Text oldDescription = description;
-		description = newDescription;
+	public NotificationChain basicSetButton(Button newButton, NotificationChain msgs) {
+		Button oldButton = button;
+		button = newButton;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.VIDEO__DESCRIPTION, oldDescription, newDescription);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.VIDEO__BUTTON, oldButton, newButton);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -195,18 +196,18 @@ public class VideoImpl extends ElementImpl implements Video {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(Text newDescription) {
-		if (newDescription != description) {
+	public void setButton(Button newButton) {
+		if (newButton != button) {
 			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MetamodeloNewsletterPackage.VIDEO__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MetamodeloNewsletterPackage.VIDEO__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
+			if (button != null)
+				msgs = ((InternalEObject)button).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MetamodeloNewsletterPackage.VIDEO__BUTTON, null, msgs);
+			if (newButton != null)
+				msgs = ((InternalEObject)newButton).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MetamodeloNewsletterPackage.VIDEO__BUTTON, null, msgs);
+			msgs = basicSetButton(newButton, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.VIDEO__DESCRIPTION, newDescription, newDescription));
+			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.VIDEO__BUTTON, newButton, newButton));
 	}
 
 	/**
@@ -221,8 +222,8 @@ public class VideoImpl extends ElementImpl implements Video {
 				return basicSetPreview(null, msgs);
 			case MetamodeloNewsletterPackage.VIDEO__TITLE:
 				return basicSetTitle(null, msgs);
-			case MetamodeloNewsletterPackage.VIDEO__DESCRIPTION:
-				return basicSetDescription(null, msgs);
+			case MetamodeloNewsletterPackage.VIDEO__BUTTON:
+				return basicSetButton(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -239,8 +240,8 @@ public class VideoImpl extends ElementImpl implements Video {
 				return getPreview();
 			case MetamodeloNewsletterPackage.VIDEO__TITLE:
 				return getTitle();
-			case MetamodeloNewsletterPackage.VIDEO__DESCRIPTION:
-				return getDescription();
+			case MetamodeloNewsletterPackage.VIDEO__BUTTON:
+				return getButton();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -259,8 +260,8 @@ public class VideoImpl extends ElementImpl implements Video {
 			case MetamodeloNewsletterPackage.VIDEO__TITLE:
 				setTitle((Text)newValue);
 				return;
-			case MetamodeloNewsletterPackage.VIDEO__DESCRIPTION:
-				setDescription((Text)newValue);
+			case MetamodeloNewsletterPackage.VIDEO__BUTTON:
+				setButton((Button)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -280,8 +281,8 @@ public class VideoImpl extends ElementImpl implements Video {
 			case MetamodeloNewsletterPackage.VIDEO__TITLE:
 				setTitle((Text)null);
 				return;
-			case MetamodeloNewsletterPackage.VIDEO__DESCRIPTION:
-				setDescription((Text)null);
+			case MetamodeloNewsletterPackage.VIDEO__BUTTON:
+				setButton((Button)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -299,8 +300,8 @@ public class VideoImpl extends ElementImpl implements Video {
 				return preview != null;
 			case MetamodeloNewsletterPackage.VIDEO__TITLE:
 				return title != null;
-			case MetamodeloNewsletterPackage.VIDEO__DESCRIPTION:
-				return description != null;
+			case MetamodeloNewsletterPackage.VIDEO__BUTTON:
+				return button != null;
 		}
 		return super.eIsSet(featureID);
 	}

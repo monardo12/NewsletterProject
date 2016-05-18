@@ -61,7 +61,7 @@ public class ElementItemProvider
 			super.getPropertyDescriptors(object);
 
 			addLinkPropertyDescriptor(object);
-			addAlignmentPropertyDescriptor(object);
+			addAlignPropertyDescriptor(object);
 			addWidthPropertyDescriptor(object);
 			addHeightPropertyDescriptor(object);
 		}
@@ -91,19 +91,19 @@ public class ElementItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Alignment feature.
+	 * This adds a property descriptor for the Align feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAlignmentPropertyDescriptor(Object object) {
+	protected void addAlignPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Element_alignment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Element_alignment_feature", "_UI_Element_type"),
-				 MetamodeloNewsletterPackage.Literals.ELEMENT__ALIGNMENT,
+				 getString("_UI_Element_align_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Element_align_feature", "_UI_Element_type"),
+				 MetamodeloNewsletterPackage.Literals.ELEMENT__ALIGN,
 				 true,
 				 false,
 				 false,
@@ -184,7 +184,7 @@ public class ElementItemProvider
 
 		switch (notification.getFeatureID(Element.class)) {
 			case MetamodeloNewsletterPackage.ELEMENT__LINK:
-			case MetamodeloNewsletterPackage.ELEMENT__ALIGNMENT:
+			case MetamodeloNewsletterPackage.ELEMENT__ALIGN:
 			case MetamodeloNewsletterPackage.ELEMENT__WIDTH:
 			case MetamodeloNewsletterPackage.ELEMENT__HEIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

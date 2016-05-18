@@ -72,7 +72,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String WIDTH_EDEFAULT = null;
+	protected static final int WIDTH_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -82,7 +82,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * @generated
 	 * @ordered
 	 */
-	protected String width = WIDTH_EDEFAULT;
+	protected int width = WIDTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
@@ -92,7 +92,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color BACKGROUND_COLOR_EDEFAULT = Color.NONE;
+	protected static final Color BACKGROUND_COLOR_EDEFAULT = Color.WHITE;
 
 	/**
 	 * The cached value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
@@ -203,7 +203,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
@@ -212,8 +212,8 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(String newWidth) {
-		String oldWidth = width;
+	public void setWidth(int newWidth) {
+		int oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.CELL__WIDTH, oldWidth, width));
@@ -316,7 +316,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 				getElements().addAll((Collection<? extends Element>)newValue);
 				return;
 			case MetamodeloNewsletterPackage.CELL__WIDTH:
-				setWidth((String)newValue);
+				setWidth((Integer)newValue);
 				return;
 			case MetamodeloNewsletterPackage.CELL__BACKGROUND_COLOR:
 				setBackgroundColor((Color)newValue);
@@ -368,7 +368,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 			case MetamodeloNewsletterPackage.CELL__ELEMENTS:
 				return elements != null && !elements.isEmpty();
 			case MetamodeloNewsletterPackage.CELL__WIDTH:
-				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
+				return width != WIDTH_EDEFAULT;
 			case MetamodeloNewsletterPackage.CELL__BACKGROUND_COLOR:
 				return backgroundColor != BACKGROUND_COLOR_EDEFAULT;
 			case MetamodeloNewsletterPackage.CELL__VERTICAL_ALIGNMENT:

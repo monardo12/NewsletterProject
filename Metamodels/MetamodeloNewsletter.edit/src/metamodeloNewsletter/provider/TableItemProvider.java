@@ -86,7 +86,7 @@ public class TableItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -162,10 +162,8 @@ public class TableItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Table)object).getWidth();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Table_type") :
-			getString("_UI_Table_type") + " " + label;
+		Table table = (Table)object;
+		return getString("_UI_Table_type") + " " + table.getWidth();
 	}
 	
 

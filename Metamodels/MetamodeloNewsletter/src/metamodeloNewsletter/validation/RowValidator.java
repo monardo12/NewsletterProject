@@ -20,6 +20,8 @@ public interface RowValidator {
 	boolean validate();
 
 	boolean validateCells(EList<Cell> value);
+	boolean validateHeight(int value);
+
 	boolean validateHeight(String value);
 	boolean validateBackgroundColor(Color value);
 }

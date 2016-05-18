@@ -28,7 +28,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="Newsletter.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Element/link"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Element/alignment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Element/align"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Element/width"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Element/height"/>
     </genClasses>
@@ -37,10 +37,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Text/fontFamily"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Text/fontSize"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Text/fontColor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Text/fontWeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Text/bold"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Text/italic"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Text/underline"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Text/strikethrough"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Text/textAlign"/>
     </genClasses>
     <genClasses ecoreClass="Newsletter.ecore#//Button">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Newsletter.ecore#//Button/text"/>
@@ -52,14 +53,13 @@
     <genClasses ecoreClass="Newsletter.ecore#//Video">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Newsletter.ecore#//Video/preview"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Newsletter.ecore#//Video/title"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Newsletter.ecore#//Video/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Newsletter.ecore#//Video/button"/>
     </genClasses>
     <genClasses ecoreClass="Newsletter.ecore#//Divider">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Divider/color"/>
     </genClasses>
     <nestedGenPackages prefix="Enums" disposableProviderFactory="true" ecorePackage="Newsletter.ecore#//enums">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="Newsletter.ecore#//enums/Color">
-        <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/Color/none"/>
         <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/Color/aqua"/>
         <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/Color/black"/>
         <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/Color/blue"/>
@@ -87,10 +87,6 @@
         <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/VerticalAlign/top"/>
         <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/VerticalAlign/middle"/>
         <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/VerticalAlign/bottom"/>
-      </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="Newsletter.ecore#//enums/FontWeight">
-        <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/FontWeight/normal"/>
-        <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/FontWeight/bold"/>
       </genEnums>
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="Newsletter.ecore#//enums/FontFamily">
         <genEnumLiterals ecoreEnumLiteral="Newsletter.ecore#//enums/FontFamily/arial"/>

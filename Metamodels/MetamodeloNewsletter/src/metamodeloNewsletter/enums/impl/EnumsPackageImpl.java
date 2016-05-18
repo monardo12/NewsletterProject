@@ -9,7 +9,6 @@ import metamodeloNewsletter.enums.Color;
 import metamodeloNewsletter.enums.EnumsFactory;
 import metamodeloNewsletter.enums.EnumsPackage;
 import metamodeloNewsletter.enums.FontFamily;
-import metamodeloNewsletter.enums.FontWeight;
 import metamodeloNewsletter.enums.VerticalAlign;
 
 import metamodeloNewsletter.impl.MetamodeloNewsletterPackageImpl;
@@ -46,13 +45,6 @@ public class EnumsPackageImpl extends EPackageImpl implements EnumsPackage {
 	 * @generated
 	 */
 	private EEnum verticalAlignEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum fontWeightEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,15 +151,6 @@ public class EnumsPackageImpl extends EPackageImpl implements EnumsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getFontWeight() {
-		return fontWeightEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getFontFamily() {
 		return fontFamilyEEnum;
 	}
@@ -203,7 +186,6 @@ public class EnumsPackageImpl extends EPackageImpl implements EnumsPackage {
 		colorEEnum = createEEnum(COLOR);
 		alignEEnum = createEEnum(ALIGN);
 		verticalAlignEEnum = createEEnum(VERTICAL_ALIGN);
-		fontWeightEEnum = createEEnum(FONT_WEIGHT);
 		fontFamilyEEnum = createEEnum(FONT_FAMILY);
 	}
 
@@ -232,7 +214,6 @@ public class EnumsPackageImpl extends EPackageImpl implements EnumsPackage {
 
 		// Initialize enums and add enum literals
 		initEEnum(colorEEnum, Color.class, "Color");
-		addEEnumLiteral(colorEEnum, Color.NONE);
 		addEEnumLiteral(colorEEnum, Color.AQUA);
 		addEEnumLiteral(colorEEnum, Color.BLACK);
 		addEEnumLiteral(colorEEnum, Color.BLUE);
@@ -260,10 +241,6 @@ public class EnumsPackageImpl extends EPackageImpl implements EnumsPackage {
 		addEEnumLiteral(verticalAlignEEnum, VerticalAlign.TOP);
 		addEEnumLiteral(verticalAlignEEnum, VerticalAlign.MIDDLE);
 		addEEnumLiteral(verticalAlignEEnum, VerticalAlign.BOTTOM);
-
-		initEEnum(fontWeightEEnum, FontWeight.class, "FontWeight");
-		addEEnumLiteral(fontWeightEEnum, FontWeight.NORMAL);
-		addEEnumLiteral(fontWeightEEnum, FontWeight.BOLD);
 
 		initEEnum(fontFamilyEEnum, FontFamily.class, "FontFamily");
 		addEEnumLiteral(fontFamilyEEnum, FontFamily.ARIAL);
