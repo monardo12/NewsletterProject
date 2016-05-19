@@ -12,6 +12,7 @@ pre {
 	'lastId_GridLayout'=0
 	};
 	
+	var allActions:Set = new Set;
 }
 
 /**
@@ -49,7 +50,7 @@ rule Newsletter2Activity
 		t.title = "NewsLetterMockup";
 		if(s.table <> null){
 				t.layout = s.equivalent('Newsletter2Layout');
-				//t.actions = 
+				t.actions = allActions;
 			}
 		}
 /**
@@ -67,6 +68,7 @@ rule Newsletter2Layout
 		t.name = "activity_main";
 		t.content = s.table.equivalent('RootTable2RelativeScrollableGridLayout');
 		}
+
 
 /**
 * This rule executes the transformation for the map Table
@@ -134,7 +136,6 @@ rule  Table2GridLayout
 				//LinearLayout Row (only one cell)
 				for(cell in row.cells){	
 					var ll:android!LinearLayout = cell.equivalent();
-					ll.layout_columnWeight = 1.0d;
 					ll.layout_column = 0;
 					ll.layout_row = rowCount-1;
 					t.views.add(ll);
@@ -159,6 +160,7 @@ rule  Table2GridLayout
 					
 					gridCell.layout_column = 0;
 					gridCell.layout_row = rowCount-1;
+					gridCell.background = ll.background;
 					gridCell.views.add(ll);
 					
 					t.views.add(gridCell);
@@ -218,14 +220,22 @@ rule Text2TextView
 		t.layout_width = "wrap_content";
 		t.layout_height = "wrap_content";
 		
-		t.text = s.content;
+		t.text = s.content.normalize();
 		t.textColor = s.fontColor.literal;
-		t.textAlignment = "center";
+		if(s.textAlign == newsletter!Align#center)
+		{
+			t.textAlignment = s.textAlign.literal;
+		}
+		else
+		{
+			t.textAlignment = "gravity";
+		}
 		t.layout_gravity= s.textAlign.literal;
 		t.textAppearance = "?android:attr/textAppearanceSmall";
 		t.textSize = (10+(s.fontSize.asInteger())).asString()+"dp";
 		t.textStyle = s.extractTextStyles();
 		
+		s.createActionIfApplies(t);
 		}
 /**
 * This rule executes the transformation for the map Text
@@ -245,13 +255,14 @@ rule Button2Button
 		
 		//Atributos tomados del Text del Button
 		var text:newsletter!Text = s.text;
-		t.text = text.content;
+		t.text = text.content.normalize();
 		t.textColor = text.fontColor.literal;
-		t.textAlignment = "center";
+		t.textAlignment = "gravity";
 		t.layout_gravity= text.textAlign.literal;
 		t.textSize = (10+(text.fontSize.asInteger())).asString()+"dp";
 		t.textStyle = text.extractTextStyles();
 		
+		s.createActionIfApplies(t);
 		
 		}
 @lazy 
@@ -267,6 +278,8 @@ rule Image2ImageView
 		
 		t.src = s.extractImageNameNormalized(t);
 		
+		s.createActionIfApplies(t);
+		
 		}
 @lazy 
 rule Video2LinearLayoutVideo
@@ -278,12 +291,29 @@ rule Video2LinearLayoutVideo
 		
 		t.layout_width = "wrap_content";
 		t.layout_height = "wrap_content";
+		t.background = s.button.color.literal;
 		
+		//If the Video doesnt have link, 
+		//then it tries to use the link in his Button
+		if(not s.link.isDefined()){
+			s.link=s.button.link;
+		}
+		
+		//If the Button doesnt have link, 
+		//then it tries to use the link in the Video
+		if(not s.button.link.isDefined()){
+			s.button.link=s.link;
+		}
+
 		var preview:android!ImageView = s.preview.equivalent();
 		var title:android!TextView = s.title.equivalent();
+		var button:android!Button = s.button.equivalent();
 		
 		t.views.add(preview);
 		t.views.add(title);
+		t.views.add(button);
+	
+		s.createActionIfApplies(t);
 		
 		}
 @lazy 
@@ -303,7 +333,7 @@ rule Divider2LinearLayoutDivider
 		}
 		else
 		{
-			t.layout_height= "2dp";
+			t.layout_height= "10dp";
 		}
 		
 		t.paddingLeft="10dp";
@@ -319,7 +349,6 @@ rule Divider2LinearLayoutDivider
 		t.views.add(separator);
 		
 		}			
-		 	
 
 post {
 	"Finish ETL Newsletter2Android".println();

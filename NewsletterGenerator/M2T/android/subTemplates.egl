@@ -128,9 +128,20 @@ operation View printViewProperties()
 	if(self.isTypeOf(LinearLayout)){
 	self.printOrientation();
 	self.printLayoutColumnWeight();
+	self.printGravity();
 	}
 	if(self.isTypeOf(ImageView)){
 	self.printSrc();
+	}
+	self.addOnClickPropertiesIfApply();
+}
+
+@Templte
+operation View addOnClickPropertiesIfApply(){
+	if(self.triggerAction()){
+	%]android:onClick="onClick"
+      android:clickable="true"
+	[%
 	}
 }
 
@@ -144,6 +155,8 @@ operation View printId(){
 
 @Template
 operation View printText(){
+//var nativeString:new Native("java.lang.String") = self.text;
+//nativeString.println();
 	if(self.text.isDefined()){
 	%]android:text="[%=self.text%]"
 	[%
@@ -315,6 +328,14 @@ operation LinearLayout printOrientation(){
 operation LinearLayout printLayoutColumnWeight(){
 	if(self.layout_columnWeight.isDefined() and self.layout_columnWeight <> 0.0 ){
 	%]android:layout_columnWeight="[%=self.layout_columnWeight%]"
+	[%
+	}
+}
+
+@Template
+operation LinearLayout printGravity(){
+	if(self.gravity.isDefined()){
+	%]android:gravity="[%=self.gravity%]"
 	[%
 	}
 }

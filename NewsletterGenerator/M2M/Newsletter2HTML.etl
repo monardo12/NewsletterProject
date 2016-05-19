@@ -1,3 +1,6 @@
+pre {
+	"Start ETL Newsletter2HTML".println();
+}
 rule Newsletter2HTML
 	transform
 		s:newsletter!Newsletter
@@ -88,6 +91,10 @@ rule Cell2TD
 				t.addElement(htmlElement);
 			}
 		}
+
+post {
+	"Finish ETL Newsletter2HTML".println();
+}
 		
 operation newsletter!Text getHtmlTextElement() : html!HTMLElement{
 	var p = new html!P;

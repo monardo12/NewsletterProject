@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
 
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        this.startActivity(Intent.createChooser(intent, "Chose browser"));
+        this.startActivity(Intent.createChooser(intent, "Choose browser"));
 
     }
 

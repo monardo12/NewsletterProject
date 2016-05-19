@@ -179,25 +179,24 @@ operation getColorDarkByKey(keyColor: String ): String{
 
 operation View getBackgroundByKey(keyColor): String{
 	
+
+	// Valida si el background es un selector
+	if (self.isTypeOf(Button))
+	{
+		return '@drawable/selector_on_click_view_'+keyColor;
+	}
+	if (self.isTypeOf(LinearLayout) and self.triggerAction()) 
+	{
+		return '@drawable/selector_on_click_video_'+keyColor;
+	}
+	return getColorByKey(keyColor);
+	
+}
+
+operation View triggerAction(){
 	var app : android!Application:= android!Application.all.at(0);
 	var mainActivity : android!Activity = app.mainActivity;
 	
-	// Valida si el background es un selector
-	if (mainActivity.actions->collect(a | a.view).includes(self))
-	{
-		if (self.isTypeOf(Button))
-		{
-			return '@drawable/selector_on_click_view_'+keyColor;
-		}
-		if (self.isTypeOf(LinearLayout)) 
-		{
-			return '@drawable/selector_on_click_video_'+keyColor;
-		}
-		return getColorByKey(keyColor);
-	}
-	else
-	{
-		return getColorByKey(keyColor);
-	}
+	return mainActivity.actions->collect(a | a.view).includes(self);
 }
 
