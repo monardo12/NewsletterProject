@@ -33,7 +33,7 @@ public interface Button extends Element {
 	 * @return the value of the '<em>Text</em>' containment reference.
 	 * @see #setText(Text)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getButton_Text()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Text getText();
@@ -50,7 +50,7 @@ public interface Button extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Color</b></em>' attribute.
-	 * The default value is <code>"none"</code>.
+	 * The default value is <code>"black"</code>.
 	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.Color}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -62,7 +62,7 @@ public interface Button extends Element {
 	 * @see metamodeloNewsletter.enums.Color
 	 * @see #setColor(Color)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getButton_Color()
-	 * @model default="none"
+	 * @model default="black"
 	 * @generated
 	 */
 	Color getColor();

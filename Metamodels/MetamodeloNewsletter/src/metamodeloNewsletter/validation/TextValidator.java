@@ -4,6 +4,7 @@
  */
 package metamodeloNewsletter.validation;
 
+import metamodeloNewsletter.enums.Align;
 import metamodeloNewsletter.enums.Color;
 import metamodeloNewsletter.enums.FontFamily;
 import metamodeloNewsletter.enums.FontWeight;
@@ -21,8 +22,12 @@ public interface TextValidator {
 	boolean validateFontFamily(FontFamily value);
 	boolean validateFontSize(String value);
 	boolean validateFontColor(Color value);
+	boolean validateBold(boolean value);
+
 	boolean validateFontWeight(FontWeight value);
 	boolean validateItalic(boolean value);
 	boolean validateUnderline(boolean value);
 	boolean validateStrikethrough(boolean value);
+
+	boolean validateTextAlign(Align value);
 }

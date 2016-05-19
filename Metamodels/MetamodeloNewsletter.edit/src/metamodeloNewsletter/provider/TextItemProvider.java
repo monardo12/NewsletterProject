@@ -49,10 +49,11 @@ public class TextItemProvider extends ElementItemProvider {
 			addFontFamilyPropertyDescriptor(object);
 			addFontSizePropertyDescriptor(object);
 			addFontColorPropertyDescriptor(object);
-			addFontWeightPropertyDescriptor(object);
+			addBoldPropertyDescriptor(object);
 			addItalicPropertyDescriptor(object);
 			addUnderlinePropertyDescriptor(object);
 			addStrikethroughPropertyDescriptor(object);
+			addTextAlignPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -146,23 +147,23 @@ public class TextItemProvider extends ElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Font Weight feature.
+	 * This adds a property descriptor for the Bold feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFontWeightPropertyDescriptor(Object object) {
+	protected void addBoldPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Text_fontWeight_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Text_fontWeight_feature", "_UI_Text_type"),
-				 MetamodeloNewsletterPackage.Literals.TEXT__FONT_WEIGHT,
+				 getString("_UI_Text_bold_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Text_bold_feature", "_UI_Text_type"),
+				 MetamodeloNewsletterPackage.Literals.TEXT__BOLD,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -234,6 +235,28 @@ public class TextItemProvider extends ElementItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Text Align feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTextAlignPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Text_textAlign_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Text_textAlign_feature", "_UI_Text_type"),
+				 MetamodeloNewsletterPackage.Literals.TEXT__TEXT_ALIGN,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Text.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -275,10 +298,11 @@ public class TextItemProvider extends ElementItemProvider {
 			case MetamodeloNewsletterPackage.TEXT__FONT_FAMILY:
 			case MetamodeloNewsletterPackage.TEXT__FONT_SIZE:
 			case MetamodeloNewsletterPackage.TEXT__FONT_COLOR:
-			case MetamodeloNewsletterPackage.TEXT__FONT_WEIGHT:
+			case MetamodeloNewsletterPackage.TEXT__BOLD:
 			case MetamodeloNewsletterPackage.TEXT__ITALIC:
 			case MetamodeloNewsletterPackage.TEXT__UNDERLINE:
 			case MetamodeloNewsletterPackage.TEXT__STRIKETHROUGH:
+			case MetamodeloNewsletterPackage.TEXT__TEXT_ALIGN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

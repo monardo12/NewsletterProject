@@ -5,10 +5,9 @@ package metamodeloNewsletter.impl;
 import metamodeloNewsletter.MetamodeloNewsletterPackage;
 import metamodeloNewsletter.Text;
 
+import metamodeloNewsletter.enums.Align;
 import metamodeloNewsletter.enums.Color;
 import metamodeloNewsletter.enums.FontFamily;
-import metamodeloNewsletter.enums.FontWeight;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -27,10 +26,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link metamodeloNewsletter.impl.TextImpl#getFontFamily <em>Font Family</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.TextImpl#getFontSize <em>Font Size</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.TextImpl#getFontColor <em>Font Color</em>}</li>
- *   <li>{@link metamodeloNewsletter.impl.TextImpl#getFontWeight <em>Font Weight</em>}</li>
+ *   <li>{@link metamodeloNewsletter.impl.TextImpl#isBold <em>Bold</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.TextImpl#isItalic <em>Italic</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.TextImpl#isUnderline <em>Underline</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.TextImpl#isStrikethrough <em>Strikethrough</em>}</li>
+ *   <li>{@link metamodeloNewsletter.impl.TextImpl#getTextAlign <em>Text Align</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,7 +104,7 @@ public class TextImpl extends ElementImpl implements Text {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color FONT_COLOR_EDEFAULT = Color.NONE;
+	protected static final Color FONT_COLOR_EDEFAULT = Color.BLACK;
 
 	/**
 	 * The cached value of the '{@link #getFontColor() <em>Font Color</em>}' attribute.
@@ -117,24 +117,24 @@ public class TextImpl extends ElementImpl implements Text {
 	protected Color fontColor = FONT_COLOR_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getFontWeight() <em>Font Weight</em>}' attribute.
+	 * The default value of the '{@link #isBold() <em>Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFontWeight()
+	 * @see #isBold()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final FontWeight FONT_WEIGHT_EDEFAULT = FontWeight.NORMAL;
+	protected static final boolean BOLD_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getFontWeight() <em>Font Weight</em>}' attribute.
+	 * The cached value of the '{@link #isBold() <em>Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFontWeight()
+	 * @see #isBold()
 	 * @generated
 	 * @ordered
 	 */
-	protected FontWeight fontWeight = FONT_WEIGHT_EDEFAULT;
+	protected boolean bold = BOLD_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isItalic() <em>Italic</em>}' attribute.
@@ -195,6 +195,26 @@ public class TextImpl extends ElementImpl implements Text {
 	 * @ordered
 	 */
 	protected boolean strikethrough = STRIKETHROUGH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTextAlign() <em>Text Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTextAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Align TEXT_ALIGN_EDEFAULT = Align.LEFT;
+
+	/**
+	 * The cached value of the '{@link #getTextAlign() <em>Text Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTextAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected Align textAlign = TEXT_ALIGN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -304,8 +324,8 @@ public class TextImpl extends ElementImpl implements Text {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FontWeight getFontWeight() {
-		return fontWeight;
+	public boolean isBold() {
+		return bold;
 	}
 
 	/**
@@ -313,11 +333,11 @@ public class TextImpl extends ElementImpl implements Text {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFontWeight(FontWeight newFontWeight) {
-		FontWeight oldFontWeight = fontWeight;
-		fontWeight = newFontWeight == null ? FONT_WEIGHT_EDEFAULT : newFontWeight;
+	public void setBold(boolean newBold) {
+		boolean oldBold = bold;
+		bold = newBold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.TEXT__FONT_WEIGHT, oldFontWeight, fontWeight));
+			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.TEXT__BOLD, oldBold, bold));
 	}
 
 	/**
@@ -388,6 +408,27 @@ public class TextImpl extends ElementImpl implements Text {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Align getTextAlign() {
+		return textAlign;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTextAlign(Align newTextAlign) {
+		Align oldTextAlign = textAlign;
+		textAlign = newTextAlign == null ? TEXT_ALIGN_EDEFAULT : newTextAlign;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.TEXT__TEXT_ALIGN, oldTextAlign, textAlign));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -399,14 +440,16 @@ public class TextImpl extends ElementImpl implements Text {
 				return getFontSize();
 			case MetamodeloNewsletterPackage.TEXT__FONT_COLOR:
 				return getFontColor();
-			case MetamodeloNewsletterPackage.TEXT__FONT_WEIGHT:
-				return getFontWeight();
+			case MetamodeloNewsletterPackage.TEXT__BOLD:
+				return isBold();
 			case MetamodeloNewsletterPackage.TEXT__ITALIC:
 				return isItalic();
 			case MetamodeloNewsletterPackage.TEXT__UNDERLINE:
 				return isUnderline();
 			case MetamodeloNewsletterPackage.TEXT__STRIKETHROUGH:
 				return isStrikethrough();
+			case MetamodeloNewsletterPackage.TEXT__TEXT_ALIGN:
+				return getTextAlign();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -431,8 +474,8 @@ public class TextImpl extends ElementImpl implements Text {
 			case MetamodeloNewsletterPackage.TEXT__FONT_COLOR:
 				setFontColor((Color)newValue);
 				return;
-			case MetamodeloNewsletterPackage.TEXT__FONT_WEIGHT:
-				setFontWeight((FontWeight)newValue);
+			case MetamodeloNewsletterPackage.TEXT__BOLD:
+				setBold((Boolean)newValue);
 				return;
 			case MetamodeloNewsletterPackage.TEXT__ITALIC:
 				setItalic((Boolean)newValue);
@@ -442,6 +485,9 @@ public class TextImpl extends ElementImpl implements Text {
 				return;
 			case MetamodeloNewsletterPackage.TEXT__STRIKETHROUGH:
 				setStrikethrough((Boolean)newValue);
+				return;
+			case MetamodeloNewsletterPackage.TEXT__TEXT_ALIGN:
+				setTextAlign((Align)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -467,8 +513,8 @@ public class TextImpl extends ElementImpl implements Text {
 			case MetamodeloNewsletterPackage.TEXT__FONT_COLOR:
 				setFontColor(FONT_COLOR_EDEFAULT);
 				return;
-			case MetamodeloNewsletterPackage.TEXT__FONT_WEIGHT:
-				setFontWeight(FONT_WEIGHT_EDEFAULT);
+			case MetamodeloNewsletterPackage.TEXT__BOLD:
+				setBold(BOLD_EDEFAULT);
 				return;
 			case MetamodeloNewsletterPackage.TEXT__ITALIC:
 				setItalic(ITALIC_EDEFAULT);
@@ -478,6 +524,9 @@ public class TextImpl extends ElementImpl implements Text {
 				return;
 			case MetamodeloNewsletterPackage.TEXT__STRIKETHROUGH:
 				setStrikethrough(STRIKETHROUGH_EDEFAULT);
+				return;
+			case MetamodeloNewsletterPackage.TEXT__TEXT_ALIGN:
+				setTextAlign(TEXT_ALIGN_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -499,14 +548,16 @@ public class TextImpl extends ElementImpl implements Text {
 				return FONT_SIZE_EDEFAULT == null ? fontSize != null : !FONT_SIZE_EDEFAULT.equals(fontSize);
 			case MetamodeloNewsletterPackage.TEXT__FONT_COLOR:
 				return fontColor != FONT_COLOR_EDEFAULT;
-			case MetamodeloNewsletterPackage.TEXT__FONT_WEIGHT:
-				return fontWeight != FONT_WEIGHT_EDEFAULT;
+			case MetamodeloNewsletterPackage.TEXT__BOLD:
+				return bold != BOLD_EDEFAULT;
 			case MetamodeloNewsletterPackage.TEXT__ITALIC:
 				return italic != ITALIC_EDEFAULT;
 			case MetamodeloNewsletterPackage.TEXT__UNDERLINE:
 				return underline != UNDERLINE_EDEFAULT;
 			case MetamodeloNewsletterPackage.TEXT__STRIKETHROUGH:
 				return strikethrough != STRIKETHROUGH_EDEFAULT;
+			case MetamodeloNewsletterPackage.TEXT__TEXT_ALIGN:
+				return textAlign != TEXT_ALIGN_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -529,14 +580,16 @@ public class TextImpl extends ElementImpl implements Text {
 		result.append(fontSize);
 		result.append(", fontColor: ");
 		result.append(fontColor);
-		result.append(", fontWeight: ");
-		result.append(fontWeight);
+		result.append(", bold: ");
+		result.append(bold);
 		result.append(", italic: ");
 		result.append(italic);
 		result.append(", underline: ");
 		result.append(underline);
 		result.append(", strikethrough: ");
 		result.append(strikethrough);
+		result.append(", textAlign: ");
+		result.append(textAlign);
 		result.append(')');
 		return result.toString();
 	}

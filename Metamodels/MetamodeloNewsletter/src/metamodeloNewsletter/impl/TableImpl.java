@@ -58,7 +58,7 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String WIDTH_EDEFAULT = null;
+	protected static final int WIDTH_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -68,7 +68,7 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 	 * @generated
 	 * @ordered
 	 */
-	protected String width = WIDTH_EDEFAULT;
+	protected int width = WIDTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
@@ -78,7 +78,7 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color BACKGROUND_COLOR_EDEFAULT = Color.NONE;
+	protected static final Color BACKGROUND_COLOR_EDEFAULT = Color.WHITE;
 
 	/**
 	 * The cached value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
@@ -126,7 +126,7 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
@@ -135,8 +135,8 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(String newWidth) {
-		String oldWidth = width;
+	public void setWidth(int newWidth) {
+		int oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.TABLE__WIDTH, oldWidth, width));
@@ -209,7 +209,7 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 				getRows().addAll((Collection<? extends Row>)newValue);
 				return;
 			case MetamodeloNewsletterPackage.TABLE__WIDTH:
-				setWidth((String)newValue);
+				setWidth((Integer)newValue);
 				return;
 			case MetamodeloNewsletterPackage.TABLE__BACKGROUND_COLOR:
 				setBackgroundColor((Color)newValue);
@@ -250,7 +250,7 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 			case MetamodeloNewsletterPackage.TABLE__ROWS:
 				return rows != null && !rows.isEmpty();
 			case MetamodeloNewsletterPackage.TABLE__WIDTH:
-				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
+				return width != WIDTH_EDEFAULT;
 			case MetamodeloNewsletterPackage.TABLE__BACKGROUND_COLOR:
 				return backgroundColor != BACKGROUND_COLOR_EDEFAULT;
 		}

@@ -52,12 +52,12 @@ public interface Row extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(String)
+	 * @see #setHeight(int)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getRow_Height()
 	 * @model
 	 * @generated
 	 */
-	String getHeight();
+	int getHeight();
 
 	/**
 	 * Sets the value of the '{@link metamodeloNewsletter.Row#getHeight <em>Height</em>}' attribute.
@@ -67,11 +67,11 @@ public interface Row extends EObject {
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(String value);
+	void setHeight(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Background Color</b></em>' attribute.
-	 * The default value is <code>"none"</code>.
+	 * The default value is <code>"white"</code>.
 	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.Color}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -83,7 +83,7 @@ public interface Row extends EObject {
 	 * @see metamodeloNewsletter.enums.Color
 	 * @see #setBackgroundColor(Color)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getRow_BackgroundColor()
-	 * @model default="none"
+	 * @model default="white"
 	 * @generated
 	 */
 	Color getBackgroundColor();

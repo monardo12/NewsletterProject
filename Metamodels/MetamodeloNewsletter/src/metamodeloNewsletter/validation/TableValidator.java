@@ -20,6 +20,8 @@ public interface TableValidator {
 	boolean validate();
 
 	boolean validateRows(EList<Row> value);
+	boolean validateWidth(int value);
+
 	boolean validateWidth(String value);
 	boolean validateBackgroundColor(Color value);
 }

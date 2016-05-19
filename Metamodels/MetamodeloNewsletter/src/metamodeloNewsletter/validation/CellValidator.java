@@ -23,6 +23,8 @@ public interface CellValidator {
 
 	boolean validateTable(Table value);
 	boolean validateElements(EList<Element> value);
+	boolean validateWidth(int value);
+
 	boolean validateWidth(String value);
 	boolean validateBackgroundColor(Color value);
 	boolean validateVerticalAlignment(VerticalAlign value);

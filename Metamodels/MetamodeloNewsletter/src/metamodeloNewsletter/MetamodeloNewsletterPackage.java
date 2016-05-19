@@ -214,22 +214,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int CELL = 3;
 
 	/**
-	 * The feature id for the '<em><b>Table</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CELL__TABLE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CELL__ELEMENTS = 1;
+	int CELL__ELEMENTS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -238,7 +229,7 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL__WIDTH = 2;
+	int CELL__WIDTH = 1;
 
 	/**
 	 * The feature id for the '<em><b>Background Color</b></em>' attribute.
@@ -247,7 +238,7 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL__BACKGROUND_COLOR = 3;
+	int CELL__BACKGROUND_COLOR = 2;
 
 	/**
 	 * The feature id for the '<em><b>Vertical Alignment</b></em>' attribute.
@@ -256,7 +247,7 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL__VERTICAL_ALIGNMENT = 4;
+	int CELL__VERTICAL_ALIGNMENT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Cell</em>' class.
@@ -265,7 +256,7 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL_FEATURE_COUNT = 5;
+	int CELL_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Cell</em>' class.
@@ -296,13 +287,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int ELEMENT__LINK = 0;
 
 	/**
-	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * The feature id for the '<em><b>Align</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__ALIGNMENT = 1;
+	int ELEMENT__ALIGN = 1;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -360,13 +351,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int TEXT__LINK = ELEMENT__LINK;
 
 	/**
-	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * The feature id for the '<em><b>Align</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT__ALIGNMENT = ELEMENT__ALIGNMENT;
+	int TEXT__ALIGN = ELEMENT__ALIGN;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -423,13 +414,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int TEXT__FONT_COLOR = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Font Weight</b></em>' attribute.
+	 * The feature id for the '<em><b>Bold</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT__FONT_WEIGHT = ELEMENT_FEATURE_COUNT + 4;
+	int TEXT__BOLD = ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Italic</b></em>' attribute.
@@ -459,13 +450,22 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int TEXT__STRIKETHROUGH = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Text Align</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT__TEXT_ALIGN = ELEMENT_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Text</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 8;
+	int TEXT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Text</em>' class.
@@ -496,13 +496,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int BUTTON__LINK = ELEMENT__LINK;
 
 	/**
-	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * The feature id for the '<em><b>Align</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__ALIGNMENT = ELEMENT__ALIGNMENT;
+	int BUTTON__ALIGN = ELEMENT__ALIGN;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -578,13 +578,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int IMAGE__LINK = ELEMENT__LINK;
 
 	/**
-	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * The feature id for the '<em><b>Align</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE__ALIGNMENT = ELEMENT__ALIGNMENT;
+	int IMAGE__ALIGN = ELEMENT__ALIGN;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -651,13 +651,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int VIDEO__LINK = ELEMENT__LINK;
 
 	/**
-	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * The feature id for the '<em><b>Align</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIDEO__ALIGNMENT = ELEMENT__ALIGNMENT;
+	int VIDEO__ALIGN = ELEMENT__ALIGN;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -696,13 +696,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int VIDEO__TITLE = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Button</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIDEO__DESCRIPTION = ELEMENT_FEATURE_COUNT + 2;
+	int VIDEO__BUTTON = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Video</em>' class.
@@ -742,13 +742,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int DIVIDER__LINK = ELEMENT__LINK;
 
 	/**
-	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * The feature id for the '<em><b>Align</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIVIDER__ALIGNMENT = ELEMENT__ALIGNMENT;
+	int DIVIDER__ALIGN = ELEMENT__ALIGN;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -914,17 +914,6 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	EClass getCell();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link metamodeloNewsletter.Cell#getTable <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Table</em>'.
-	 * @see metamodeloNewsletter.Cell#getTable()
-	 * @see #getCell()
-	 * @generated
-	 */
-	EReference getCell_Table();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link metamodeloNewsletter.Cell#getElements <em>Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -990,15 +979,15 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	EAttribute getElement_Link();
 
 	/**
-	 * Returns the meta object for the attribute '{@link metamodeloNewsletter.Element#getAlignment <em>Alignment</em>}'.
+	 * Returns the meta object for the attribute '{@link metamodeloNewsletter.Element#getAlign <em>Align</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Alignment</em>'.
-	 * @see metamodeloNewsletter.Element#getAlignment()
+	 * @return the meta object for the attribute '<em>Align</em>'.
+	 * @see metamodeloNewsletter.Element#getAlign()
 	 * @see #getElement()
 	 * @generated
 	 */
-	EAttribute getElement_Alignment();
+	EAttribute getElement_Align();
 
 	/**
 	 * Returns the meta object for the attribute '{@link metamodeloNewsletter.Element#getWidth <em>Width</em>}'.
@@ -1077,15 +1066,15 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	EAttribute getText_FontColor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link metamodeloNewsletter.Text#getFontWeight <em>Font Weight</em>}'.
+	 * Returns the meta object for the attribute '{@link metamodeloNewsletter.Text#isBold <em>Bold</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Font Weight</em>'.
-	 * @see metamodeloNewsletter.Text#getFontWeight()
+	 * @return the meta object for the attribute '<em>Bold</em>'.
+	 * @see metamodeloNewsletter.Text#isBold()
 	 * @see #getText()
 	 * @generated
 	 */
-	EAttribute getText_FontWeight();
+	EAttribute getText_Bold();
 
 	/**
 	 * Returns the meta object for the attribute '{@link metamodeloNewsletter.Text#isItalic <em>Italic</em>}'.
@@ -1119,6 +1108,17 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getText_Strikethrough();
+
+	/**
+	 * Returns the meta object for the attribute '{@link metamodeloNewsletter.Text#getTextAlign <em>Text Align</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Align</em>'.
+	 * @see metamodeloNewsletter.Text#getTextAlign()
+	 * @see #getText()
+	 * @generated
+	 */
+	EAttribute getText_TextAlign();
 
 	/**
 	 * Returns the meta object for class '{@link metamodeloNewsletter.Button <em>Button</em>}'.
@@ -1206,15 +1206,15 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	EReference getVideo_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link metamodeloNewsletter.Video#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the containment reference '{@link metamodeloNewsletter.Video#getButton <em>Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
-	 * @see metamodeloNewsletter.Video#getDescription()
+	 * @return the meta object for the containment reference '<em>Button</em>'.
+	 * @see metamodeloNewsletter.Video#getButton()
 	 * @see #getVideo()
 	 * @generated
 	 */
-	EReference getVideo_Description();
+	EReference getVideo_Button();
 
 	/**
 	 * Returns the meta object for class '{@link metamodeloNewsletter.Divider <em>Divider</em>}'.
@@ -1357,14 +1357,6 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 		EClass CELL = eINSTANCE.getCell();
 
 		/**
-		 * The meta object literal for the '<em><b>Table</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CELL__TABLE = eINSTANCE.getCell_Table();
-
-		/**
 		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1415,12 +1407,12 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 		EAttribute ELEMENT__LINK = eINSTANCE.getElement_Link();
 
 		/**
-		 * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Align</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT__ALIGNMENT = eINSTANCE.getElement_Alignment();
+		EAttribute ELEMENT__ALIGN = eINSTANCE.getElement_Align();
 
 		/**
 		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
@@ -1481,12 +1473,12 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 		EAttribute TEXT__FONT_COLOR = eINSTANCE.getText_FontColor();
 
 		/**
-		 * The meta object literal for the '<em><b>Font Weight</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Bold</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TEXT__FONT_WEIGHT = eINSTANCE.getText_FontWeight();
+		EAttribute TEXT__BOLD = eINSTANCE.getText_Bold();
 
 		/**
 		 * The meta object literal for the '<em><b>Italic</b></em>' attribute feature.
@@ -1511,6 +1503,14 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEXT__STRIKETHROUGH = eINSTANCE.getText_Strikethrough();
+
+		/**
+		 * The meta object literal for the '<em><b>Text Align</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT__TEXT_ALIGN = eINSTANCE.getText_TextAlign();
 
 		/**
 		 * The meta object literal for the '{@link metamodeloNewsletter.impl.ButtonImpl <em>Button</em>}' class.
@@ -1583,12 +1583,12 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 		EReference VIDEO__TITLE = eINSTANCE.getVideo_Title();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Button</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VIDEO__DESCRIPTION = eINSTANCE.getVideo_Description();
+		EReference VIDEO__BUTTON = eINSTANCE.getVideo_Button();
 
 		/**
 		 * The meta object literal for the '{@link metamodeloNewsletter.impl.DividerImpl <em>Divider</em>}' class.

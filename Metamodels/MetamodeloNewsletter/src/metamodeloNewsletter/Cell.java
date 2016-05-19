@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link metamodeloNewsletter.Cell#getTable <em>Table</em>}</li>
  *   <li>{@link metamodeloNewsletter.Cell#getElements <em>Elements</em>}</li>
  *   <li>{@link metamodeloNewsletter.Cell#getWidth <em>Width</em>}</li>
  *   <li>{@link metamodeloNewsletter.Cell#getBackgroundColor <em>Background Color</em>}</li>
@@ -30,32 +29,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Cell extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Table</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Table</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Table</em>' containment reference.
-	 * @see #setTable(Table)
-	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getCell_Table()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Table getTable();
-
-	/**
-	 * Sets the value of the '{@link metamodeloNewsletter.Cell#getTable <em>Table</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Table</em>' containment reference.
-	 * @see #getTable()
-	 * @generated
-	 */
-	void setTable(Table value);
-
 	/**
 	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link metamodeloNewsletter.Element}.
@@ -81,12 +54,12 @@ public interface Cell extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(String)
+	 * @see #setWidth(int)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getCell_Width()
 	 * @model
 	 * @generated
 	 */
-	String getWidth();
+	int getWidth();
 
 	/**
 	 * Sets the value of the '{@link metamodeloNewsletter.Cell#getWidth <em>Width</em>}' attribute.
@@ -96,11 +69,11 @@ public interface Cell extends EObject {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(String value);
+	void setWidth(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Background Color</b></em>' attribute.
-	 * The default value is <code>"none"</code>.
+	 * The default value is <code>"white"</code>.
 	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.Color}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -112,7 +85,7 @@ public interface Cell extends EObject {
 	 * @see metamodeloNewsletter.enums.Color
 	 * @see #setBackgroundColor(Color)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getCell_BackgroundColor()
-	 * @model default="none"
+	 * @model default="white"
 	 * @generated
 	 */
 	Color getBackgroundColor();

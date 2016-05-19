@@ -52,12 +52,12 @@ public interface Table extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(String)
+	 * @see #setWidth(int)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getTable_Width()
 	 * @model
 	 * @generated
 	 */
-	String getWidth();
+	int getWidth();
 
 	/**
 	 * Sets the value of the '{@link metamodeloNewsletter.Table#getWidth <em>Width</em>}' attribute.
@@ -67,11 +67,11 @@ public interface Table extends EObject {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(String value);
+	void setWidth(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Background Color</b></em>' attribute.
-	 * The default value is <code>"none"</code>.
+	 * The default value is <code>"white"</code>.
 	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.Color}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -83,7 +83,7 @@ public interface Table extends EObject {
 	 * @see metamodeloNewsletter.enums.Color
 	 * @see #setBackgroundColor(Color)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getTable_BackgroundColor()
-	 * @model default="none"
+	 * @model default="white"
 	 * @generated
 	 */
 	Color getBackgroundColor();

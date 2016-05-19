@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link metamodeloNewsletter.impl.ElementImpl#getLink <em>Link</em>}</li>
- *   <li>{@link metamodeloNewsletter.impl.ElementImpl#getAlignment <em>Alignment</em>}</li>
+ *   <li>{@link metamodeloNewsletter.impl.ElementImpl#getAlign <em>Align</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.ElementImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.ElementImpl#getHeight <em>Height</em>}</li>
  * </ul>
@@ -52,24 +52,24 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	protected String link = LINK_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAlignment()
+	 * @see #getAlign()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Align ALIGNMENT_EDEFAULT = Align.LEFT;
+	protected static final Align ALIGN_EDEFAULT = Align.LEFT;
 
 	/**
-	 * The cached value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
+	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAlignment()
+	 * @see #getAlign()
 	 * @generated
 	 * @ordered
 	 */
-	protected Align alignment = ALIGNMENT_EDEFAULT;
+	protected Align align = ALIGN_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -156,8 +156,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Align getAlignment() {
-		return alignment;
+	public Align getAlign() {
+		return align;
 	}
 
 	/**
@@ -165,11 +165,11 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlignment(Align newAlignment) {
-		Align oldAlignment = alignment;
-		alignment = newAlignment == null ? ALIGNMENT_EDEFAULT : newAlignment;
+	public void setAlign(Align newAlign) {
+		Align oldAlign = align;
+		align = newAlign == null ? ALIGN_EDEFAULT : newAlign;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.ELEMENT__ALIGNMENT, oldAlignment, alignment));
+			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.ELEMENT__ALIGN, oldAlign, align));
 	}
 
 	/**
@@ -224,8 +224,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case MetamodeloNewsletterPackage.ELEMENT__LINK:
 				return getLink();
-			case MetamodeloNewsletterPackage.ELEMENT__ALIGNMENT:
-				return getAlignment();
+			case MetamodeloNewsletterPackage.ELEMENT__ALIGN:
+				return getAlign();
 			case MetamodeloNewsletterPackage.ELEMENT__WIDTH:
 				return getWidth();
 			case MetamodeloNewsletterPackage.ELEMENT__HEIGHT:
@@ -245,8 +245,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			case MetamodeloNewsletterPackage.ELEMENT__LINK:
 				setLink((String)newValue);
 				return;
-			case MetamodeloNewsletterPackage.ELEMENT__ALIGNMENT:
-				setAlignment((Align)newValue);
+			case MetamodeloNewsletterPackage.ELEMENT__ALIGN:
+				setAlign((Align)newValue);
 				return;
 			case MetamodeloNewsletterPackage.ELEMENT__WIDTH:
 				setWidth((Integer)newValue);
@@ -269,8 +269,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			case MetamodeloNewsletterPackage.ELEMENT__LINK:
 				setLink(LINK_EDEFAULT);
 				return;
-			case MetamodeloNewsletterPackage.ELEMENT__ALIGNMENT:
-				setAlignment(ALIGNMENT_EDEFAULT);
+			case MetamodeloNewsletterPackage.ELEMENT__ALIGN:
+				setAlign(ALIGN_EDEFAULT);
 				return;
 			case MetamodeloNewsletterPackage.ELEMENT__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
@@ -292,8 +292,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case MetamodeloNewsletterPackage.ELEMENT__LINK:
 				return LINK_EDEFAULT == null ? link != null : !LINK_EDEFAULT.equals(link);
-			case MetamodeloNewsletterPackage.ELEMENT__ALIGNMENT:
-				return alignment != ALIGNMENT_EDEFAULT;
+			case MetamodeloNewsletterPackage.ELEMENT__ALIGN:
+				return align != ALIGN_EDEFAULT;
 			case MetamodeloNewsletterPackage.ELEMENT__WIDTH:
 				return width != WIDTH_EDEFAULT;
 			case MetamodeloNewsletterPackage.ELEMENT__HEIGHT:
@@ -314,8 +314,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (link: ");
 		result.append(link);
-		result.append(", alignment: ");
-		result.append(alignment);
+		result.append(", align: ");
+		result.append(align);
 		result.append(", width: ");
 		result.append(width);
 		result.append(", height: ");

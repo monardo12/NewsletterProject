@@ -87,7 +87,7 @@ public class CellItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -148,7 +148,6 @@ public class CellItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MetamodeloNewsletterPackage.Literals.CELL__TABLE);
 			childrenFeatures.add(MetamodeloNewsletterPackage.Literals.CELL__ELEMENTS);
 		}
 		return childrenFeatures;
@@ -186,10 +185,8 @@ public class CellItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Cell)object).getWidth();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Cell_type") :
-			getString("_UI_Cell_type") + " " + label;
+		Cell cell = (Cell)object;
+		return getString("_UI_Cell_type") + " " + cell.getWidth();
 	}
 	
 
@@ -210,7 +207,6 @@ public class CellItemProvider
 			case MetamodeloNewsletterPackage.CELL__VERTICAL_ALIGNMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MetamodeloNewsletterPackage.CELL__TABLE:
 			case MetamodeloNewsletterPackage.CELL__ELEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -228,11 +224,6 @@ public class CellItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MetamodeloNewsletterPackage.Literals.CELL__TABLE,
-				 MetamodeloNewsletterFactory.eINSTANCE.createTable()));
 
 		newChildDescriptors.add
 			(createChildParameter
