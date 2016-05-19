@@ -17,14 +17,20 @@ import java.util.ArrayList;
 
 public class ImageDownloader {
 
-	public static final String URLS_FILE = "../NewsletterGenerator/data/urlsImagenes.txt";
+	public static String URLS_FILE = "../NewsletterGenerator/data/urlsImagenes.txt";
 	public static final String TARGER_DIRECTORY = "../NewsletterGenerator/staticFiles/Images";
 	//public static final String TARGER_DIRECTORY = "../NewsletterGenerator/staticFiles/NewsletterAndroid/app/src/main/res/drawable-hdpi";
 	
 	public static ArrayList<String> urls = new ArrayList<String>();
 
 	public static void main(String[] arguments) 
-	{
+	{	
+		if (arguments.length>0)
+		{
+			System.out.println("Image Downloader Argument[0] (URLS_FILE) =" + arguments[0]);
+			URLS_FILE = arguments[0];
+		}
+		
 		System.out.println("---- Image Downloader Start ----");
 		
 		//Load Urls
@@ -47,6 +53,7 @@ public class ImageDownloader {
 			int lastSlash = imageUrl.lastIndexOf("/");
 			//+1 to remove slash of the name
 			String targetFileName  = imageUrl.substring(lastSlash + 1);
+			targetFileName = normalizeString(targetFileName);
 			System.out.println("targetFileName= "+targetFileName); 
 
 		
@@ -97,6 +104,20 @@ public class ImageDownloader {
 		}
 		imageReader.close();
 		imageWriter.close();
+	}
+	
+	public static String normalizeString(String myString){
+	
+		myString = myString.replaceAll("[-+.^:,]","");
+		myString = myString.toLowerCase();
+		myString = myString.replace("á","a");
+		myString = myString.replace("é","e");
+		myString = myString.replace("í","i");
+		myString = myString.replace("ó","o");
+		myString = myString.replace("ú","u");
+		myString = myString.replace("ñ","n");
+		
+		return myString;
 	}
 
 
