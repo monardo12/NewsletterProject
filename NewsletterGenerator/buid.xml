@@ -4,6 +4,9 @@
 	<property name="generated.location" location="${basedir}/generated" />
 	<property name="generated.location.android.images" location="${generated.location}/NewsletterAndroid/app/src/main/res/drawable-hdpi" />
 	
+	<!-- Other Data Locations -->
+	<property name="staticfiles.location.images" location="${basedir}/staticFiles/Images" />
+	<property name="data.urlsimagenes" location="${basedir}/data/urlsImagenes.txt" />
 	
 	<!-- Models -->
 	<property name="newsletter.model.location" location="../Metamodels/MetamodeloNewsletter/model/Newsletter.xmi" />
@@ -20,16 +23,29 @@
 	
 	
 	<target name="build">
-		<echo>Borrando contenidos generados de la carpeta generated</echo>
-
+		<echo>Llamando targets para preparar el contenido</echo>
+		<antcall target="prepare-images" />
+		<echo>Llamando targets para realizar las transformaciones</echo>
+		<antcall target="m2m-newsletter2html" />
+		<antcall target="m2m-newsletter2android" />
+	</target>
+	
+	<!-- Preparation Tasks -->
+	<target name="prepare-images">
+		<echo>Borrando contenidos de imagenes de la carpeta correspondiente en generated</echo>
 		<!-- Delete ONLY contents in generated images folder, not the folder-->
 		<delete>
 		   <fileset dir="${generated.location.android.images}">
-		      <include name="*"/>
+		   		<include name="*"/>
 		   </fileset>
 		</delete>
-		<antcall target="m2m-newsletter2html" />
-		<antcall target="m2m-newsletter2android" />
+		<!-- Copy New contents (images) to the folder generated -->
+		<echo>Copiando nuevo conjunto de imagenes a carpeta correspondiente en generated</echo>
+		<copy todir="${generated.location.android.images}" >  
+			<fileset dir="${staticfiles.location.images}">
+				<include name="*"/>
+			</fileset>
+		</copy>
 	</target>
 	
 	<!-- M2M -->
