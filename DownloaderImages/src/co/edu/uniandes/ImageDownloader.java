@@ -18,8 +18,8 @@ import java.util.ArrayList;
 public class ImageDownloader {
 
 	public static final String URLS_FILE = "../NewsletterGenerator/data/urlsImagenes.txt";
-	//public static final String TARGER_DIRECTORY = "../NewsletterGenerator/staticFiles/Images";
-	public static final String TARGER_DIRECTORY = "../NewsletterGenerator/staticFiles/NewsletterAndroid/app/src/main/res/drawable-hdpi";
+	public static final String TARGER_DIRECTORY = "../NewsletterGenerator/staticFiles/Images";
+	//public static final String TARGER_DIRECTORY = "../NewsletterGenerator/staticFiles/NewsletterAndroid/app/src/main/res/drawable-hdpi";
 	
 	public static ArrayList<String> urls = new ArrayList<String>();
 

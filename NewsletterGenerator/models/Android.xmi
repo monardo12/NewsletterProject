@@ -4,7 +4,7 @@
     <layout name="activity_main">
       <content xsi:type="view:RelativeLayout" id="root_relativeLayout" paddingBottom="@dimen/activity_vertical_margin" paddingLeft="@dimen/activity_horizontal_margin" paddingRight="@dimen/activity_horizontal_margin" paddingTop="@dimen/activity_vertical_margin">
         <views xsi:type="view:ScrollView" id="root_scrollView" layout_height="wrap_content">
-          <views xsi:type="view:GridLayout" id="root_table_gridLayout_1" layout_height="wrap_content" rowCount="11" layout_aligntParentTop="true" layout_centerHorizontal="true">
+          <views xsi:type="view:GridLayout" id="root_table_gridLayout_1" layout_height="wrap_content" background="white" rowCount="11" layout_aligntParentTop="true" layout_centerHorizontal="true">
             <views xsi:type="view:LinearLayout" id="cell_linearLayout_1" layout_height="wrap_content" background="white" gravity="top">
               <views xsi:type="view:ImageView" id="imageView_1" layout_width="wrap_content" layout_height="wrap_content" src="header02_1"/>
             </views>
@@ -68,14 +68,14 @@
         </views>
       </content>
     </layout>
-    <actions actionLink="https://plus.google.com/events/c541njr83ht26v8ic03tslq4c3c" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.6/@views.1/@views.2"/>
-    <actions actionLink="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.8/@views.1/@views.0/@views.2"/>
-    <actions actionLink="https://apps.co/comunicaciones/articulos/elementos-legales-para-el-emprendimiento-digital-2/?mkt_hm=4&amp;amp;utm_source=email_marketing&amp;amp;utm_admin=65089&amp;amp;utm_medium=email&amp;amp;utm_campaign=Elementos_" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.2/@views.0"/>
     <actions actionLink="https://apps.co/comunicaciones/articulos/certificate-internacionalmente-como-profesional-ti" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.7/@views.0"/>
-    <actions actionLink="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.8/@views.1/@views.0"/>
-    <actions actionLink="http://apps.co" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.0/@views.0"/>
-    <actions actionLink="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.6/@views.1/@views.0"/>
     <actions actionLink="https://www.youtube.com/watch?v=p542clXAwRw" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.8/@views.0/@views.0/@views.2"/>
     <actions actionLink="https://www.youtube.com/watch?v=p542clXAwRw" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.8/@views.0/@views.0"/>
+    <actions actionLink="https://plus.google.com/events/c541njr83ht26v8ic03tslq4c3c" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.6/@views.1/@views.2"/>
+    <actions actionLink="http://apps.co" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.0/@views.0"/>
+    <actions actionLink="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.8/@views.1/@views.0"/>
+    <actions actionLink="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.6/@views.1/@views.0"/>
+    <actions actionLink="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.8/@views.1/@views.0/@views.2"/>
+    <actions actionLink="https://apps.co/comunicaciones/articulos/elementos-legales-para-el-emprendimiento-digital-2/?mkt_hm=4&amp;amp;utm_source=email_marketing&amp;amp;utm_admin=65089&amp;amp;utm_medium=email&amp;amp;utm_campaign=Elementos_" view="//@mainActivity/@layout/@content/@views.0/@views.0/@views.2/@views.0"/>
   </mainActivity>
 </android:Application>
