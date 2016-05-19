@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:metamodeloNewsletter="http://www.example.org/metamodeloNewsletter" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.example.org/metamodeloNewsletter enums http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_wlkBMBZLEeaE-prKX3gx9Q" selectedViews="_hyjWwB0YEea86MseXPzyQw" version="10.1.0.201509162000">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:metamodeloNewsletter="http://www.example.org/metamodeloNewsletter" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_wlkBMBZLEeaE-prKX3gx9Q" selectedViews="_hyjWwB0YEea86MseXPzyQw" version="10.1.0.201509162000">
   <semanticResources>example/Newsletter.xmi</semanticResources>
   <semanticResources>test/NewsletterTest.xmi</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_Brb9ABZMEeaE-prKX3gx9Q">
@@ -2222,6 +2222,310 @@
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_hq30lB2CEeaK68SjsStJow"/>
       <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer"/>
       <target xmi:type="metamodeloNewsletter:Newsletter" href="example/Newsletter.xmi#/"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_-tpPMB3rEeactI6Cb7301Q" name="NewsletterTestDiagram">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_-tpPMR3rEeactI6Cb7301Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_-tpPMh3rEeactI6Cb7301Q"/>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_-tuuwB3rEeactI6Cb7301Q" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_-tvV0B3rEeactI6Cb7301Q" type="Sirius" element="_-tpPMB3rEeactI6Cb7301Q" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_-txLAB3rEeactI6Cb7301Q" type="2002" element="_-tpPMx3rEeactI6Cb7301Q">
+            <children xmi:type="notation:Node" xmi:id="_-t01YB3rEeactI6Cb7301Q" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_-t01YR3rEeactI6Cb7301Q" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_AfiqoB3sEeactI6Cb7301Q" type="3008" element="_Admw8B3sEeactI6Cb7301Q">
+                <children xmi:type="notation:Node" xmi:id="_Afiqox3sEeactI6Cb7301Q" type="5005"/>
+                <children xmi:type="notation:Node" xmi:id="_AfiqpB3sEeactI6Cb7301Q" type="7002">
+                  <children xmi:type="notation:Node" xmi:id="_BQke8B3sEeactI6Cb7301Q" type="3008" element="_BNUWoB3sEeactI6Cb7301Q">
+                    <children xmi:type="notation:Node" xmi:id="_BQlGAB3sEeactI6Cb7301Q" type="5005"/>
+                    <children xmi:type="notation:Node" xmi:id="_BQlGAR3sEeactI6Cb7301Q" type="7002">
+                      <children xmi:type="notation:Node" xmi:id="_IV2fkB3sEeaxZcIixBLBMQ" type="3009" element="_ISJEQB3sEeaxZcIixBLBMQ">
+                        <children xmi:type="notation:Node" xmi:id="_IV5i4B3sEeaxZcIixBLBMQ" type="5004"/>
+                        <children xmi:type="notation:Node" xmi:id="_IV6J8B3sEeaxZcIixBLBMQ" type="7003">
+                          <styles xmi:type="notation:SortingStyle" xmi:id="_IV6J8R3sEeaxZcIixBLBMQ"/>
+                          <styles xmi:type="notation:FilteringStyle" xmi:id="_IV6J8h3sEeaxZcIixBLBMQ"/>
+                          <styles xmi:type="notation:DrawerStyle" xmi:id="_IV6J8x3sEeaxZcIixBLBMQ"/>
+                        </children>
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_IV2fkR3sEeaxZcIixBLBMQ" fontName="Segoe UI" fontHeight="8"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IV2fkh3sEeaxZcIixBLBMQ"/>
+                      </children>
+                      <styles xmi:type="notation:SortingStyle" xmi:id="_BQlGAh3sEeactI6Cb7301Q"/>
+                      <styles xmi:type="notation:FilteringStyle" xmi:id="_BQlGAx3sEeactI6Cb7301Q"/>
+                      <styles xmi:type="notation:DrawerStyle" xmi:id="_BQlGBB3sEeactI6Cb7301Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_BQke8R3sEeactI6Cb7301Q" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BQke8h3sEeactI6Cb7301Q"/>
+                  </children>
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_AfiqpR3sEeactI6Cb7301Q"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_Afiqph3sEeactI6Cb7301Q"/>
+                  <styles xmi:type="notation:DrawerStyle" xmi:id="_Afiqpx3sEeactI6Cb7301Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_AfiqoR3sEeactI6Cb7301Q" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Afiqoh3sEeactI6Cb7301Q" height="136"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_2zAhoB3wEeayS5LudEyADA" type="3008" element="_2ut3gB3wEeayS5LudEyADA">
+                <children xmi:type="notation:Node" xmi:id="_2zEMAB3wEeayS5LudEyADA" type="5005"/>
+                <children xmi:type="notation:Node" xmi:id="_2zEMAR3wEeayS5LudEyADA" type="7002">
+                  <children xmi:type="notation:Node" xmi:id="_3SX-MB3wEeayS5LudEyADA" type="3008" element="_3JKX0B3wEeayS5LudEyADA">
+                    <children xmi:type="notation:Node" xmi:id="_3SX-Mx3wEeayS5LudEyADA" type="5005"/>
+                    <children xmi:type="notation:Node" xmi:id="_3SYlQB3wEeayS5LudEyADA" type="7002">
+                      <children xmi:type="notation:Node" xmi:id="_31KiMB3wEeayS5LudEyADA" type="3008" element="_3wcaQB3wEeayS5LudEyADA">
+                        <children xmi:type="notation:Node" xmi:id="_31LJQB3wEeayS5LudEyADA" type="5005"/>
+                        <children xmi:type="notation:Node" xmi:id="_31LJQR3wEeayS5LudEyADA" type="7002">
+                          <children xmi:type="notation:Node" xmi:id="_p9UMIB3xEeabF93Fn8nhfg" type="3009" element="_p49QkB3xEeabF93Fn8nhfg">
+                            <children xmi:type="notation:Node" xmi:id="_p9X2gB3xEeabF93Fn8nhfg" type="5004"/>
+                            <children xmi:type="notation:Node" xmi:id="_p9YdkB3xEeabF93Fn8nhfg" type="7003">
+                              <styles xmi:type="notation:SortingStyle" xmi:id="_p9YdkR3xEeabF93Fn8nhfg"/>
+                              <styles xmi:type="notation:FilteringStyle" xmi:id="_p9Ydkh3xEeabF93Fn8nhfg"/>
+                              <styles xmi:type="notation:DrawerStyle" xmi:id="_p9Ydkx3xEeabF93Fn8nhfg"/>
+                            </children>
+                            <styles xmi:type="notation:ShapeStyle" xmi:id="_p9UMIR3xEeabF93Fn8nhfg" fontName="Segoe UI" fontHeight="8"/>
+                            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9UMIh3xEeabF93Fn8nhfg"/>
+                          </children>
+                          <children xmi:type="notation:Node" xmi:id="_rW2K4B3xEeabF93Fn8nhfg" type="3008" element="_rSOwoB3xEeabF93Fn8nhfg">
+                            <children xmi:type="notation:Node" xmi:id="_rW2K4x3xEeabF93Fn8nhfg" type="5005"/>
+                            <children xmi:type="notation:Node" xmi:id="_rW2x8B3xEeabF93Fn8nhfg" type="7002">
+                              <styles xmi:type="notation:SortingStyle" xmi:id="_rW2x8R3xEeabF93Fn8nhfg"/>
+                              <styles xmi:type="notation:FilteringStyle" xmi:id="_rW2x8h3xEeabF93Fn8nhfg"/>
+                              <styles xmi:type="notation:DrawerStyle" xmi:id="_rW2x8x3xEeabF93Fn8nhfg"/>
+                            </children>
+                            <styles xmi:type="notation:ShapeStyle" xmi:id="_rW2K4R3xEeabF93Fn8nhfg" fontName="Segoe UI" fontHeight="8"/>
+                            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rW2K4h3xEeabF93Fn8nhfg" y="88"/>
+                          </children>
+                          <children xmi:type="notation:Node" xmi:id="_tAuSwB3xEeabF93Fn8nhfg" type="3008" element="_s_EF4B3xEeabF93Fn8nhfg">
+                            <children xmi:type="notation:Node" xmi:id="_tAuSwx3xEeabF93Fn8nhfg" type="5005"/>
+                            <children xmi:type="notation:Node" xmi:id="_tAu50B3xEeabF93Fn8nhfg" type="7002">
+                              <children xmi:type="notation:Node" xmi:id="_uCf40B3xEeabF93Fn8nhfg" type="3008" element="_uAOA4B3xEeabF93Fn8nhfg">
+                                <children xmi:type="notation:Node" xmi:id="_uCgf4B3xEeabF93Fn8nhfg" type="5005"/>
+                                <children xmi:type="notation:Node" xmi:id="_uCgf4R3xEeabF93Fn8nhfg" type="7002">
+                                  <styles xmi:type="notation:SortingStyle" xmi:id="_uCgf4h3xEeabF93Fn8nhfg"/>
+                                  <styles xmi:type="notation:FilteringStyle" xmi:id="_uCgf4x3xEeabF93Fn8nhfg"/>
+                                  <styles xmi:type="notation:DrawerStyle" xmi:id="_uCgf5B3xEeabF93Fn8nhfg"/>
+                                </children>
+                                <styles xmi:type="notation:ShapeStyle" xmi:id="_uCf40R3xEeabF93Fn8nhfg" fontName="Segoe UI" fontHeight="8"/>
+                                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uCf40h3xEeabF93Fn8nhfg"/>
+                              </children>
+                              <styles xmi:type="notation:SortingStyle" xmi:id="_tAu50R3xEeabF93Fn8nhfg"/>
+                              <styles xmi:type="notation:FilteringStyle" xmi:id="_tAu50h3xEeabF93Fn8nhfg"/>
+                              <styles xmi:type="notation:DrawerStyle" xmi:id="_tAu50x3xEeabF93Fn8nhfg"/>
+                            </children>
+                            <styles xmi:type="notation:ShapeStyle" xmi:id="_tAuSwR3xEeabF93Fn8nhfg" fontName="Segoe UI" fontHeight="8"/>
+                            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tAuSwh3xEeabF93Fn8nhfg" y="128"/>
+                          </children>
+                          <styles xmi:type="notation:SortingStyle" xmi:id="_31LJQh3wEeayS5LudEyADA"/>
+                          <styles xmi:type="notation:FilteringStyle" xmi:id="_31LJQx3wEeayS5LudEyADA"/>
+                          <styles xmi:type="notation:DrawerStyle" xmi:id="_31LJRB3wEeayS5LudEyADA"/>
+                        </children>
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_31KiMR3wEeayS5LudEyADA" fontName="Segoe UI" fontHeight="8"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_31KiMh3wEeayS5LudEyADA"/>
+                      </children>
+                      <styles xmi:type="notation:SortingStyle" xmi:id="_3SYlQR3wEeayS5LudEyADA"/>
+                      <styles xmi:type="notation:FilteringStyle" xmi:id="_3SYlQh3wEeayS5LudEyADA"/>
+                      <styles xmi:type="notation:DrawerStyle" xmi:id="_3SYlQx3wEeayS5LudEyADA"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_3SX-MR3wEeayS5LudEyADA" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3SX-Mh3wEeayS5LudEyADA"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_XVYp4B4AEea_oPc9bJM44A" type="3008" element="_XPjHoB4AEea_oPc9bJM44A">
+                    <children xmi:type="notation:Node" xmi:id="_XVcUQB4AEea_oPc9bJM44A" type="5005"/>
+                    <children xmi:type="notation:Node" xmi:id="_XVcUQR4AEea_oPc9bJM44A" type="7002">
+                      <children xmi:type="notation:Node" xmi:id="_YFNkUB4AEea_oPc9bJM44A" type="3009" element="_X_syMB4AEea_oPc9bJM44A">
+                        <children xmi:type="notation:Node" xmi:id="_YFNkUx4AEea_oPc9bJM44A" type="5004"/>
+                        <children xmi:type="notation:Node" xmi:id="_YFOLYB4AEea_oPc9bJM44A" type="7003">
+                          <styles xmi:type="notation:SortingStyle" xmi:id="_YFOLYR4AEea_oPc9bJM44A"/>
+                          <styles xmi:type="notation:FilteringStyle" xmi:id="_YFOLYh4AEea_oPc9bJM44A"/>
+                          <styles xmi:type="notation:DrawerStyle" xmi:id="_YFOLYx4AEea_oPc9bJM44A"/>
+                        </children>
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_YFNkUR4AEea_oPc9bJM44A" fontName="Segoe UI" fontHeight="8"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YFNkUh4AEea_oPc9bJM44A"/>
+                      </children>
+                      <styles xmi:type="notation:SortingStyle" xmi:id="_XVcUQh4AEea_oPc9bJM44A"/>
+                      <styles xmi:type="notation:FilteringStyle" xmi:id="_XVcUQx4AEea_oPc9bJM44A"/>
+                      <styles xmi:type="notation:DrawerStyle" xmi:id="_XVcURB4AEea_oPc9bJM44A"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_XVYp4R4AEea_oPc9bJM44A" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XVYp4h4AEea_oPc9bJM44A" x="351"/>
+                  </children>
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_2zEMAh3wEeayS5LudEyADA"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_2zEMAx3wEeayS5LudEyADA"/>
+                  <styles xmi:type="notation:DrawerStyle" xmi:id="_2zEMBB3wEeayS5LudEyADA"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_2zAhoR3wEeayS5LudEyADA" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2zAhoh3wEeayS5LudEyADA" y="136" height="266"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_OG4yoB4DEeamdcmUEYpo_g" type="3008" element="_OBZ1sB4DEeamdcmUEYpo_g">
+                <children xmi:type="notation:Node" xmi:id="_OG8dAB4DEeamdcmUEYpo_g" type="5005"/>
+                <children xmi:type="notation:Node" xmi:id="_OG9EEB4DEeamdcmUEYpo_g" type="7002">
+                  <children xmi:type="notation:Node" xmi:id="_Os_wYB4DEeamdcmUEYpo_g" type="3008" element="_OoGpUB4DEeamdcmUEYpo_g">
+                    <children xmi:type="notation:Node" xmi:id="_Os_wYx4DEeamdcmUEYpo_g" type="5005"/>
+                    <children xmi:type="notation:Node" xmi:id="_OtAXcB4DEeamdcmUEYpo_g" type="7002">
+                      <children xmi:type="notation:Node" xmi:id="_PJb0wB4DEeamdcmUEYpo_g" type="3009" element="_PEitsB4DEeamdcmUEYpo_g">
+                        <children xmi:type="notation:Node" xmi:id="_PJb0wx4DEeamdcmUEYpo_g" type="5004"/>
+                        <children xmi:type="notation:Node" xmi:id="_PJcb0B4DEeamdcmUEYpo_g" type="7003">
+                          <styles xmi:type="notation:SortingStyle" xmi:id="_PJcb0R4DEeamdcmUEYpo_g"/>
+                          <styles xmi:type="notation:FilteringStyle" xmi:id="_PJcb0h4DEeamdcmUEYpo_g"/>
+                          <styles xmi:type="notation:DrawerStyle" xmi:id="_PJcb0x4DEeamdcmUEYpo_g"/>
+                        </children>
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_PJb0wR4DEeamdcmUEYpo_g" fontName="Segoe UI" fontHeight="8"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PJb0wh4DEeamdcmUEYpo_g"/>
+                      </children>
+                      <styles xmi:type="notation:SortingStyle" xmi:id="_OtAXcR4DEeamdcmUEYpo_g"/>
+                      <styles xmi:type="notation:FilteringStyle" xmi:id="_OtAXch4DEeamdcmUEYpo_g"/>
+                      <styles xmi:type="notation:DrawerStyle" xmi:id="_OtAXcx4DEeamdcmUEYpo_g"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_Os_wYR4DEeamdcmUEYpo_g" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Os_wYh4DEeamdcmUEYpo_g"/>
+                  </children>
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_OG9EER4DEeamdcmUEYpo_g"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_OG9EEh4DEeamdcmUEYpo_g"/>
+                  <styles xmi:type="notation:DrawerStyle" xmi:id="_OG9EEx4DEeamdcmUEYpo_g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_OG4yoR4DEeamdcmUEYpo_g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OG4yoh4DEeamdcmUEYpo_g" y="402"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_-t01Yh3rEeactI6Cb7301Q"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_-t01Yx3rEeactI6Cb7301Q"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-txLAR3rEeactI6Cb7301Q" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-txLAh3rEeactI6Cb7301Q" x="420" y="140"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_-tvV0R3rEeactI6Cb7301Q"/>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_-tpPMx3rEeactI6Cb7301Q" name="Table" childrenPresentation="VerticalStack">
+        <target xmi:type="metamodeloNewsletter:Table" href="test/NewsletterTest.xmi#//@table"/>
+        <semanticElements xmi:type="metamodeloNewsletter:Table" href="test/NewsletterTest.xmi#//@table"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_-tpPNB3rEeactI6Cb7301Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@conditionnalStyles.15/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_Admw8B3sEeactI6Cb7301Q" name="Row" childrenPresentation="HorizontalStack">
+          <target xmi:type="metamodeloNewsletter:Row" href="test/NewsletterTest.xmi#//@table/@rows.0"/>
+          <semanticElements xmi:type="metamodeloNewsletter:Row" href="test/NewsletterTest.xmi#//@table/@rows.0"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_AeorsB3sEeactI6Cb7301Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@conditionnalStyles.15/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']"/>
+          <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_BNUWoB3sEeactI6Cb7301Q" name="Cell" childrenPresentation="VerticalStack">
+            <target xmi:type="metamodeloNewsletter:Cell" href="test/NewsletterTest.xmi#//@table/@rows.0/@cells.0"/>
+            <semanticElements xmi:type="metamodeloNewsletter:Cell" href="test/NewsletterTest.xmi#//@table/@rows.0/@cells.0"/>
+            <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_BOjswB3sEeactI6Cb7301Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+              <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@conditionnalStyles.15/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']"/>
+            <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ISJEQB3sEeaxZcIixBLBMQ" name="Image">
+              <target xmi:type="metamodeloNewsletter:Image" href="test/NewsletterTest.xmi#//@table/@rows.0/@cells.0/@elements.0"/>
+              <semanticElements xmi:type="metamodeloNewsletter:Image" href="test/NewsletterTest.xmi#//@table/@rows.0/@cells.0/@elements.0"/>
+              <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_ISJrUB3sEeaxZcIixBLBMQ" showIcon="false" workspacePath="/Newsletter.design/resources/image-placeholder.png">
+                <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='ImageNode']/@style"/>
+              </ownedStyle>
+              <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='ImageNode']"/>
+            </ownedDiagramElements>
+          </ownedDiagramElements>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_2ut3gB3wEeayS5LudEyADA" name="Row" childrenPresentation="HorizontalStack">
+          <target xmi:type="metamodeloNewsletter:Row" href="test/NewsletterTest.xmi#//@table/@rows.1"/>
+          <semanticElements xmi:type="metamodeloNewsletter:Row" href="test/NewsletterTest.xmi#//@table/@rows.1"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_2wZSgB3wEeayS5LudEyADA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@conditionnalStyles.15/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']"/>
+          <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_3JKX0B3wEeayS5LudEyADA" name="Cell" childrenPresentation="VerticalStack">
+            <target xmi:type="metamodeloNewsletter:Cell" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0"/>
+            <semanticElements xmi:type="metamodeloNewsletter:Cell" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0"/>
+            <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_1rmpIB36EeaWWOUjrr3A5g" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="192,192,192" foregroundColor="192,192,192">
+              <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@conditionnalStyles.13/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']"/>
+            <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_3wcaQB3wEeayS5LudEyADA" name="Video" childrenPresentation="VerticalStack">
+              <target xmi:type="metamodeloNewsletter:Video" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0"/>
+              <semanticElements xmi:type="metamodeloNewsletter:Video" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0"/>
+              <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_1rq6kB36EeaWWOUjrr3A5g" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="192,192,192" foregroundColor="192,192,192">
+                <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']/@conditionnalStyles.12/@style"/>
+              </ownedStyle>
+              <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']"/>
+              <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_p49QkB3xEeabF93Fn8nhfg" name="VideoImage">
+                <target xmi:type="metamodeloNewsletter:Image" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0/@preview"/>
+                <semanticElements xmi:type="metamodeloNewsletter:Image" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0/@preview"/>
+                <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_p493oB3xEeabF93Fn8nhfg" showIcon="false" workspacePath="/Newsletter.design/resources/video-placeholder.png">
+                  <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']/@subContainerMappings[name='VideoImage']/@style"/>
+                </ownedStyle>
+                <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']/@subContainerMappings[name='VideoImage']"/>
+              </ownedDiagramElements>
+              <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_rSOwoB3xEeabF93Fn8nhfg" name="Asesores Apps.co resuelven dudas frecuentes de los emprendedores">
+                <target xmi:type="metamodeloNewsletter:Text" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0/@title"/>
+                <semanticElements xmi:type="metamodeloNewsletter:Text" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0/@title"/>
+                <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_1ruk8B36EeaWWOUjrr3A5g" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="192,192,192" foregroundColor="192,192,192">
+                  <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']/@subContainerMappings[name='VideoText']/@conditionnalStyles.12/@style"/>
+                </ownedStyle>
+                <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']/@subContainerMappings[name='VideoText']"/>
+              </ownedDiagramElements>
+              <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_s_EF4B3xEeabF93Fn8nhfg" name="VideoButton" childrenPresentation="VerticalStack">
+                <target xmi:type="metamodeloNewsletter:Button" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0/@button"/>
+                <semanticElements xmi:type="metamodeloNewsletter:Button" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0/@button"/>
+                <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_XKfe8B30EeaBz-I1kzSdJg" showIcon="false" labelColor="255,255,255" borderSize="1" borderSizeComputationExpression="1" borderColor="255,255,255" backgroundColor="0,0,255" foregroundColor="0,0,255">
+                  <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']/@subContainerMappings[name='VideoButton']/@conditionnalStyles.1/@style"/>
+                </ownedStyle>
+                <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']/@subContainerMappings[name='VideoButton']"/>
+                <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_uAOA4B3xEeabF93Fn8nhfg" name="VER VIDEO">
+                  <target xmi:type="metamodeloNewsletter:Text" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0/@button/@text"/>
+                  <semanticElements xmi:type="metamodeloNewsletter:Text" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.0/@elements.0/@button/@text"/>
+                  <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_XKgtEB30EeaBz-I1kzSdJg" showIcon="false" labelColor="255,255,255" borderSize="1" borderSizeComputationExpression="1" borderColor="255,255,255" backgroundColor="0,0,255" foregroundColor="0,0,255">
+                    <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']/@subContainerMappings[name='VideoButton']/@subContainerMappings[name='VideoButtonText']/@conditionnalStyles.1/@style"/>
+                  </ownedStyle>
+                  <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='VideoNode']/@subContainerMappings[name='VideoButton']/@subContainerMappings[name='VideoButtonText']"/>
+                </ownedDiagramElements>
+              </ownedDiagramElements>
+            </ownedDiagramElements>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_XPjHoB4AEea_oPc9bJM44A" name="Cell" childrenPresentation="VerticalStack">
+            <target xmi:type="metamodeloNewsletter:Cell" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.1"/>
+            <semanticElements xmi:type="metamodeloNewsletter:Cell" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.1"/>
+            <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_b51sgB4AEea_oPc9bJM44A" showIcon="false" labelColor="255,255,255" borderSize="1" borderSizeComputationExpression="1" borderColor="255,255,255" backgroundColor="128,128,128" foregroundColor="128,128,128">
+              <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@conditionnalStyles.4/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']"/>
+            <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_X_syMB4AEea_oPc9bJM44A" name="Image">
+              <target xmi:type="metamodeloNewsletter:Image" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.1/@elements.0"/>
+              <semanticElements xmi:type="metamodeloNewsletter:Image" href="test/NewsletterTest.xmi#//@table/@rows.1/@cells.1/@elements.0"/>
+              <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_X_tZQB4AEea_oPc9bJM44A" showIcon="false" workspacePath="/Newsletter.design/resources/image-placeholder.png">
+                <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='ImageNode']/@style"/>
+              </ownedStyle>
+              <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='ImageNode']"/>
+            </ownedDiagramElements>
+          </ownedDiagramElements>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_OBZ1sB4DEeamdcmUEYpo_g" name="Row" childrenPresentation="HorizontalStack">
+          <target xmi:type="metamodeloNewsletter:Row" href="test/NewsletterTest.xmi#//@table/@rows.2"/>
+          <semanticElements xmi:type="metamodeloNewsletter:Row" href="test/NewsletterTest.xmi#//@table/@rows.2"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_OCnWoB4DEeamdcmUEYpo_g" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@conditionnalStyles.15/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']"/>
+          <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_OoGpUB4DEeamdcmUEYpo_g" name="Cell" childrenPresentation="VerticalStack">
+            <target xmi:type="metamodeloNewsletter:Cell" href="test/NewsletterTest.xmi#//@table/@rows.2/@cells.0"/>
+            <semanticElements xmi:type="metamodeloNewsletter:Cell" href="test/NewsletterTest.xmi#//@table/@rows.2/@cells.0"/>
+            <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_STyQ4B4DEeamdcmUEYpo_g" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="192,192,192" foregroundColor="192,192,192">
+              <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@conditionnalStyles.13/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']"/>
+            <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_PEitsB4DEeamdcmUEYpo_g" name="Semana 11 al 16 de abril de 2016">
+              <target xmi:type="metamodeloNewsletter:Text" href="test/NewsletterTest.xmi#//@table/@rows.2/@cells.0/@elements.0"/>
+              <semanticElements xmi:type="metamodeloNewsletter:Text" href="test/NewsletterTest.xmi#//@table/@rows.2/@cells.0/@elements.0"/>
+              <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ST0tIB4DEeamdcmUEYpo_g" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="192,192,192" foregroundColor="192,192,192">
+                <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='TextNode']/@conditionnalStyles.12/@style"/>
+              </ownedStyle>
+              <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer/@containerMappings[name='TableNode']/@subContainerMappings[name='RowNode']/@subContainerMappings[name='CellNode']/@subContainerMappings[name='TextNode']"/>
+            </ownedDiagramElements>
+          </ownedDiagramElements>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_-tpPPx3rEeactI6Cb7301Q"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']/@ownedRepresentations[name='Newsletter%20Diagram']/@defaultLayer"/>
+      <target xmi:type="metamodeloNewsletter:Newsletter" href="test/NewsletterTest.xmi#/"/>
     </ownedRepresentations>
     <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/Newsletter.design/description/Newsletter.odesign#//@ownedViewpoints[name='Newsletter']"/>
   </ownedViews>
