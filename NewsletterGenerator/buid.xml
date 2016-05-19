@@ -7,6 +7,7 @@
 	<!-- Other Data Locations -->
 	<property name="staticfiles.location.images" location="${basedir}/staticFiles/Images" />
 	<property name="data.urlsimagenes" location="${basedir}/data/urlsImagenes.txt" />
+	<property name="downloaderimages.location" location="../DownloaderImages" />
 	
 	<!-- Models -->
 	<property name="newsletter.model.location" location="../NewsletterModel/test/NewsletterTest.xmi" />
@@ -21,7 +22,7 @@
 	<property name="android.metamodel.location" location="${basedir}/metamodels/Android.ecore" />
     <property name="android.metamodel.uri" value="android" />
 	
-	
+	<!-- Build -->
 	<target name="build">
 		<echo>Llamando targets para preparar el contenido</echo>
 		<antcall target="prepare-images" />
@@ -39,14 +40,31 @@
 		   		<include name="*"/>
 		   </fileset>
 		</delete>
+		
+		<!-- Delete ONLY contents in staticFiles images folder, not the folder-->
+		<delete>
+		   <fileset dir="${staticfiles.location.images}">
+		   		<include name="*"/>
+		   </fileset>
+		</delete>
+		
+		<!-- Descarga imagenes y las agrega a folder de images-->
+		<antcall target="execute-image-downloader" />
+		
 		<!-- Copy New contents (images) to the folder generated -->
 		<echo>Copiando nuevo conjunto de imagenes a carpeta correspondiente en generated</echo>
 		<copy todir="${generated.location.android.images}" >  
 			<fileset dir="${staticfiles.location.images}">
-				<include name="*"/>
+				<include name="**"/>
 			</fileset>
 		</copy>
 	</target>
+	
+	<!-- Executes another antfile to build and run jar ImageDownloader -->
+	
+	<target name="execute-image-downloader">
+	     <ant antfile="${basedir}/build_jar.xml" target="build" />
+	</target>	
 	
 	<!-- M2M -->
 	<target name="m2m-newsletter2html">

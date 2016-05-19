@@ -325,6 +325,8 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:src="@drawable/disenoboletin19febrerob20"
+						android:onClick="onClick"
+						android:clickable="true"
 						>
 						</ImageView>
 						<TextView
@@ -381,6 +383,8 @@ tools:context="co.edu.uniandes.newslettermockup.MainActivity">
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:src="@drawable/disenoboletin19febrerob17"
+						android:onClick="onClick"
+						android:clickable="true"
 						>
 						</ImageView>
 						<TextView
