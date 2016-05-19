@@ -8,7 +8,7 @@
     </rows>
     <rows height="30" backgroundColor="gray">
       <cells width="600" backgroundColor="silver">
-        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="SEMANA 15 - 20 DE FEBRERO 2016   " fontSize="2" fontColor="white" textAlign="right"/>
+        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="SEMANA 15 - 20 DE FEBRERO 2016   NUEVO" fontSize="2" fontColor="white" textAlign="right"/>
       </cells>
     </rows>
     <rows height="358">
@@ -28,8 +28,8 @@
     </rows>
     <rows>
       <cells width="600" backgroundColor="gray">
-        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL" fontSize="3" fontColor="white" bold="true" textAlign="center"/>
-        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="Aspectos jurídicos que, como mínimo, todo emprendedor debe conocer." fontSize="3" fontColor="white" textAlign="center"/>
+        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="ELEMENTOS LEGALES PARA EL EMPRENDIMIENTO DIGITAL" fontColor="white" bold="true" textAlign="center"/>
+        <elements xsi:type="metamodeloNewsletter:Text" align="center" content="Aspectos jurídicos que, como mínimo, todo emprendedor debe conocer." fontColor="white" textAlign="center"/>
       </cells>
     </rows>
     <rows backgroundColor="gray">
@@ -38,11 +38,11 @@
       </cells>
       <cells width="300" backgroundColor="gray">
         <elements xsi:type="metamodeloNewsletter:Button" link="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/" width="140" height="40" color="orange">
-          <text link="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/" content="PRESENCIAL" fontFamily="Trebuchet MS" fontSize="3" fontColor="white" bold="true"/>
+          <text link="https://apps.co/comunicaciones/eventos/elementos-legales-para-el-emprendimiento-digital-3/" content="PRESENCIAL" fontFamily="Trebuchet MS" fontColor="white" bold="true"/>
         </elements>
         <elements xsi:type="metamodeloNewsletter:Text" content="25 de Febrero 2016 - 2:00 pm" fontSize="2" fontColor="white" italic="true"/>
         <elements xsi:type="metamodeloNewsletter:Button" link="https://plus.google.com/events/c541njr83ht26v8ic03tslq4c3c" width="140" height="40" color="orange">
-          <text link="https://plus.google.com/events/c541njr83ht26v8ic03tslq4c3c" content="VIRTUAL" fontFamily="Trebuchet MS" fontSize="3" fontColor="white" bold="true"/>
+          <text link="https://plus.google.com/events/c541njr83ht26v8ic03tslq4c3c" content="VIRTUAL" fontFamily="Trebuchet MS" fontColor="white" bold="true"/>
         </elements>
         <elements xsi:type="metamodeloNewsletter:Text" content="3 de Marzo 2016 - 2:00 pm" fontSize="2" fontColor="white" italic="true"/>
       </cells>
@@ -58,7 +58,7 @@
           <preview link="" height="133" src="https://s3.amazonaws.com/newsletter-imagenes/2016/04/appsco/disenoboletin19febrerob20.png"/>
           <title link="" align="center" content="En el 2016 habrá 1600 millones de cosas conectadas" fontSize="2" fontColor="white" textAlign="center"/>
           <button link="" align="center" width="140" height="40" color="orange">
-            <text link="" align="center" content="VER VIDEO" fontFamily="Trebuchet MS" fontSize="3" fontColor="white" bold="true" textAlign="center"/>
+            <text link="" align="center" content="VER VIDEO" fontFamily="Trebuchet MS" fontColor="white" bold="true" textAlign="center"/>
           </button>
         </elements>
       </cells>
@@ -67,7 +67,7 @@
           <preview link="" height="133" src="https://s3.amazonaws.com/newsletter-imagenes/2016/04/appsco/disenoboletin19febrerob17.png"/>
           <title align="center" content="Tendencias claves para un año cargado de tecnología" fontSize="2" fontColor="white" textAlign="center"/>
           <button link="" align="center" width="140" height="40" color="orange">
-            <text link="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" align="center" content="VER VIDEO" fontFamily="Trebuchet MS" fontSize="3" fontColor="white" bold="true" textAlign="center"/>
+            <text link="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" align="center" content="VER VIDEO" fontFamily="Trebuchet MS" fontColor="white" bold="true" textAlign="center"/>
           </button>
         </elements>
       </cells>
