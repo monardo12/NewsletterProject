@@ -33,6 +33,7 @@ import metamodeloNewsletter.enums.FontFamily;
 public interface Text extends Element {
 	/**
 	 * Returns the value of the '<em><b>Content</b></em>' attribute.
+	 * The default value is <code>"Text"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Content</em>' attribute isn't clear,
@@ -42,7 +43,7 @@ public interface Text extends Element {
 	 * @return the value of the '<em>Content</em>' attribute.
 	 * @see #setContent(String)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getText_Content()
-	 * @model
+	 * @model default="Text"
 	 * @generated
 	 */
 	String getContent();
@@ -89,6 +90,7 @@ public interface Text extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Font Size</b></em>' attribute.
+	 * The default value is <code>"3"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Font Size</em>' attribute isn't clear,
@@ -98,7 +100,7 @@ public interface Text extends Element {
 	 * @return the value of the '<em>Font Size</em>' attribute.
 	 * @see #setFontSize(String)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getText_FontSize()
-	 * @model
+	 * @model default="3"
 	 * @generated
 	 */
 	String getFontSize();
@@ -145,7 +147,6 @@ public interface Text extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Bold</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Bold</em>' attribute isn't clear,
@@ -155,7 +156,7 @@ public interface Text extends Element {
 	 * @return the value of the '<em>Bold</em>' attribute.
 	 * @see #setBold(boolean)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getText_Bold()
-	 * @model default="false"
+	 * @model
 	 * @generated
 	 */
 	boolean isBold();
@@ -250,6 +251,7 @@ public interface Text extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Text Align</b></em>' attribute.
+	 * The default value is <code>"left"</code>.
 	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.Align}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -261,7 +263,7 @@ public interface Text extends Element {
 	 * @see metamodeloNewsletter.enums.Align
 	 * @see #setTextAlign(Align)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getText_TextAlign()
-	 * @model
+	 * @model default="left"
 	 * @generated
 	 */
 	Align getTextAlign();

@@ -44,7 +44,7 @@ public class TextImpl extends ElementImpl implements Text {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONTENT_EDEFAULT = null;
+	protected static final String CONTENT_EDEFAULT = "Text";
 
 	/**
 	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
@@ -84,7 +84,7 @@ public class TextImpl extends ElementImpl implements Text {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FONT_SIZE_EDEFAULT = null;
+	protected static final String FONT_SIZE_EDEFAULT = "3";
 
 	/**
 	 * The cached value of the '{@link #getFontSize() <em>Font Size</em>}' attribute.

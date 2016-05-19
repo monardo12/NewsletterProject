@@ -50,7 +50,7 @@ public interface Button extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Color</b></em>' attribute.
-	 * The default value is <code>"black"</code>.
+	 * The default value is <code>"white"</code>.
 	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.Color}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -62,7 +62,7 @@ public interface Button extends Element {
 	 * @see metamodeloNewsletter.enums.Color
 	 * @see #setColor(Color)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getButton_Color()
-	 * @model default="black"
+	 * @model default="white"
 	 * @generated
 	 */
 	Color getColor();

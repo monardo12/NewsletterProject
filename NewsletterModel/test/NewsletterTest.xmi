@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodeloNewsletter:Newsletter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metamodeloNewsletter="http://www.example.org/metamodeloNewsletter">
+  <table>
+    <rows>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Image"/>
+      </cells>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Image"/>
+      </cells>
+    </rows>
+  </table>
+</metamodeloNewsletter:Newsletter>
