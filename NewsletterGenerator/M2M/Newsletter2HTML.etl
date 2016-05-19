@@ -148,7 +148,9 @@ operation newsletter!Text getHtmlTextElement() : html!HTMLElement{
 }
 
 operation newsletter!Button getHtmlButtonElement() : html!HTMLElement{
-	self.text.link = self.link;
+	if(self.link <> null){
+		self.text.link = self.link;
+	}
 	var p = self.text.getHtmlTextElement();
 	p.align = self.align.literal;
 	
@@ -196,11 +198,16 @@ operation newsletter!Image getHtmlImageElement() : html!HTMLElement{
 	}
 	
 	img.border = "0";
+	
+	//Set image link
+	var a = new html!A;
 	if(self.link <> null){
-		var a = new html!A;
 		a.ref = self.link;
-		p.addElementRecursively(a);
+	} else {
+		a.ref = self.src;
 	}
+	p.addElementRecursively(a);
+	
 	p.addElementRecursively(img);
 	return p;
 }
@@ -209,6 +216,11 @@ operation newsletter!Video getHtmlVideoElement() : html!HTMLElement{
 	var preview = self.preview.getHtmlImageElement();
 	var title = self.title.getHtmlTextElement();
 	var button = self.button.getHtmlButtonElement();
+	
+	if(self.link <> null){
+		self.preview.link = self.link;
+		self.button.link = self.link;
+	}
 	
 	var div = new html!DIV;
 	div.align = self.align.literal;
