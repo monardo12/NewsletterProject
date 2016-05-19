@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project default="build">
+	<!-- Generated Files Locations-->
+	<property name="generated.location" location="${basedir}/generated" />
+	<property name="generated.location.android.images" location="${generated.location}/NewsletterAndroid/app/src/main/res/drawable-hdpi" />
+	
+	
 	<!-- Models -->
 	<property name="newsletter.model.location" location="../Metamodels/MetamodeloNewsletter/model/Newsletter.xmi" />
 	<property name="html.model.location" location="${basedir}/models/HTML.xmi" />
@@ -15,8 +20,14 @@
 	
 	
 	<target name="build">
-		<echo>Borrando el contenido de la carpeta generated</echo>
-		<delete dir="${generated.location}" failonerror="true" />
+		<echo>Borrando contenidos generados de la carpeta generated</echo>
+
+		<!-- Delete ONLY contents in generated images folder, not the folder-->
+		<delete>
+		   <fileset dir="${generated.location.android.images}">
+		      <include name="*"/>
+		   </fileset>
+		</delete>
 		<antcall target="m2m-newsletter2html" />
 		<antcall target="m2m-newsletter2android" />
 	</target>

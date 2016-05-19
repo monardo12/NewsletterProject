@@ -127,7 +127,7 @@ rule  Table2GridLayout
 		t.layout_height = "wrap_content";
 		
 		if(s.backgroundColor <> null){
-				t.backgroud = s.backgroundColor.literal;
+				t.background = s.backgroundColor.literal;
 			}
 			
 		var rowCount = 1;
@@ -200,9 +200,6 @@ rule Cell2LinearLayout
 			
 		t.gravity = s.toGravity( s.verticalAlignment);
 		
-		if(s.table.isDefined()){
-				t.views.add (s.table.equivalent('Table2GridLayout'));
-		}
 		t.views = s.elements.equivalent();
 		//Posible rules called in above equivalen() operation:
 		//Text to Textview, Button to Button, 
