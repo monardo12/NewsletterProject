@@ -51,9 +51,13 @@ public class ImageDownloader {
 		for (String imageUrl : urls) {
 
 			int lastSlash = imageUrl.lastIndexOf("/");
+			int lastDot = imageUrl.lastIndexOf(".");
 			//+1 to remove slash of the name
-			String targetFileName  = imageUrl.substring(lastSlash + 1);
+			String targetFileName  = imageUrl.substring(lastSlash + 1, lastDot);
+			String extension  = imageUrl.substring(lastDot);
+
 			targetFileName = normalizeString(targetFileName);
+			targetFileName = targetFileName + extension;
 			System.out.println("targetFileName= "+targetFileName); 
 
 		

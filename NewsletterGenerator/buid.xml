@@ -22,7 +22,7 @@
 	<property name="android.metamodel.location" location="../Metamodels/MetamodeloAndroid/metamodel/Android.ecore" />
     <property name="android.metamodel.uri" value="android" />
 	
-	<!-- bulid -->
+	<!-- Build -->
 	<target name="build">
 		<echo>Llamando targets para preparar el contenido</echo>
 		<antcall target="prepare-images" />
@@ -41,6 +41,13 @@
 		   </fileset>
 		</delete>
 		
+		<!-- Delete ONLY contents in staticFiles images folder, not the folder-->
+		<delete>
+		   <fileset dir="${staticfiles.location.images}">
+		   		<include name="*"/>
+		   </fileset>
+		</delete>
+		
 		<!-- Descarga imagenes y las agrega a folder de images-->
 		<antcall target="execute-image-downloader" />
 		
@@ -48,12 +55,12 @@
 		<echo>Copiando nuevo conjunto de imagenes a carpeta correspondiente en generated</echo>
 		<copy todir="${generated.location.android.images}" >  
 			<fileset dir="${staticfiles.location.images}">
-				<include name="*"/>
+				<include name="**"/>
 			</fileset>
 		</copy>
 	</target>
 	
-	<!-- Excutes ant to bulild and run jar ImageDownloader -->
+	<!-- Executes another antfile to build and run jar ImageDownloader -->
 	
 	<target name="execute-image-downloader">
 	     <ant antfile="${basedir}/build_jar.xml" target="build" />
