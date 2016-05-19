@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodeloNewsletter:Newsletter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metamodeloNewsletter="http://www.example.org/metamodeloNewsletter">
+  <table>
+    <rows>
+      <cells backgroundColor="yellow">
+        <elements xsi:type="metamodeloNewsletter:Image"/>
+      </cells>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Button"/>
+      </cells>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Image"/>
+      </cells>
+    </rows>
+    <rows>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Divider"/>
+      </cells>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Image"/>
+      </cells>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Divider"/>
+      </cells>
+    </rows>
+    <rows>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Video">
+          <preview/>
+          <title content="TEXTO DEL VIDEO"/>
+          <button>
+            <text content="TEXTO DEL BOTON DEL VIDEO"/>
+          </button>
+        </elements>
+      </cells>
+    </rows>
+    <rows>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Text" content="Textooooo de estaaa celdaaaaa" fontColor="blue" bold="true"/>
+      </cells>
+      <cells>
+        <elements xsi:type="metamodeloNewsletter:Button">
+          <text content="Texto del bot&#xf3;n"/>
+        </elements>
+      </cells>
+    </rows>
+    <rows>
+      <cells/>
+    </rows>
+  </table>
+</metamodeloNewsletter:Newsletter>
