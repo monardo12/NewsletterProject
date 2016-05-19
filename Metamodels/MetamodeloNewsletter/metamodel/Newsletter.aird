@@ -4,6 +4,7 @@
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
   <semanticResources>../model/Newsletter2.xmi</semanticResources>
   <semanticResources>Newsletter.genmodel</semanticResources>
+  <semanticResources>../model/NewsletterBackup.xmi</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_zJ2AIBS8EeaIsrJJKg61Mw">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_GppLQBS-EeaIsrJJKg61Mw" name="Newsletter">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_GppLQRS-EeaIsrJJKg61Mw" source="DANNOTATION_CUSTOMIZATION_KEY">

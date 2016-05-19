@@ -64,9 +64,9 @@
       </cells>
       <cells width="300" backgroundColor="silver">
         <elements xsi:type="metamodeloNewsletter:Video" link="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E">
-          <preview link="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" height="133" src="https://s3.amazonaws.com/newsletter-imagenes/2016/04/appsco/disenoboletin19febrerob17.png"/>
+          <preview link="" height="133" src="https://s3.amazonaws.com/newsletter-imagenes/2016/04/appsco/disenoboletin19febrerob17.png"/>
           <title align="center" content="Tendencias claves para un año cargado de tecnología" fontSize="2" fontColor="white" textAlign="center"/>
-          <button link="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" align="center" width="140" height="40" color="orange">
+          <button link="" align="center" width="140" height="40" color="orange">
             <text link="https://www.youtube.com/watch?v=QY02W8XK61c&amp;list=PL1C9B31303DD2150E" align="center" content="VER VIDEO" fontFamily="Trebuchet MS" fontSize="3" fontColor="white" bold="true" textAlign="center"/>
           </button>
         </elements>

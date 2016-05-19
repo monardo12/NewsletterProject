@@ -7,7 +7,7 @@ out.println("Application" + app);
 %]
 
 [%
-out.println("INICIO generador Android2Text-------------------------------------------");
+("Start EGL Android2Text - generateANDROID -----------").println();
 
 //----------------------------------------------------
 //PROCEDIMIENTOS PREVIOS A LA GENERACION DE CODIGO
@@ -31,7 +31,7 @@ var fxml = new Native("org.eclipse.epsilon.egl.formatter.language.XmlFormatter")
 
 var tMainActivity : Template ;
 
-out.println("Creando MainActivity" );
+("Creando MainActivity" ).println();
 
 tMainActivity  = TemplateFactory.load("generateMainActivity.egl");
 tMainActivity.setFormatter(fjava);
@@ -44,7 +44,7 @@ tMainActivity.generate(dirPackageMainJava() + mainActivity.name + ".java");
 
 var tLayout : Template ;
 
-out.println("Creando Layout" );
+("Creando Layout" ).println();
 
 tLayout  = TemplateFactory.load("generateLayout.egl");
 tLayout.setFormatter(fxml);
@@ -57,7 +57,7 @@ tLayout.generate(dirPackageLayouts() + layout.name + ".xml");
 
 var tManifest : Template ;
 
-out.println("Creando AndroidMainifest" );
+("Creando AndroidMainifest" ).println();
 
 tManifest  = TemplateFactory.load("generateAndroidManifest.egl");
 tManifest.setFormatter(fxml);
@@ -66,5 +66,5 @@ tManifest.populate("app", app);
 tManifest.generate(dirPackageManifest() + "AndroidManifest.xml");
 
 
-out.println("TERMINO generador Android2Text-------------------------------------------");
+("Finish EGL Android2Text - generateANDROID -----------").println();
 %]
