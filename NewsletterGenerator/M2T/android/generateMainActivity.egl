@@ -2,6 +2,7 @@
 import "./operations.eol";
 import "./subTemplates.egl";
 %]
+[** This EGL generates the the main activity for the android project**]
 package [%=app.getPackageName()%];
 
 import android.content.Intent;

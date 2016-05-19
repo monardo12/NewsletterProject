@@ -1,5 +1,5 @@
-[**EGL que se utilizar para crear estilos adaptados a la aplicacion android 
-para las interacciones con botones del usuario**]
+[**EGL used to create drawable styles adapted to the android application
+for user interactions with buttons**]
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 

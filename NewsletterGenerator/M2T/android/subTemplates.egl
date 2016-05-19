@@ -3,7 +3,9 @@ import "./operations.eol";
 %]
 
 [%
+//------------------------------------------------
 //Root Layout Templates
+//------------------------------------------------
 @Template
 operation RelativeLayout printSchema(){
 %]xmlns:android="http://schemas.android.com/apk/res/android"
@@ -20,8 +22,9 @@ operation RelativeLayout printTools(){
 operation RelativeLayout printContext(app : Application, mainActivity: Activity){
 %]tools:context="[%=app.getPackageName()%].[%=mainActivity.name%]"[%
 }
-
+//------------------------------------------------
 //Print inner view tags for a ViewGroup
+//------------------------------------------------
 @Template
 operation View printInnerViews(){
 	for (view in self.views)
@@ -29,8 +32,9 @@ operation View printInnerViews(){
 		view.printViewTag();
 	}
 }
-
+//------------------------------------------------
 //ViewGroup Templates Tags
+//------------------------------------------------
 @Template
 operation RelativeLayout printViewTag(){
 %]
@@ -71,6 +75,9 @@ operation LinearLayout printViewTag(){
 [%
 }
 
+//------------------------------------------------
+//View Templates Tags
+//------------------------------------------------
 @Template
 operation ImageView printViewTag(){
 %]
@@ -98,9 +105,9 @@ operation TextView printViewTag(){
 [%
 }
 
-
+//------------------------------------------------
 //Templates for properties in View Element
-
+//------------------------------------------------
 @Template
 operation View printViewProperties()
 {
@@ -135,7 +142,9 @@ operation View printViewProperties()
 	}
 	self.addOnClickPropertiesIfApply();
 }
-
+//------------------------------------------------
+//Operations to print each specific property acording to a one or more validations.
+//------------------------------------------------
 @Templte
 operation View addOnClickPropertiesIfApply(){
 	if(self.triggerAction()){
@@ -295,8 +304,9 @@ operation View printPaddingTop(){
 	}
 }
 
+//------------------------------------------------
 //Templates for specific properties in GridLayout Element
-
+//------------------------------------------------
 @Template
 operation GridLayout printRowCount(){
 	if(self.rowCount.isDefined()){
@@ -313,9 +323,9 @@ operation GridLayout printColumnCount(){
 	}
 }
 
-
+//------------------------------------------------
 //Templates for specific properties in LinearLayout Element
-
+//------------------------------------------------
 @Template
 operation LinearLayout printOrientation(){
 	if(self.orientation.isDefined()){
@@ -340,8 +350,9 @@ operation LinearLayout printGravity(){
 	}
 }
 
+//------------------------------------------------
 // Templates for specific properties in ImageView
-
+//------------------------------------------------
 @Template
 operation ImageView printSrc(){
 	if(self.src.isDefined()){

@@ -1,9 +1,9 @@
 /**--------------------------------------------------------------**/
-//Definicion de operaciones reutilizables entre egls
+//Definition of reused operations for Egls
 /**--------------------------------------------------------------**/
 
 //--------------------------------------------------------------
-//Operaciones sobre directorios
+// Common operations about directories and paths for the Egls
 //--------------------------------------------------------------
 operation dirGenerado(): String{  
    return "../../generated/";
@@ -46,7 +46,6 @@ operation dirPackageDrawables(): String {
 	return dirSourceFolder()+ "main/res/drawable/";
 }
 
-
 operation dirPackageManifest(): String {
 	return dirSourceFolder()+ "main/";
 }
@@ -61,10 +60,6 @@ operation dirPackageTest(): String {
 operation dirPackage(packageName: String): String {
 	return dirSourceFolder()+ packageName;
 }
-
-//--------------------------------------------------------------
-// Operaciones comunes para los egls 
-//--------------------------------------------------------------
 
 operation Application getPackageName(): String{
 	return self.identifier;
@@ -86,12 +81,12 @@ operation ViewGroup isLinearLayout(): Boolean {
     return self.isTypeOf(LinearLayout);
 }
 
-// -------------------------------
-// Operations about colors
-// -------------------------------
+// ------------------------------------
+// Operations about colors and actions
+// ------------------------------------
 
 /**
-* Dark colors for create gradients and custom styles
+* Dark colors for create gradients and custom styles for colors supported
 */
 operation mapDarkColors(): Map{
 
@@ -119,7 +114,7 @@ operation mapDarkColors(): Map{
 }
 
 /**
-* Light and default value for colors
+* Light and default value for colors supported
 */
 operation mapLightColors(): Map{
 
@@ -147,12 +142,19 @@ operation mapLightColors(): Map{
 	return mapLightColors;
 }
 
+/**
+* Returns the map color keys supported by the transformation chain. 
+*/
 operation getColorsKeys(): Set{
 
 	var keysColors:Set = mapLightColors().keySet();
 	return keysColors;
 }
 
+/**
+* Returns a color from the Map with the supported colors by the transformation chain. 
+* The default colors are the light representations.
+*/
 operation getColorByKey(keyColor: String ): String{
 	
 	if (getColorsKeys().includes(keyColor))
@@ -165,6 +167,9 @@ operation getColorByKey(keyColor: String ): String{
 	}
 }
 
+/**
+* Returns a Dark color from the Map with the supported colors by the transformation chain. 
+*/
 operation getColorDarkByKey(keyColor: String ): String{
 	
 	if (getColorsKeys().includes(keyColor))
@@ -177,14 +182,19 @@ operation getColorDarkByKey(keyColor: String ): String{
 	}
 }
 
+/**
+* This operation evaluate the best background effect for the View received by context.
+* The backgroud depends of View type and actions that triggers or not. 
+*/
 operation View getBackgroundByKey(keyColor): String{
 	
 
-	// Valida si el background es un selector
+	// If context is a Button View. (It must have an action and needs a visual effect as background)
 	if (self.isTypeOf(Button))
 	{
 		return '@drawable/selector_on_click_view_'+keyColor;
 	}
+	// If context is a LinearLayout with a link (It's a video). (It must have an action and needs a visual effect as background)
 	if (self.isTypeOf(LinearLayout) and self.triggerAction()) 
 	{
 		return '@drawable/selector_on_click_video_'+keyColor;
@@ -193,6 +203,9 @@ operation View getBackgroundByKey(keyColor): String{
 	
 }
 
+/**
+* This operation evaluate if a View received by context is a trigger view for any action.
+*/
 operation View triggerAction(){
 	var app : android!Application:= android!Application.all.at(0);
 	var mainActivity : android!Activity = app.mainActivity;

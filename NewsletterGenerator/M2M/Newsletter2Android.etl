@@ -1,4 +1,9 @@
 import "androidOperations.eol";
+
+/**
+* Pre rules execution function.
+* Initializes some variables used in the rules exectuion
+*/
 pre {
 	"Start ETL Newsletter2Android".println();
 	
@@ -11,7 +16,7 @@ pre {
 	'lastId_LinearLayout'=0,
 	'lastId_GridLayout'=0
 	};
-	
+	//This Set wil save the actions related to views with a link defined.
 	var allActions:Set = new Set;
 }
 
@@ -238,8 +243,8 @@ rule Text2TextView
 		s.createActionIfApplies(t);
 		}
 /**
-* This rule executes the transformation for the map Text
-* to TextView.  It will not launch more definitions.
+* This rule executes the transformation for the map newsletter!Button
+* to android!Button.  It will not launch more definitions.
 */
 @lazy 
 rule Button2Button
@@ -265,6 +270,10 @@ rule Button2Button
 		s.createActionIfApplies(t);
 		
 		}
+/**
+* This rule executes the transformation for the map Image
+* to ImageView.  It will not launch more definitions.
+*/
 @lazy 
 rule Image2ImageView
 	transform 
@@ -281,6 +290,17 @@ rule Image2ImageView
 		s.createActionIfApplies(t);
 		
 		}
+		
+/**
+* This rule executes the transformation for the map Video
+* to a LinearLayout with a specific format that represents a video in android.  
+* - It will launch the definition of the 'preview' relation 
+* throught the equivalent function.
+* - It will launch the definition of the 'button' relation 
+* throught the equivalent function.
+* - It will launch the definition of the 'title' relation 
+* throught the equivalent function.
+*/
 @lazy 
 rule Video2LinearLayoutVideo
 	transform 
@@ -316,6 +336,10 @@ rule Video2LinearLayoutVideo
 		s.createActionIfApplies(t);
 		
 		}
+/**
+* This rule executes the transformation for the map Divider
+* to a LinearLayout with a specific format that represents a divider in android.  
+*/
 @lazy 
 rule Divider2LinearLayoutDivider
 	transform 
@@ -349,7 +373,10 @@ rule Divider2LinearLayoutDivider
 		t.views.add(separator);
 		
 		}			
-
+/**
+* Post rules execution function.
+* Prints some results in console as a summary of the excecution.
+*/
 post {
 	"Finish ETL Newsletter2Android".println();
 	// Print the results 

@@ -1,4 +1,7 @@
 
+//---------------------------------------------------------
+// Ids generators for the diferent android Views Types.
+//---------------------------------------------------------
 /**
 * Generates a valid id for a GridLayout
 */
@@ -43,7 +46,13 @@ operation android!TextView nextId(): String{
 	contIds.put(key, contIds.get(key) + 1);
 	return  'textView_'+contIds.get(key);
 }
-
+//---------------------------------------------------------
+// Other Utilities opertarions
+//---------------------------------------------------------
+/**
+* Converts a newsletter!VerticalAlign from a Cell 
+* to an android gravity value
+*/
 operation newsletter!Cell toGravity(vAlign):String{
 	
 	if (vAlign==newsletter!VerticalAlign#middle)
@@ -80,7 +89,9 @@ operation newsletter!Text extractTextStyles():String{
 		}
 	return styles;
 }
-
+/**
+* Returns a the number 1 as a double data type
+*/
 operation newsletter!Row getSumCells():Real{
 	return 1.0d;
 }
@@ -98,17 +109,22 @@ operation newsletter!Image extractImageNameNormalized(target:android!ImageView):
 	var lastDot = urlImagen.lastIndexOf('.');
 	//lastDot.println();
 	var nombre = urlImagen.substring(lastSlash+1, lastDot);
-	//Normaliza el nombre de la imgen, en android solo puede ser en minusculas 
-	//y sin caracteres especiales.
+	//Normalizes the image name for android, 
+	//It just can be in lower case letters without special characters.
 	nombre = nombre.replaceAll("[-+.^:,]","");
 	nombre = nombre.toLowerCase();
-	nombre = nombre.replaceAll("[αινσϊ]","");
+	nombre = nombre.normalize();
 	
 	("Imagen " + target.id + " = "+nombre).println();
 	
 	return nombre.asString();
 }
 
+/**
+* Operation that create an action giving newsletter!Element and a possible trigger android!View.
+* if the newsletter!Element has a link, then it's created an android!Action with the source link 
+* and the trigger android!View associated.
+*/
 operation newsletter!Element createActionIfApplies(trigger:android!View){
 	if (self.link.isDefined())
 		{
@@ -119,6 +135,10 @@ operation newsletter!Element createActionIfApplies(trigger:android!View){
 		}
 }	
 
+/**
+* Operation that standardizes a String passed through the context by removing the accents. 
+* Returns the string without the common accents.
+*/
 operation String normalize():String{
 	
 	var myString: new Native("java.lang.String") = self;
