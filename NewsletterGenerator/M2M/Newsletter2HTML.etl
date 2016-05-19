@@ -75,6 +75,7 @@ rule Cell2TD
 			if(s.backgroundColor <> null){
 				t.bgcolor = s.backgroundColor.literal;
 			}
+			t.valign = s.verticalAlignment.literal;
 			for(element in s.elements){
 				var htmlElement : html!HTMLElement;
 				if(element.isTypeOf(newsletter!Text)){
@@ -152,7 +153,7 @@ operation newsletter!Button getHtmlButtonElement() : html!HTMLElement{
 		self.text.link = self.link;
 	}
 	var p = self.text.getHtmlTextElement();
-	p.align = self.align.literal;
+	p.addStyle(html!StyleKey#textAlign, self.align.literal);
 	
 	if(p.elements.get(0).isTypeOf(html!A)){
 		//Button with link
@@ -263,5 +264,25 @@ operation html!HTMLElement addStyle(key : Any, value : String){
 	var style = new html!Style;
 	style.key = key;
 	style.value = value;
-	self.styles.add(style);
+	
+	var found = false;
+	for(style in self.styles){
+		if(style.key == key){
+			found = true;
+			style.value = value;
+		}
+	}
+	
+	if(not found){
+		self.styles.add(style);
+	}
+	
+}
+
+operation html!HTMLElement removeStyle(key : Any){
+	for(style in self.styles){
+		if(style.key == key){
+			self.styles.remove(style);
+		}
+	}
 }
