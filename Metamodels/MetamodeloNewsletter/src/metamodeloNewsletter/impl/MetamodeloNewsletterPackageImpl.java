@@ -273,7 +273,7 @@ public class MetamodeloNewsletterPackageImpl extends EPackageImpl implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCell_Table() {
+	public EReference getCell_Elements() {
 		return (EReference)cellEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -282,17 +282,8 @@ public class MetamodeloNewsletterPackageImpl extends EPackageImpl implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCell_Elements() {
-		return (EReference)cellEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getCell_Width() {
-		return (EAttribute)cellEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)cellEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -301,7 +292,7 @@ public class MetamodeloNewsletterPackageImpl extends EPackageImpl implements Met
 	 * @generated
 	 */
 	public EAttribute getCell_BackgroundColor() {
-		return (EAttribute)cellEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)cellEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -310,7 +301,7 @@ public class MetamodeloNewsletterPackageImpl extends EPackageImpl implements Met
 	 * @generated
 	 */
 	public EAttribute getCell_VerticalAlignment() {
-		return (EAttribute)cellEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)cellEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -589,7 +580,6 @@ public class MetamodeloNewsletterPackageImpl extends EPackageImpl implements Met
 		createEAttribute(rowEClass, ROW__BACKGROUND_COLOR);
 
 		cellEClass = createEClass(CELL);
-		createEReference(cellEClass, CELL__TABLE);
 		createEReference(cellEClass, CELL__ELEMENTS);
 		createEAttribute(cellEClass, CELL__WIDTH);
 		createEAttribute(cellEClass, CELL__BACKGROUND_COLOR);
@@ -683,7 +673,6 @@ public class MetamodeloNewsletterPackageImpl extends EPackageImpl implements Met
 		initEAttribute(getRow_BackgroundColor(), theEnumsPackage.getColor(), "backgroundColor", "white", 0, 1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cellEClass, Cell.class, "Cell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCell_Table(), this.getTable(), null, "table", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCell_Elements(), this.getElement(), null, "elements", null, 0, -1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCell_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCell_BackgroundColor(), theEnumsPackage.getColor(), "backgroundColor", "white", 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

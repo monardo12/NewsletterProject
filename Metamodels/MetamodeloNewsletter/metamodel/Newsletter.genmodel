@@ -20,7 +20,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Row/backgroundColor"/>
     </genClasses>
     <genClasses ecoreClass="Newsletter.ecore#//Cell">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Newsletter.ecore#//Cell/table"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Newsletter.ecore#//Cell/elements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Cell/width"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Newsletter.ecore#//Cell/backgroundColor"/>

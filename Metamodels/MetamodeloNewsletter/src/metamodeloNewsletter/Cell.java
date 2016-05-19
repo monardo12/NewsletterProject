@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link metamodeloNewsletter.Cell#getTable <em>Table</em>}</li>
  *   <li>{@link metamodeloNewsletter.Cell#getElements <em>Elements</em>}</li>
  *   <li>{@link metamodeloNewsletter.Cell#getWidth <em>Width</em>}</li>
  *   <li>{@link metamodeloNewsletter.Cell#getBackgroundColor <em>Background Color</em>}</li>
@@ -30,32 +29,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Cell extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Table</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Table</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Table</em>' containment reference.
-	 * @see #setTable(Table)
-	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getCell_Table()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Table getTable();
-
-	/**
-	 * Sets the value of the '{@link metamodeloNewsletter.Cell#getTable <em>Table</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Table</em>' containment reference.
-	 * @see #getTable()
-	 * @generated
-	 */
-	void setTable(Table value);
-
 	/**
 	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link metamodeloNewsletter.Element}.

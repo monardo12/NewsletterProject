@@ -7,8 +7,6 @@ import java.util.Collection;
 import metamodeloNewsletter.Cell;
 import metamodeloNewsletter.Element;
 import metamodeloNewsletter.MetamodeloNewsletterPackage;
-import metamodeloNewsletter.Table;
-
 import metamodeloNewsletter.enums.Color;
 import metamodeloNewsletter.enums.VerticalAlign;
 
@@ -34,7 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link metamodeloNewsletter.impl.CellImpl#getTable <em>Table</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.CellImpl#getElements <em>Elements</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.CellImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link metamodeloNewsletter.impl.CellImpl#getBackgroundColor <em>Background Color</em>}</li>
@@ -44,16 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
-	/**
-	 * The cached value of the '{@link #getTable() <em>Table</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTable()
-	 * @generated
-	 * @ordered
-	 */
-	protected Table table;
-
 	/**
 	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -148,49 +135,6 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Table getTable() {
-		return table;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTable(Table newTable, NotificationChain msgs) {
-		Table oldTable = table;
-		table = newTable;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.CELL__TABLE, oldTable, newTable);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTable(Table newTable) {
-		if (newTable != table) {
-			NotificationChain msgs = null;
-			if (table != null)
-				msgs = ((InternalEObject)table).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MetamodeloNewsletterPackage.CELL__TABLE, null, msgs);
-			if (newTable != null)
-				msgs = ((InternalEObject)newTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MetamodeloNewsletterPackage.CELL__TABLE, null, msgs);
-			msgs = basicSetTable(newTable, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.CELL__TABLE, newTable, newTable));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Element> getElements() {
 		if (elements == null) {
 			elements = new EObjectContainmentEList<Element>(Element.class, this, MetamodeloNewsletterPackage.CELL__ELEMENTS);
@@ -269,8 +213,6 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MetamodeloNewsletterPackage.CELL__TABLE:
-				return basicSetTable(null, msgs);
 			case MetamodeloNewsletterPackage.CELL__ELEMENTS:
 				return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
 		}
@@ -285,8 +227,6 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MetamodeloNewsletterPackage.CELL__TABLE:
-				return getTable();
 			case MetamodeloNewsletterPackage.CELL__ELEMENTS:
 				return getElements();
 			case MetamodeloNewsletterPackage.CELL__WIDTH:
@@ -308,9 +248,6 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MetamodeloNewsletterPackage.CELL__TABLE:
-				setTable((Table)newValue);
-				return;
 			case MetamodeloNewsletterPackage.CELL__ELEMENTS:
 				getElements().clear();
 				getElements().addAll((Collection<? extends Element>)newValue);
@@ -336,9 +273,6 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MetamodeloNewsletterPackage.CELL__TABLE:
-				setTable((Table)null);
-				return;
 			case MetamodeloNewsletterPackage.CELL__ELEMENTS:
 				getElements().clear();
 				return;
@@ -363,8 +297,6 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MetamodeloNewsletterPackage.CELL__TABLE:
-				return table != null;
 			case MetamodeloNewsletterPackage.CELL__ELEMENTS:
 				return elements != null && !elements.isEmpty();
 			case MetamodeloNewsletterPackage.CELL__WIDTH:

@@ -214,22 +214,13 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	int CELL = 3;
 
 	/**
-	 * The feature id for the '<em><b>Table</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CELL__TABLE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CELL__ELEMENTS = 1;
+	int CELL__ELEMENTS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -238,7 +229,7 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL__WIDTH = 2;
+	int CELL__WIDTH = 1;
 
 	/**
 	 * The feature id for the '<em><b>Background Color</b></em>' attribute.
@@ -247,7 +238,7 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL__BACKGROUND_COLOR = 3;
+	int CELL__BACKGROUND_COLOR = 2;
 
 	/**
 	 * The feature id for the '<em><b>Vertical Alignment</b></em>' attribute.
@@ -256,7 +247,7 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL__VERTICAL_ALIGNMENT = 4;
+	int CELL__VERTICAL_ALIGNMENT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Cell</em>' class.
@@ -265,7 +256,7 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL_FEATURE_COUNT = 5;
+	int CELL_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Cell</em>' class.
@@ -923,17 +914,6 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 	EClass getCell();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link metamodeloNewsletter.Cell#getTable <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Table</em>'.
-	 * @see metamodeloNewsletter.Cell#getTable()
-	 * @see #getCell()
-	 * @generated
-	 */
-	EReference getCell_Table();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link metamodeloNewsletter.Cell#getElements <em>Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1375,14 +1355,6 @@ public interface MetamodeloNewsletterPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CELL = eINSTANCE.getCell();
-
-		/**
-		 * The meta object literal for the '<em><b>Table</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CELL__TABLE = eINSTANCE.getCell_Table();
 
 		/**
 		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
