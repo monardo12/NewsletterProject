@@ -10,16 +10,16 @@
 	<property name="downloaderimages.location" location="../DownloaderImages" />
 	
 	<!-- Models -->
-	<property name="newsletter.model.location" location="../Metamodels/MetamodeloNewsletter/model/Newsletter.xmi" />
+	<property name="newsletter.model.location" location="../NewsletterModel/test/NewsletterTest.xmi" />
 	<property name="html.model.location" location="${basedir}/models/HTML.xmi" />
 	<property name="android.model.location" location="${basedir}/models/Android.xmi" />
 
 	<!-- Metamodels -->
-	<property name="newsletter.metamodel.location" location="../Metamodels/MetamodeloNewsletter/metamodel/Newsletter.ecore" />
+	<property name="newsletter.metamodel.location" location="${basedir}/metamodels/Newsletter.ecore" />
 	<property name="newsletter.metamodel.uri" value="http://www.example.org/metamodeloNewsletter" />
-	<property name="html.metamodel.location" location="../Metamodels/MetamodeloHTML/metamodel/HTML.ecore" />
+	<property name="html.metamodel.location" location="${basedir}/metamodels/HTML.ecore" />
 	<property name="html.metamodel.uri" value="HTML" />
-	<property name="android.metamodel.location" location="../Metamodels/MetamodeloAndroid/metamodel/Android.ecore" />
+	<property name="android.metamodel.location" location="${basedir}/metamodels/Android.ecore" />
     <property name="android.metamodel.uri" value="android" />
 	
 	<!-- Build -->
