@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link metamodeloNewsletter.Element#getLink <em>Link</em>}</li>
- *   <li>{@link metamodeloNewsletter.Element#getAlignment <em>Alignment</em>}</li>
+ *   <li>{@link metamodeloNewsletter.Element#getAlign <em>Align</em>}</li>
  *   <li>{@link metamodeloNewsletter.Element#getWidth <em>Width</em>}</li>
  *   <li>{@link metamodeloNewsletter.Element#getHeight <em>Height</em>}</li>
  * </ul>
@@ -53,34 +53,34 @@ public interface Element extends EObject {
 	void setLink(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Alignment</b></em>' attribute.
+	 * Returns the value of the '<em><b>Align</b></em>' attribute.
 	 * The default value is <code>"left"</code>.
 	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.Align}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Alignment</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Align</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Alignment</em>' attribute.
+	 * @return the value of the '<em>Align</em>' attribute.
 	 * @see metamodeloNewsletter.enums.Align
-	 * @see #setAlignment(Align)
-	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getElement_Alignment()
+	 * @see #setAlign(Align)
+	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getElement_Align()
 	 * @model default="left"
 	 * @generated
 	 */
-	Align getAlignment();
+	Align getAlign();
 
 	/**
-	 * Sets the value of the '{@link metamodeloNewsletter.Element#getAlignment <em>Alignment</em>}' attribute.
+	 * Sets the value of the '{@link metamodeloNewsletter.Element#getAlign <em>Align</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Alignment</em>' attribute.
+	 * @param value the new value of the '<em>Align</em>' attribute.
 	 * @see metamodeloNewsletter.enums.Align
-	 * @see #getAlignment()
+	 * @see #getAlign()
 	 * @generated
 	 */
-	void setAlignment(Align value);
+	void setAlign(Align value);
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.

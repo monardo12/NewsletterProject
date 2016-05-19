@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodeloNewsletter:Newsletter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metamodeloNewsletter="http://www.example.org/metamodeloNewsletter">
+  <table width="600">
+    <rows height="300">
+      <cells backgroundColor="black" verticalAlignment="middle">
+        <elements xsi:type="metamodeloNewsletter:Text" link="http://apps.co" align="right" width="300" height="50" content="TEXTO 1" fontSize="3" fontColor="white" bold="true" italic="true" strikethrough="true" textAlign="center"/>
+        <elements xsi:type="metamodeloNewsletter:Button" link="http://fcbarcelona.com" width="300" height="100" color="orange">
+          <text content="BOTON 1"/>
+        </elements>
+        <elements xsi:type="metamodeloNewsletter:Text" link="" width="200" height="50" content="TEXTO 2" fontSize="2" fontColor="white" underline="true" textAlign="center"/>
+      </cells>
+    </rows>
+  </table>
+</metamodeloNewsletter:Newsletter>

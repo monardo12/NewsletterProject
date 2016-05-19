@@ -14,7 +14,7 @@ package metamodeloNewsletter;
  * <ul>
  *   <li>{@link metamodeloNewsletter.Video#getPreview <em>Preview</em>}</li>
  *   <li>{@link metamodeloNewsletter.Video#getTitle <em>Title</em>}</li>
- *   <li>{@link metamodeloNewsletter.Video#getDescription <em>Description</em>}</li>
+ *   <li>{@link metamodeloNewsletter.Video#getButton <em>Button</em>}</li>
  * </ul>
  *
  * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getVideo()
@@ -59,7 +59,7 @@ public interface Video extends Element {
 	 * @return the value of the '<em>Title</em>' containment reference.
 	 * @see #setTitle(Text)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getVideo_Title()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Text getTitle();
@@ -75,29 +75,29 @@ public interface Video extends Element {
 	void setTitle(Text value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Button</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Description</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Button</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' containment reference.
-	 * @see #setDescription(Text)
-	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getVideo_Description()
-	 * @model containment="true"
+	 * @return the value of the '<em>Button</em>' containment reference.
+	 * @see #setButton(Button)
+	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getVideo_Button()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Text getDescription();
+	Button getButton();
 
 	/**
-	 * Sets the value of the '{@link metamodeloNewsletter.Video#getDescription <em>Description</em>}' containment reference.
+	 * Sets the value of the '{@link metamodeloNewsletter.Video#getButton <em>Button</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' containment reference.
-	 * @see #getDescription()
+	 * @param value the new value of the '<em>Button</em>' containment reference.
+	 * @see #getButton()
 	 * @generated
 	 */
-	void setDescription(Text value);
+	void setButton(Button value);
 
 } // Video

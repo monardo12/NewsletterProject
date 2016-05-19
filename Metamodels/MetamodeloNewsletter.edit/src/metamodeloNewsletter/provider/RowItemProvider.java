@@ -86,7 +86,7 @@ public class RowItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -162,10 +162,8 @@ public class RowItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Row)object).getHeight();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Row_type") :
-			getString("_UI_Row_type") + " " + label;
+		Row row = (Row)object;
+		return getString("_UI_Row_type") + " " + row.getHeight();
 	}
 	
 

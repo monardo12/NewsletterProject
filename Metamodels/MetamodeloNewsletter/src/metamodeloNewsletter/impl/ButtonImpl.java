@@ -49,7 +49,7 @@ public class ButtonImpl extends ElementImpl implements Button {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color COLOR_EDEFAULT = Color.NONE;
+	protected static final Color COLOR_EDEFAULT = Color.BLACK;
 
 	/**
 	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.

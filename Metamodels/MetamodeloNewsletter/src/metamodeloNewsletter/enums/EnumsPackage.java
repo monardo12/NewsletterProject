@@ -85,16 +85,6 @@ public interface EnumsPackage extends EPackage {
 	int VERTICAL_ALIGN = 2;
 
 	/**
-	 * The meta object id for the '{@link metamodeloNewsletter.enums.FontWeight <em>Font Weight</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see metamodeloNewsletter.enums.FontWeight
-	 * @see metamodeloNewsletter.enums.impl.EnumsPackageImpl#getFontWeight()
-	 * @generated
-	 */
-	int FONT_WEIGHT = 3;
-
-	/**
 	 * The meta object id for the '{@link metamodeloNewsletter.enums.FontFamily <em>Font Family</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -102,7 +92,7 @@ public interface EnumsPackage extends EPackage {
 	 * @see metamodeloNewsletter.enums.impl.EnumsPackageImpl#getFontFamily()
 	 * @generated
 	 */
-	int FONT_FAMILY = 4;
+	int FONT_FAMILY = 3;
 
 
 	/**
@@ -134,16 +124,6 @@ public interface EnumsPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getVerticalAlign();
-
-	/**
-	 * Returns the meta object for enum '{@link metamodeloNewsletter.enums.FontWeight <em>Font Weight</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Font Weight</em>'.
-	 * @see metamodeloNewsletter.enums.FontWeight
-	 * @generated
-	 */
-	EEnum getFontWeight();
 
 	/**
 	 * Returns the meta object for enum '{@link metamodeloNewsletter.enums.FontFamily <em>Font Family</em>}'.
@@ -207,16 +187,6 @@ public interface EnumsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum VERTICAL_ALIGN = eINSTANCE.getVerticalAlign();
-
-		/**
-		 * The meta object literal for the '{@link metamodeloNewsletter.enums.FontWeight <em>Font Weight</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see metamodeloNewsletter.enums.FontWeight
-		 * @see metamodeloNewsletter.enums.impl.EnumsPackageImpl#getFontWeight()
-		 * @generated
-		 */
-		EEnum FONT_WEIGHT = eINSTANCE.getFontWeight();
 
 		/**
 		 * The meta object literal for the '{@link metamodeloNewsletter.enums.FontFamily <em>Font Family</em>}' enum.

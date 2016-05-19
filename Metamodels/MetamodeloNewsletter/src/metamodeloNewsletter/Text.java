@@ -2,9 +2,9 @@
  */
 package metamodeloNewsletter;
 
+import metamodeloNewsletter.enums.Align;
 import metamodeloNewsletter.enums.Color;
 import metamodeloNewsletter.enums.FontFamily;
-import metamodeloNewsletter.enums.FontWeight;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,10 +19,11 @@ import metamodeloNewsletter.enums.FontWeight;
  *   <li>{@link metamodeloNewsletter.Text#getFontFamily <em>Font Family</em>}</li>
  *   <li>{@link metamodeloNewsletter.Text#getFontSize <em>Font Size</em>}</li>
  *   <li>{@link metamodeloNewsletter.Text#getFontColor <em>Font Color</em>}</li>
- *   <li>{@link metamodeloNewsletter.Text#getFontWeight <em>Font Weight</em>}</li>
+ *   <li>{@link metamodeloNewsletter.Text#isBold <em>Bold</em>}</li>
  *   <li>{@link metamodeloNewsletter.Text#isItalic <em>Italic</em>}</li>
  *   <li>{@link metamodeloNewsletter.Text#isUnderline <em>Underline</em>}</li>
  *   <li>{@link metamodeloNewsletter.Text#isStrikethrough <em>Strikethrough</em>}</li>
+ *   <li>{@link metamodeloNewsletter.Text#getTextAlign <em>Text Align</em>}</li>
  * </ul>
  *
  * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getText()
@@ -114,7 +115,7 @@ public interface Text extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Font Color</b></em>' attribute.
-	 * The default value is <code>"none"</code>.
+	 * The default value is <code>"black"</code>.
 	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.Color}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -126,7 +127,7 @@ public interface Text extends Element {
 	 * @see metamodeloNewsletter.enums.Color
 	 * @see #setFontColor(Color)
 	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getText_FontColor()
-	 * @model default="none"
+	 * @model default="black"
 	 * @generated
 	 */
 	Color getFontColor();
@@ -143,34 +144,31 @@ public interface Text extends Element {
 	void setFontColor(Color value);
 
 	/**
-	 * Returns the value of the '<em><b>Font Weight</b></em>' attribute.
-	 * The default value is <code>"normal"</code>.
-	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.FontWeight}.
+	 * Returns the value of the '<em><b>Bold</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Font Weight</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Bold</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Font Weight</em>' attribute.
-	 * @see metamodeloNewsletter.enums.FontWeight
-	 * @see #setFontWeight(FontWeight)
-	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getText_FontWeight()
-	 * @model default="normal"
+	 * @return the value of the '<em>Bold</em>' attribute.
+	 * @see #setBold(boolean)
+	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getText_Bold()
+	 * @model default="false"
 	 * @generated
 	 */
-	FontWeight getFontWeight();
+	boolean isBold();
 
 	/**
-	 * Sets the value of the '{@link metamodeloNewsletter.Text#getFontWeight <em>Font Weight</em>}' attribute.
+	 * Sets the value of the '{@link metamodeloNewsletter.Text#isBold <em>Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Font Weight</em>' attribute.
-	 * @see metamodeloNewsletter.enums.FontWeight
-	 * @see #getFontWeight()
+	 * @param value the new value of the '<em>Bold</em>' attribute.
+	 * @see #isBold()
 	 * @generated
 	 */
-	void setFontWeight(FontWeight value);
+	void setBold(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Italic</b></em>' attribute.
@@ -249,5 +247,34 @@ public interface Text extends Element {
 	 * @generated
 	 */
 	void setStrikethrough(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Text Align</b></em>' attribute.
+	 * The literals are from the enumeration {@link metamodeloNewsletter.enums.Align}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Text Align</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Text Align</em>' attribute.
+	 * @see metamodeloNewsletter.enums.Align
+	 * @see #setTextAlign(Align)
+	 * @see metamodeloNewsletter.MetamodeloNewsletterPackage#getText_TextAlign()
+	 * @model
+	 * @generated
+	 */
+	Align getTextAlign();
+
+	/**
+	 * Sets the value of the '{@link metamodeloNewsletter.Text#getTextAlign <em>Text Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Text Align</em>' attribute.
+	 * @see metamodeloNewsletter.enums.Align
+	 * @see #getTextAlign()
+	 * @generated
+	 */
+	void setTextAlign(Align value);
 
 } // Text

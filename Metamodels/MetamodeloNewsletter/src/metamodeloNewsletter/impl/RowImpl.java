@@ -58,7 +58,7 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String HEIGHT_EDEFAULT = null;
+	protected static final int HEIGHT_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -68,7 +68,7 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 	 * @generated
 	 * @ordered
 	 */
-	protected String height = HEIGHT_EDEFAULT;
+	protected int height = HEIGHT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
@@ -78,7 +78,7 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color BACKGROUND_COLOR_EDEFAULT = Color.NONE;
+	protected static final Color BACKGROUND_COLOR_EDEFAULT = Color.WHITE;
 
 	/**
 	 * The cached value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
@@ -126,7 +126,7 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
@@ -135,8 +135,8 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeight(String newHeight) {
-		String oldHeight = height;
+	public void setHeight(int newHeight) {
+		int oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MetamodeloNewsletterPackage.ROW__HEIGHT, oldHeight, height));
@@ -209,7 +209,7 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 				getCells().addAll((Collection<? extends Cell>)newValue);
 				return;
 			case MetamodeloNewsletterPackage.ROW__HEIGHT:
-				setHeight((String)newValue);
+				setHeight((Integer)newValue);
 				return;
 			case MetamodeloNewsletterPackage.ROW__BACKGROUND_COLOR:
 				setBackgroundColor((Color)newValue);
@@ -250,7 +250,7 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 			case MetamodeloNewsletterPackage.ROW__CELLS:
 				return cells != null && !cells.isEmpty();
 			case MetamodeloNewsletterPackage.ROW__HEIGHT:
-				return HEIGHT_EDEFAULT == null ? height != null : !HEIGHT_EDEFAULT.equals(height);
+				return height != HEIGHT_EDEFAULT;
 			case MetamodeloNewsletterPackage.ROW__BACKGROUND_COLOR:
 				return backgroundColor != BACKGROUND_COLOR_EDEFAULT;
 		}

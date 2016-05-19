@@ -64,7 +64,7 @@ public class VideoItemProvider extends ElementItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MetamodeloNewsletterPackage.Literals.VIDEO__PREVIEW);
 			childrenFeatures.add(MetamodeloNewsletterPackage.Literals.VIDEO__TITLE);
-			childrenFeatures.add(MetamodeloNewsletterPackage.Literals.VIDEO__DESCRIPTION);
+			childrenFeatures.add(MetamodeloNewsletterPackage.Literals.VIDEO__BUTTON);
 		}
 		return childrenFeatures;
 	}
@@ -122,7 +122,7 @@ public class VideoItemProvider extends ElementItemProvider {
 		switch (notification.getFeatureID(Video.class)) {
 			case MetamodeloNewsletterPackage.VIDEO__PREVIEW:
 			case MetamodeloNewsletterPackage.VIDEO__TITLE:
-			case MetamodeloNewsletterPackage.VIDEO__DESCRIPTION:
+			case MetamodeloNewsletterPackage.VIDEO__BUTTON:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,31 +152,8 @@ public class VideoItemProvider extends ElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MetamodeloNewsletterPackage.Literals.VIDEO__DESCRIPTION,
-				 MetamodeloNewsletterFactory.eINSTANCE.createText()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == MetamodeloNewsletterPackage.Literals.VIDEO__TITLE ||
-			childFeature == MetamodeloNewsletterPackage.Literals.VIDEO__DESCRIPTION;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+				(MetamodeloNewsletterPackage.Literals.VIDEO__BUTTON,
+				 MetamodeloNewsletterFactory.eINSTANCE.createButton()));
 	}
 
 }

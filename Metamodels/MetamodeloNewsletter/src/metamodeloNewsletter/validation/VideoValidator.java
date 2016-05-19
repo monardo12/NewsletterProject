@@ -4,6 +4,7 @@
  */
 package metamodeloNewsletter.validation;
 
+import metamodeloNewsletter.Button;
 import metamodeloNewsletter.Image;
 import metamodeloNewsletter.Text;
 
@@ -18,5 +19,7 @@ public interface VideoValidator {
 
 	boolean validatePreview(Image value);
 	boolean validateTitle(Text value);
+	boolean validateButton(Button value);
+
 	boolean validateDescription(Text value);
 }

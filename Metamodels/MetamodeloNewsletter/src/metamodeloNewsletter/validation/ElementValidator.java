@@ -16,6 +16,8 @@ public interface ElementValidator {
 	boolean validate();
 
 	boolean validateLink(String value);
+	boolean validateAlign(Align value);
+
 	boolean validateAlignment(Align value);
 	boolean validateWidth(int value);
 	boolean validateHeight(int value);
