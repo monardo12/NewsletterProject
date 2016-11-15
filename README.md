@@ -48,6 +48,7 @@ Este archivo prepara folders de NewsletterGenerator/generated, compila y ejecuta
 </br>
 7. El contenido del newsletter aparecerá en el folder de de /NewsleterGenerator/generated
 </br>
+</br>
 (**Nota, a veces el ant guarda un caché del primer modelo que ejecuta. Si corriendo el ant (build.xml) no se actualiza el contenido de la carpeta generated, se sugiere correr las transfomaaiciones manualmente tras ejecutar el ant.)
 
 -----------------------------------------------------------------------	
